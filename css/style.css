@@ -3423,6 +3423,10 @@ ul.heart li {
 	padding-top: 20px;
 	padding-bottom: 90px;
 }
+.footer .logo img{
+	height: 75px;
+	width: auto;
+}
 .footer .content {
 	padding-bottom: 30px;
 	color: #fff;
@@ -3524,7 +3528,7 @@ ul.heart li {
 	background-color: #df574b !important;
 }
 .indianred {
-	background-color: #cb483e;
+	background-color: black;
 }
 /**************************** /Color Scheme **************************/
 
