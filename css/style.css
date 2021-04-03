@@ -42,7 +42,6 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	font-family: Lato, sans-serif;
-	background-color: #eff0ea;
 	opacity: 0;
 	margin: 0;
 	padding: 0;
@@ -182,7 +181,7 @@ body.blog-sidebar #header:after {
 }
 #header {
 	width: 100%;
-	height: 1080px;
+	height: 100vh;
 }
 .blog-no-sidebar #header .main {
 	width: 1170px;
