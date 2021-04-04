@@ -54,7 +54,7 @@ svg {
 }
 
 .heading:nth-child(1) .str0 {
-	stroke: #52B6E0;
+	stroke: #e31e24;
 	stroke-width: 6.94;
 	stroke-miterlimit: 2.61313
 }
@@ -96,7 +96,7 @@ svg {
 }
 
 .heading:nth-child(2) .fil0 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
@@ -128,7 +128,7 @@ svg {
 }
 
 .heading:nth-child(3) .fil1 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
@@ -160,7 +160,7 @@ svg {
 }
 
 .heading:nth-child(4) .fil1 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
@@ -187,7 +187,7 @@ svg {
 }
 
 .heading:nth-child(5) .str0 {
-	stroke: #52B6E0;
+	stroke: #e31e24;
 	stroke-width: 6.94;
 	stroke-miterlimit: 2.61313
 }
@@ -229,7 +229,7 @@ svg {
 }
 
 .heading:nth-child(6) .fil1 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
@@ -261,7 +261,7 @@ svg {
 }
 
 .heading:nth-child(7) .fil0 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
@@ -292,7 +292,7 @@ svg {
 }
 
 .heading:nth-child(8) .fil0 {
-	fill: #52B6E0;
+	fill: #e31e24;
 	fill-rule: nonzero
 }
 
