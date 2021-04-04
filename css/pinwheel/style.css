@@ -36,7 +36,6 @@ svg {
 	left: 50%;
 	visibility: hidden;
 	transition: visibility ease-in 0.5s;
-	border: 1px solid black;
 	padding: 0.25rem;
 }
 
