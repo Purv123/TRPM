@@ -3,28 +3,33 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .pinwheel-container {
 	position: absolute;
 	width: 100vw;
 	height: 90vh;
 	padding: 1rem;
 }
-.fil0 {
+
+.fil-pinwheel {
 	fill: #e31e24;
 }
+
 svg {
-	width: 75vmin;
-	height: 75vmin;
+	width: 65vmin;
+	height: 65vmin;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	/* 	border: 1px solid black; */
 }
+
 .spin {
 	-webkit-animation: rotate-pinwheel 8s linear 1 forwards;
-	        animation: rotate-pinwheel 8s linear 1 forwards;
+	animation: rotate-pinwheel 8s linear 1 forwards;
 }
+
 .heading {
 	position: absolute;
 	top: 50%;
@@ -34,40 +39,277 @@ svg {
 	border: 1px solid black;
 	padding: 0.25rem;
 }
+
+.heading svg {
+	height: 17.5vmin;
+	width: 27.5vmin;
+}
+
 .show-heading {
 	visibility: visible;
 }
+
 .heading:nth-child(1) {
 	transform-origin: center bottom;
-	transform: translate(-50%, -30vmin);
+	transform: translate(-50%, -35vmin);
 }
+
+.heading:nth-child(1) .str0 {
+	stroke: #52B6E0;
+	stroke-width: 6.94;
+	stroke-miterlimit: 2.61313
+}
+
+.heading:nth-child(1) .fil0 {
+	fill: none
+}
+
+.heading:nth-child(1) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(1) .fil1 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(1) .fil3 {
+	fill: #B3B3B3;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(1) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
 .heading:nth-child(2) {
 	transform-origin: left bottom;
-	transform: translate(20vmin, -18.5vmin);
+	transform: translate(35vmin, -20.5vmin);
 }
+
+.heading:nth-child(2) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(2) .fil0 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(2) .fil2 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(2) .fil3 {
+	fill: gray;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(2) .fil1 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
 .heading:nth-child(3) {
 	transform-origin: left center;
-	transform: translate(25vmin, -50%);
+	transform: translate(38.5vmin, -3.75vmin);
 }
+
+.heading:nth-child(3) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(3) .fil1 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(3) .fil0 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(3) .fil3 {
+	fill: gray;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(3) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
 .heading:nth-child(4) {
 	transform-origin: left top;
-	transform: translate(20vmin, 12.5vmin);
+	transform: translate(33.5vmin, 12.5vmin);
 }
+
+.heading:nth-child(4) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(4) .fil1 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(4) .fil0 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(4) .fil3 {
+	fill: gray;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(4) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
 .heading:nth-child(5) {
 	transform-origin: center top;
 	transform: translate(-50%, 25vmin);
 }
+
+.heading:nth-child(5) .str0 {
+	stroke: #52B6E0;
+	stroke-width: 6.94;
+	stroke-miterlimit: 2.61313
+}
+
+.heading:nth-child(5) .fil1 {
+	fill: none
+}
+
+.heading:nth-child(5) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(5) .fil0 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(5) .fil3 {
+	fill: gray;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(5) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(6) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
 .heading:nth-child(6) {
 	transform-origin: right top;
-	transform: translate(-72.5vmin, 12.5vmin);
+	transform: translate(-33.5vmin, 12.5vmin);
 }
+
+.heading:nth-child(6) .fil1 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(6) .fil0 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(6) .fil3 {
+	fill: gray;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(6) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
 .heading:nth-child(7) {
 	transform-origin: right center;
-	transform: translate(-72.5vmin, -50%);
+	transform: translate(-38.5vmin, -3.75vmin);
 }
+
+.heading:nth-child(7) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(7) .fil0 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(7) .fil1 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(7) .fil3 {
+	fill: #B3B3B3;
+	fill-rule: nonzero;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(7) .fil2 {
+	fill: url(#id2);
+	fill-rule: nonzero
+}
+
 .heading:nth-child(8) {
 	transform-origin: right bottom;
-	transform: translate(-70vmin, -18.5vmin);
+	transform: translate(-35vmin, -20.5vmin);
+}
+
+.heading:nth-child(8) .fil4 {
+	fill: black;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(8) .fil0 {
+	fill: #52B6E0;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(8) .fil1 {
+	fill: #E6E6E6;
+	fill-rule: nonzero
+}
+
+.heading:nth-child(8) .fil2 {
+	fill: #B3B3B3;
+	fill-opacity: 0.800000
+}
+
+.heading:nth-child(8) .fil3 {
+	fill: url(#id2);
+	fill-rule: nonzero
 }
 
 @-webkit-keyframes rotate-pinwheel {
