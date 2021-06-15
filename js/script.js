@@ -1,12 +1,15 @@
 window.addEventListener("load", () => {
 	const headings = [...document.getElementsByClassName("heading")];
-	const pinwheel = document.querySelector(".pinwheel svg");
-	pinwheel.classList.add("spin");
-	for (let i = 0; i < headings.length; i++) {
+	for (let i = 0; i < headings.length / 2; i++) {
 		let timeout = setTimeout(() => {
+			console.log(i, i + (headings.length / 2))
 			headings[i].classList.add("show-heading");
+			headings[i + (headings.length / 2)].classList.add("show-heading");
 		}, i * 1 * 1000);
 	}
+
+	const pinwheels = [...document.querySelectorAll(".pinwheel svg")];
+	pinwheels.forEach(pinwheel => pinwheel.classList.add("spin"));
 
 	const navbarToggler = document.querySelector(".navbar-toggler");
 	const navItems = document.querySelector("#navbarToggler");
