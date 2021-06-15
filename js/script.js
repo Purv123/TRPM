@@ -7,4 +7,15 @@ window.addEventListener("load", () => {
 			headings[i].classList.add("show-heading");
 		}, i * 1 * 1000);
 	}
+
+	const navbarToggler = document.querySelector(".navbar-toggler");
+	const navItems = document.querySelector("#navbarToggler");
+	navbarToggler.addEventListener('click', () => {
+		const navItemsClassList = navItems.classList;
+		if (navItemsClassList.contains('collapsed')) {
+			navItemsClassList.remove('collapsed')
+		} else {
+			navItemsClassList.add('collapsed')
+		}
+	});
 });
