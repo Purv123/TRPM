@@ -2,7 +2,6 @@ window.addEventListener("load", () => {
 	const headings = [...document.getElementsByClassName("heading")];
 	for (let i = 0; i < headings.length / 2; i++) {
 		let timeout = setTimeout(() => {
-			console.log(i, i + (headings.length / 2))
 			headings[i].classList.add("show-heading");
 			headings[i + (headings.length / 2)].classList.add("show-heading");
 		}, i * 1 * 1000);

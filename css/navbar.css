@@ -82,7 +82,15 @@
     top: calc(150px - 100vh);
 }
 
-@media screen and (max-width: 768px) {
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media screen and (max-width: 1250px) {
     header.travel nav.header {
         display: none;
     }

@@ -25,54 +25,7 @@
 
     <!--/Custom panel -->
     <div class="box">
-        <header id="header" class="travel">
-            <nav class="header">
-                <ul>
-                    <li><a href="shortcodes.html">About Us</a></li>
-                    <li><a href="about.html">(TPRM) as service</a></li>
-                    <li><a href="about.html">Our Services</a></li>
-                    <li><a href="about.html">Blog</a></li>
-                    <li class="logo">
-                        <a href="travelgroup.html">
-                            <img src="images/logo.svg" alt="" />
-                            <h3>RISK KARMA</h3>
-                            <h6>TPRM as-a-Service</h6>
-                        </a>
-                    </li>
-                    <li><a href="blog.html">Pricing</a></li>
-                    <li><a href="gallery.html">For Enterprises</a></li>
-                    <li><a href="gallery.html">For Third Parties</a></li>
-                    <li><a href="gallery.html">Contact Us</a></li>
-                </ul>
-            </nav>
-
-            <nav class="header md">
-                <div class="collapsed" id="navbarToggler">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li><a href="shortcodes.html">About Us</a></li>
-                        <li><a href="about.html">(TPRM) as service</a></li>
-                        <li><a href="about.html">Our Services</a></li>
-                        <li><a href="about.html">Blog</a></li>
-                        <li><a href="blog.html">Pricing</a></li>
-                        <li><a href="gallery.html">For Enterprises</a></li>
-                        <li><a href="gallery.html">For Third Parties</a></li>
-                        <li><a href="gallery.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="logo-button-wrapper">
-                    <li class="logo">
-                        <a href="travelgroup.html">
-                            <img src="images/logo.svg" alt="" />
-                            <h3>RISK KARMA</h3>
-                            <h6>TPRM as-a-Service</h6>
-                        </a>
-                    </li>
-                    <button class="navbar-toggler" type="button">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                    </button>
-                </div>
-            </nav>
-        </header>
+        <?php include_once 'navbar.php'; ?>
 
         <section class="pinwheel" id="pinwheel-section">
             <div class="bg"></div>
@@ -126,104 +79,10 @@
             </div>
         </section>
 
-        <footer class="footer-section">
-            <div class="container">
-                <div class="footer-content pt-5 pb-5">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 mb-50">
-                            <div class="footer-widget">
-                                <div class="footer-cta">
-                                    <div class="mb-3">
-                                        <div class="single-cta">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <div class="cta-text">
-                                                <h4>Find us</h4>
-                                                <span>California (Headquarters)
-                                                    Irvine, CA 92603</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="single-cta">
-                                            <i class="fas fa-phone"></i>
-                                            <div class="cta-text">
-                                                <h4>Call us</h4>
-                                                <span>949-421-7294</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="single-cta">
-                                            <i class="far fa-envelope-open"></i>
-                                            <div class="cta-text">
-                                                <h4>Mail us</h4>
-                                                <span>support@RiskKarma.com</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <div class="footer-widget-heading">
-                                    <h3>Useful Links</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Services </a></li>
-                                    <li><a href="#">(TPRM) as-a-Service</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">For Enterprises</a></li>
-                                    <li><a href="#">For Third Parties</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                            <div class="footer-widget">
-                                <div class="footer-widget-heading">
-                                    <h3>Subscribe</h3>
-                                </div>
-                                <div class="footer-text mb-25">
-                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                                </div>
-                                <div class="subscribe-form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Email Address">
-                                        <button><i class="fab fa-telegram-plane"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-9 col-lg-9 text-center text-lg-left verticalAlignCenter8">
-                            <div class="copyright-text">
-                                <p>Copyright @ 2021 Risk Karma LLC, All Rights Reserved | Risk Karma TPRM is a Risk
-                                    Karma LLC Service Offering</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block text-right">
-                            <div class="footer-menu">
-                                <div class="footer-social-icon">
-                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php include_once 'footer.php'; ?>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
