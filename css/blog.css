@@ -74,6 +74,7 @@
 
 .timeline ul li.in-view::after {
     background: #EE3137;
+    Border: 5px solid white;
 }
 
 .timeline ul li div {

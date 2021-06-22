@@ -42,6 +42,8 @@ if (isset($_POST['submit'])) {
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>
@@ -89,40 +91,6 @@ if (isset($_POST['submit'])) {
                         <div class="panel-heading">
                             <div id="page-title">
 
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD SERVICE</button>
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h6 class="modal-title">ADD service</h6>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="" enctype="multipart/form-data" method="POST">
-                                                    <label for="inputEmail4">Catagory</label>
-                                                    <select class="form-control" name="type">
-                                                        <option value="ourservices">Our Services</option>
-                                                        <option value="forthirdparty">For Third Party</option>
-                                                        <option value="forenterprise">For Enterprise</option>
-                                                    </select>
-                                                    <br>
-                                                    <label for="inputEmail4">Title</label>
-                                                    <input type="text" class="form-control" name="title" placeholder="Service Title">
-                                                    <br>
-                                                    <label for="inputEmail4">Description</label>
-                                                    <input type="text" class="form-control" name="description" placeholder="Service Description">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
-                                                <input type="submit" name="submit" value="ADD" class="btn btn-primary">
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Searchbox-->
-                                <br>
                             </div>
 
                             <!-- /right options -->
@@ -133,9 +101,8 @@ if (isset($_POST['submit'])) {
 
                             <div id="flot-sales" class="fullwidth ">
 
-                                <?php
-                                echo '<div class="table-responsive">
-                               <table class="table table-bordered table-hover">
+                                <div class="table-responsive">
+                               <table class="table table-bordered table-hover" id="editableTable    ">
                                         <tr> 
                                             <th></th>
                                             <th></th>
@@ -143,21 +110,22 @@ if (isset($_POST['submit'])) {
                                             <th>Catagory</th>
                                             <th>Title</th>
                                             <th>Description</th>
-                                        </tr>';
-
-                                while ($row = mysqli_fetch_array($service_fetch)) {
-                                    echo '<tr>
-                                            <td><a href="service_edit.php?edit=' . $row['id'] . '">EDIT</a></td>
-                                            <td><a href="service.php?delete=' . $row['id'] . '">DELETE</a></td>
-                                            <td>' . $row["id"] . '</td>
-                                            <td>' . $row["type"] . '</td>
-                                            <td>' . $row["title"] . '</td>
-                                            <td>' . $row["description"] . '</td>
-                                            </tr>';
-                                }
-                                echo '</table></div>';
-                                ?>
-
+                                        </tr>
+                                        <?php
+                                        $sql_query = "SELECT * FROM pricelist";
+                                        $resultset = mysqli_query($connection, $sql_query) or die("database error:". mysqli_error($conn));
+                                        while( $pricelist = mysqli_fetch_assoc($resultset) ) {
+                                        ?>
+                                        <tr id="<?php echo $pricelist ['id']; ?>">
+                                        <td><?php echo $pricelist ['col1']; ?></td>
+                                        <td><?php echo $pricelist ['col2']; ?></td>
+                                        <td><?php echo $pricelist ['col3']; ?></td>
+                                        <td><?php echo $pricelist ['col4']; ?></td>
+                                        <td><?php echo $pricelist ['col5']; ?></td>
+                                        <td><?php echo $pricelist ['col6']; ?></td>
+                                        </tr>
+                                        <?php } ?>
+                                        </table></div>
                             </div>
 
                         </div>
@@ -223,6 +191,8 @@ if (isset($_POST['submit'])) {
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script src="plugin/bootstable.js"></script>
+    <script src="js/editable.js"></script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">

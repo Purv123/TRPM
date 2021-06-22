@@ -4127,8 +4127,10 @@ ul {
 }
 
 .footer-section {
-	background: #151414;
+	background: black;
+--	background-image: url(../images/travel/bg.png);
 	position: relative;
+  	opacity: 0.6;
 }
 
 .footer-cta {
@@ -4294,6 +4296,8 @@ ul {
 .copyright-area {
 	background: #202020;
 	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
 }
 
 .copyright-text p {
@@ -5177,4 +5181,8 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.li-mb-1 li {
+	margin-bottom: 1rem;
 }

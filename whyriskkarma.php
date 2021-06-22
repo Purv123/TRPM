@@ -28,8 +28,20 @@
         <?php include_once 'navbar.php'; ?>
 
         <div class="container my-5">
-            <p class="h3 text-center mb-5">Why Risk Karma</p>
-            <ul>
+            <p class="h3 mt-3" style="margin-left: 8rem;">Why Risk Karma</p>
+         <div class="row vertical_content_manage mt-5">
+            
+        <div class="col-lg-5">
+            <div class="">
+                <div class="img_about mt-3">
+                        <img src="images/pinwheels/halfempty.svg" alt="" class="img-fluid mx-auto d-block" style="transform: rotate(180deg);">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="mt-3">
+                        
+            <ul class="li-mb-1">
                 <li>Industry Expertise. At the center of the Risk Karma’s (TPRM) as-a-Service solution are industry thought leaders and security practitioners with deep experience in developing third-party risk programs and/or executing high quality 3<sup>rd</sup> party risk assessments for companies of all sizes and industry sectors.
                 <li>Ability to cost effectively scale third-party risk management program efforts.</li>
                 <li>Make quick, intelligent and consistent decisions on your relationships with your third parties.</li>
@@ -42,6 +54,10 @@
                 <li>Better assurances that the reputation and quality of your services and products are not ruined.</li>
                 <li>Bottom line - Drive better desired risk-based outcomes with your third parities relationships.</li>
             </ul>
+            </div>
+            </div>
+        </div>
+            
         </div>
 
         <?php include_once 'footer.php'; ?>

@@ -2,3 +2,11 @@ ul {
     list-style-image: url('../images/logo.jpeg');
     padding-left: 18px;
 }
+
+.pinwheel_icon {
+	width: 36px;
+	height: 38px;
+	background-size: 100%;
+	display: block;
+	list-style-image: url('../images/logo.jpeg');
+}

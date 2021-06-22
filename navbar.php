@@ -1,28 +1,28 @@
 <header id="header" class="travel">
             <nav class="header">
                 <ul>
-                    <li><a href="shortcodes.html">About Us</a></li>
-                    <li><a href="shortcodes.html">Why risk karma</a></li>
-                    <li><a href="about.html">(TPRM) as service</a></li>
+                    <li><a href="aboutus.php">About Us</a></li>
+                    <li><a href="whyriskkarma.php">Why risk karma</a></li>
+                    <li><a href="tprmasservice.php">(TPRM) as service</a></li>
                     <li class="nav-item dropdown position-relative">
                         <a class="nav-link dropdown-toggle" href="#">What we offer</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Our Services</a>
-                            <a class="dropdown-item" href="#">For Enterprise</a>
-                            <a class="dropdown-item" href="#">For Third Party</a>
+                            <a class="dropdown-item" href="services1.php">Our Services</a>
+                            <a class="dropdown-item" href="services2.php">For Enterprise</a>
+                            <a class="dropdown-item" href="services3.php">For Third Party</a>
                         </div>
                     </li>
                     <li class="logo">
-                        <a href="travelgroup.html">
+                        <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
                             <h6>TPRM as-a-Service</h6>
                         </a>
                     </li>
-                    <li><a href="blog.html">Pricing</a></li>
-                    <li><a href="gallery.html">Use case</a></li>
-                    <li><a href="gallery.html">Blog</a></li>
-                    <li><a href="gallery.html">Contact Us</a></li>
+                    <li><a href="pricelist.php">Pricing</a></li>
+                    <li><a href="commonusecases.php">Use case</a></li>
+                    <li><a href="blogindex.php">Blog</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
             </nav>
 

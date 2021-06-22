@@ -33,7 +33,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -44,7 +44,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -55,7 +55,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -66,7 +66,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -77,7 +77,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -88,7 +88,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -99,7 +99,7 @@
                 <li>
                   <div>
                       <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
+                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
                       </a>
                       <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
                       <a href="#" class="blogbutton w-inline-block">
@@ -107,50 +107,7 @@
                       </a>
                   </div>
                 </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
+                
               </ul>
             </section>
         </div>

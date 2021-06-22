@@ -99,20 +99,12 @@ if (isset($_POST['submit'])) {
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
                                     $editRow = mysqli_fetch_row($editSerevice);
-                                    echo '<label for="inputEmail4">Catagory</label>
-                                                    <select class="form-control" name="type">
-                                                        <option value="ourservices">Our Services</option>
-                                                        <option value="forthirdparty">For Third Party</option>
-                                                        <option value="forenterprise">For Enterprise</option>
-                                                    </select>
-                                    
-                                    <br>
-                                    
-                                    <label for="inputEmail4">Title</label>
+                                    echo '
+                                    <label for="inputEmail4">Commitment Title</label>
                                     <input type="text" class="form-control" name="title" placeholder="Service Title" value=" ' . $editRow[2] . '">
                                     <br>
-                                    <label for="inputEmail4">Description</label>
-                                    <input type="text" class="form-control" name="description" placeholder="Service Description" value=" ' . $editRow[3] . '">
+                                    <label for="inputEmail4">Commitment Description</label>
+                                    <input type="text" class="form-control" name="description" placeholder="Commitment Description" ' . $editRow[3] . '">
                                     ';
                                     ?>
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">

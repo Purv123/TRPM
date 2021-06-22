@@ -72,18 +72,18 @@ $sideNav = '<!--MAIN NAVIGATION-->
 
                         <!--Menu list item-->
                         <li>
-                            <a href="services.php">
+                            <a href="service.php">
                                 <i class="fa fa-server"></i>
-                                <span class="menu-title">Services</span>
+                                <span class="menu-title">service</span>
                                 <i class="arrow"></i>
                             </a>
                             <!--Submenu-->
                             <ul class="collapse">
-                            <li><a href="services.php?service_type=ourservices">Our Services</a>
+                            <li><a href="service.php?service_type=ourservice">Our service</a>
                             </li> 
-                            <li><a href="product_spec.php?cat_id=forthirdparty">For Third Party</a>
+                            <li><a href="service.php?cat_id=forthirdparty">For Third Party</a>
                             </li> 
-                            <li><a href="product_spec.php?cat_id=forenterprise">For Enterprise</a>
+                            <li><a href="service.php?cat_id=forenterprise">For Enterprise</a>
                             </li> 
                             </ul>
                         </li>
@@ -106,7 +106,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         </li>
                         
                         <li>
-                        <a href="contactus.php">
+                        <a href="contact.php">
                             <i class="fa fa-phone"></i>
                             <span class="menu-title">Contact Us</span>
                             <i class="arrow"></i>

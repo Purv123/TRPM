@@ -42,6 +42,7 @@ if (isset($_POST['submit'])) {
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>
@@ -69,7 +70,7 @@ if (isset($_POST['submit'])) {
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Service Edit</h1>
+                    <h1 class="page-header text-overflow">Blog</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -95,24 +96,16 @@ if (isset($_POST['submit'])) {
                         <!-- panel content -->
                         <div class="panel-body">
                                 <form action="" enctype="multipart/form-data" method="POST">
-                                    <label for="inputEmail4">Catagory</label>
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
                                     $editRow = mysqli_fetch_row($editSerevice);
-                                    echo '<label for="inputEmail4">Catagory</label>
-                                                    <select class="form-control" name="type">
-                                                        <option value="ourservices">Our Services</option>
-                                                        <option value="forthirdparty">For Third Party</option>
-                                                        <option value="forenterprise">For Enterprise</option>
-                                                    </select>
-                                    
+                                    echo '<label for="inputEmail4">Blog Title</label>
+                                                    <textarea class="form-control" name="description" required id="editor1"></textarea>
+                                                    </br>
+                                                    <label for="inputEmail4">Blog Description</label>
+                                                    <textarea class="form-control" name="description" required id="editor2"></textarea>
                                     <br>
                                     
-                                    <label for="inputEmail4">Title</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Service Title" value=" ' . $editRow[2] . '">
-                                    <br>
-                                    <label for="inputEmail4">Description</label>
-                                    <input type="text" class="form-control" name="description" placeholder="Service Description" value=" ' . $editRow[3] . '">
                                     ';
                                     ?>
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
@@ -181,6 +174,10 @@ if (isset($_POST['submit'])) {
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script>
+  CKEDITOR.replace( 'editor1' );
+  CKEDITOR.replace( 'editor2' );
+</script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">

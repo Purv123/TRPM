@@ -1,36 +1,22 @@
 <?php require '../db.php';
+require 'commonFunction.php';
+
 ?>
-<?php require 'commonFunction.php'; ?>
 <?php
-$img2 = "./assets/img/";
 if (isset($_POST['submit'])) {
-    // $product_count = $connection->query("SELECT cat_id from product where cat_id = '$catid' ");
-    // $rowcount = mysqli_num_rows($product_count) + 1;
-    // $counter = 0;
-    // print_r(mysqli_fetch_all($product_count)[0][0]);
-    // $prodid = $catid . '_P_' . $rowcount;
-    $cat_name = $_POST['cat_id'];
-    $cat_name = strtolower(explode(" ", $cat_name)[0]);
-    $linkToInsert = $cat_name.'.php';
-    $filetmp = $_FILES["img1"]["tmp_name"];
-    $filename = $_FILES["img1"]["name"];
-    $filetype = $_FILES["img1"]["type"];
-    $filepath = "../assets/img/" . $filename;
-    move_uploaded_file($filetmp, $filepath);
-    $img2 = $img2 . $filename;
-    mysqli_query($connection, "INSERT INTO  home_slider(img_path,link) VALUES ('$img2','$linkToInsert')");
-    header('location: home_slider.php');
-    $image_fetch = $connection->query("SELECT * from home_slider");
-    $product_cat_fetch = $connection->query("SELECT * from product_cat");
-} else if (isset($_GET['delete'])) {
-    $img_id = $_REQUEST['delete'];
-    $delimg = $connection->query("DELETE FROM home_slider WHERE id='$img_id'");
-    $image_fetch = $connection->query("SELECT * from home_slider");
-    $product_cat_fetch = $connection->query("SELECT * from product_cat");
-    header('location: home_slider.php');
-} else {
-    $image_fetch = $connection->query("SELECT * from home_slider");
-    $product_cat_fetch = $connection->query("SELECT * from product_cat");
+    $service_id = $_REQUEST['edit'];
+    $type = $_POST['type'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+        mysqli_query($connection, "UPDATE services
+        SET type = '$type', title = '$title', description = '$description'
+        WHERE id = $service_id");
+    header('location: service.php');
+    $service_fetch = $connection->query("SELECT * from services");
+} else if (isset($_GET['edit'])) {
+    // echo("EDITt Side");
+    $service_id = $_REQUEST['edit'];
+    $editSerevice = $connection->query("SELECT * from services WHERE id=$service_id");
 }
 
 
@@ -38,12 +24,11 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.ravijaiswal.com/Jais_admin/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 04 Aug 2017 15:24:40 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | VP Automobiles</title>
+    <title>Dashboard | TPRM</title>
     <link href=".././assets/img/favicon.png" rel="icon">
 
 
@@ -57,6 +42,7 @@ if (isset($_POST['submit'])) {
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>
@@ -84,7 +70,7 @@ if (isset($_POST['submit'])) {
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Home Image Slider</h1>
+                    <h1 class="page-header text-overflow">About Us</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -106,21 +92,26 @@ if (isset($_POST['submit'])) {
                                 All pannels should have an unique ID or the panel collapse status will not be stored!
                     -->
                     <div id="panel-1" class="panel panel-default">
-                        <div class="panel-heading">
-                            <span class="title elipsis">
-                                <strong style="text-transform: uppercase;font-weight: bold;">Home image slider</strong>
-                                <!-- panel title -->
-                            </span>
-                            <!-- /right options -->
-
+                        
+                        <!-- panel content -->
+                        <div class="panel-body">
+                                <form action="" enctype="multipart/form-data" method="POST">
+                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
+                                    <?php
+                                    $editRow = mysqli_fetch_row($editSerevice);
+                                    echo '<label for="inputEmail4">About Us Description</label>
+                                                    <textarea class="form-control" name="description" required id="editor1"></textarea>
+                                                    </br>
+                                    <br>
+                                    
+                                    ';
+                                    ?>
+                                    <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
+                                </form>
                         </div>
                     </div>
-                    <!-- /PANEL -->
 
-
-
-
-                    <p>Please add image for your slider here.</p>
+                    <p>Please add your commitment details here.</p>
                     <!--===================================================-->
                     <!--End page content-->
 
@@ -129,34 +120,21 @@ if (isset($_POST['submit'])) {
                         <div class="panel-heading">
                             <div id="page-title">
 
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD IMAGE</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD Commitment</button>
                                 <div class="modal fade" id="myModal" role="dialog">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h6 class="modal-title">ADD IMAGE</h6>
+                                                <h6 class="modal-title">ADD service</h6>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             </div>
                                             <div class="modal-body">
                                                 <form action="" enctype="multipart/form-data" method="POST">
-                                                    <label for="inputEmail4">Catagory</label>
-                                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
-                                                    <?php
-                                                    echo '<select class="form-control" name="cat_id">';
-                                                    while ($row = mysqli_fetch_array($product_cat_fetch)) {
-                                                        echo '
-                                                        <option value=' . $row["cat_name"] . '>' . $row["cat_name"] . ' </option>';
-                                                    }
-                                                    echo '</select>';
-                                                    ?>
+                                                    <label for="inputEmail4">Commitment Title</label>
+                                                    <input type="text" class="form-control" name="title" placeholder="Service Title">
                                                     <br>
-                                                    <div class="container">
-                                                        <label for="exampleFormControlFile1">Slider Image:</label>
-                                                        <input type="file" name="img1" class="form-control-file" id="exampleFormControlFile1">
-                                                        Size: 2MB per image.<br>
-                                                        Only 1 image is allowed.
-                                                    </div>
-
+                                                    <label for="inputEmail4">Commitment Description</label>
+                                                    <input type="text" class="form-control" name="description" placeholder="Commitment Description">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
@@ -184,17 +162,17 @@ if (isset($_POST['submit'])) {
                                <table class="table table-bordered table-hover">
                                         <tr> 
                                             <th></th>
-                                            <th>Id</th>
-                                            <th>Navigation Link</th>
-                                            <th>Image</th>
+                                            <th></th>
+                                            <th>Commitment Title</th>
+                                            <th>Commitment Description</th>
                                         </tr>';
 
-                                while ($row = mysqli_fetch_array($image_fetch)) {
+                                while ($row = mysqli_fetch_array($service_fetch)) {
                                     echo '<tr>
-                                            <td><a href="home_slider.php?delete=' . $row['id'] . '">DELETE</a></td>
-                                            <td>' . $row["id"] . '</td>
-                                            <td>' . $row["link"] . '</td>
-                                            <td><img src="../' . $row["img_path"] . '" style="height: 50px; width: 100px;" /></td>
+                                            <td><a href="commitment_edit.php?edit=' . $row['id'] . '">EDIT</a></td>
+                                            <td><a href="commitment_edit.php?delete=' . $row['id'] . '">DELETE</a></td>
+                                            <td>' . $row["title"] . '</td>
+                                            <td>' . $row["description"] . '</td>
                                             </tr>';
                                 }
                                 echo '</table></div>';
@@ -205,6 +183,18 @@ if (isset($_POST['submit'])) {
                         </div>
                         <!-- /panel content -->
                     </div>
+                        <!-- /panel content -->
+                    </div>
+                    <!-- /PANEL -->
+
+
+
+
+                    <!--===================================================-->
+                    <!--End page content-->
+
+
+
                     <!-- /PANEL -->
 
                 </div>
@@ -225,32 +215,14 @@ if (isset($_POST['submit'])) {
             <?php
             echo $sideNav;
             ?>
+
             <!--===================================================-->
             <!--END MAIN NAVIGATION-->
 
         </div>
         <!-- FOOTER -->
         <!--===================================================-->
-        <footer id="footer">
 
-            <!-- Visible when footer positions are fixed -->
-            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-            <div class="show-fixed pull-right">
-                You have <a href="#" class="text-bold text-main"><span class="label label-danger">3</span> pending action.</a>
-            </div>
-
-
-
-
-            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
-            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-            <p class="pad-lft">&#0169; 2020 Copyright VP Automobile</p>
-
-
-
-        </footer>
         <!--===================================================-->
         <!-- END FOOTER -->
 
@@ -273,6 +245,10 @@ if (isset($_POST['submit'])) {
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script>
+  CKEDITOR.replace( 'editor1' );
+  CKEDITOR.replace( 'editor2' );
+</script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -282,6 +258,22 @@ if (isset($_POST['submit'])) {
     <script src="assets/js/jais.js"></script>
     <script src="assets/js/demo/jais-demo.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 
 </body>
 
