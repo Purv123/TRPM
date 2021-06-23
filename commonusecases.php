@@ -28,7 +28,7 @@
         <?php include_once 'navbar.php'; ?>
 
         <div class="container my-5">
-            <p class="h3 text-center mb-5">Common Use Cases</span></p>
+            <p class="h3 text-center mb-5">Common <span class="text-danger">Use Cases</span></span></p>
             <ul>
                 <li>Allow existing staff to focus on contracted third parties and us to handle third party assessments during RFI/RFP evaluations.</li>
                 <li>Allow existing staff to focus on high-risk complex strategic third parties and us to handle med-risk tactical third parties leveraged for short-term project work.</li>
@@ -40,6 +40,7 @@
         <?php include_once 'footer.php'; ?>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>

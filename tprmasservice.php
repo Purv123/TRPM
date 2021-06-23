@@ -29,7 +29,7 @@
 
         <div class="container my-5">
             <p class="h3 text-center mb-5">TPRM As <span class="text-danger">Service</span></p>
-            <p class="text-secondary">Risk Karma’s Third-Party Risk Management as-a-Service is helping organizations of all sizes, in all the verticals to manage their third party risks; through its manage services approach. Select and engage in services based on your needs and pay as you go or simply leverage our entire services offering with a straightforward annual subscription fee.</p>
+            <p>Risk Karma’s Third-Party Risk Management as-a-Service is helping organizations of all sizes, in all the verticals to manage their third party risks; through its manage services approach. Select and engage in services based on your needs and pay as you go or simply leverage our entire services offering with a straightforward annual subscription fee.</p>
             <ul>
                 <li>If you’re just getting started in setting up a TRPM program in your organization and need some guidance we can help accelerate your third-party risk management program and drive forward solutions/services that deliver outcomes.</li>
                 <li>If you already have a mature TPRM program in place and just need help augmenting existing staff – we can help.</li>
@@ -42,8 +42,8 @@
                 <li>To offer solutions/services you can select as you grow and at the time needed with flexible pricing options that meet most all budgets requirements and needs.</li>
                 <li>To offer integrated TPRM related services that drive desired program outcomes for your organization.</li>
             </ul>
-            <p class="text-secondary">Risk Karma (TPRM) as-a-Service offering can bring an average 60% reduction in manual work, 45% reduction in time to identify and mitigate risk, and 300% increase in team productivity.</p>
-            <p class="text-secondary">In short – You need third party risk assessments done and we do third party risk assessments. In fact’s it ALL we do. This is a serendipitous collision made in haven…</p>
+            <p>Risk Karma (TPRM) as-a-Service offering can bring an average 60% reduction in manual work, 45% reduction in time to identify and mitigate risk, and 300% increase in team productivity.</p>
+            <p>In short – You need third party risk assessments done and we do third party risk assessments. In fact’s it ALL we do. This is a serendipitous collision made in haven…</p>
         </div>
 
         <?php include_once 'footer.php'; ?>

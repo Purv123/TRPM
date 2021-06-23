@@ -1,3 +1,7 @@
+<?php 
+require_once 'db.php';
+$aboutus_fetch = $connection->query("SELECT * from aboutus");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -29,9 +33,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section_title_all text-center">
-                            <p class="section_subtitle mx-auto text-muted">Risk Karma is Third Party Risk Management
-                                Company. <br />Risk Karma’s (TPRM) as-a-Service is an advisory and consulting service
-                                offering.</p>
+                            <p class="section_subtitle mx-auto text-muted">
+                            <?php
+                            $editRow = mysqli_fetch_row($aboutus_fetch);
+                            echo $editRow[1];
+                            ?>
+                            </p>
                             <div class="">
                                 <i class=""></i>
                             </div>
@@ -39,42 +46,32 @@
                     </div>
                 </div>
 
-                <div class="row vertical_content_manage mt-5">
+                <div class="row">
+                        <div class="col-lg-6"> </div> 
+                        <div class="col-lg-6 mt-3"> 
+                                <h3 class="text-center">About Us</h3> 
+                        </div>   
+                    </div>
+                <div class="row vertical_content_manage">
                     <div class="col-lg-6">
                         <div class="about_header_main mt-3">
                             <!-- <div class="about_icon_box">
                             <p class="text_custom font-weight-bold">Lorem Ipsum is simply dummy text</p>
                         </div> -->
                             <!-- <h4 class="about_heading text-capitalize font-weight-bold mt-4">Lorem Ipsum is simply dummy text of the printing industry.</h4> -->
-                            <p class="text-muted mt-5">The risks third parties pose to enterprises continue to mount
-                                even as security leaders accelerate their efforts to improve security overall. As CISOs
-                                improve network, cloud, endpoint, application and user level security, third parties
-                                have become the entry points for some of the largest breaches to date. The need to make
-                                third-party assessments in all organizations a top concern has already been validated.
-                                The proven way to fulfill and act on this growing concern is to conduct third-party
-                                risk assessments either yourself or through a trusted outsourced service provider. A
-                                third-party risk assessment is an analysis of vendor risk posed by an organization’s
-                                third-party relationships along the entire supply chain, including vendors, service
-                                providers, and suppliers. Risks to be considered include security risk, business
-                                continuity risk, privacy risk, and reputational risk. Third-party risk assessments
-                                continue to remain a crucial part of every third-party risk management program (TPRM).</p>
-
-                            <p class="text-muted mt-3"> Risk Karma’s (TPRM) as-a-Service is an advisory and consulting
-                                service offering driven to help solve the many challenges organizations face when
-                                managing the ever-increasing risks from outsourcing to third parties. We are talented
-                                team of ex-CISOs and top-notch security professional that have a passion in the TPRM
-                                space.</p>
+                            <?php
+                            echo $editRow[2];
+                            ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <h3 class="text-center mb-5">About Us</h3>
                         <div class="img_about mt-5">
                             <img src="images/half-logo.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                     </div>
                 </div>
 
-                <h5 class="mt-5 mb-5 center">Our Commitment</h5>
+                <h4 class="mb-5 mt-3 center">Our Commitment</h4>
                 <div class="row mt-3">
                     <div class="col-lg-3">
                         <div class="about_content_box_all mt-3">

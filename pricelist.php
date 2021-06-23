@@ -1,14 +1,13 @@
+<?php 
+require_once 'db.php';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>Travel Group</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/pinwheel/style.css" />
     <link
       rel="stylesheet"
@@ -37,7 +36,9 @@
     <!-- Bootstrap  -->
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
 
-
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
@@ -54,7 +55,7 @@
     <!--/Custom panel -->
     <div class="box">
       <?php include_once 'navbar.php'; ?>
-      <div class="pricetbl">
+      <div class="pricetbl" style="overflow-x: auto;">
         <table class="price-table">
             <tbody>
               <tr>
@@ -96,118 +97,38 @@
                   </td>
               </tr>
               <tr>
-                <td></td>
-                <td class="price">
-                  <br />$295/Report
-                  <br />                  
-                </td>
-                <td class="price">
-                  <br />$495/Report
-                  <br />
-                </td>
-                <td class="price">
-                  <br />$795/Report
-                  <br />
-                </td>
-                <td class="price">
-                  <br />$995/Report
-                  <br />
-                </td>
-                <td class="price">
-                    <br />$10,000/Monthly
-                    <br />
-                  </td>
+              <?php
+              $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT 1,1");
+              while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
+                foreach ($row as $value) {
+                  echo '<td class="price">
+                  <br />';
+                  echo $value;
+                  echo '<br />
+                </td>';
+                }
+              }
+              ?>
               </tr>
-              <tr>
-                <td>Cyber Risk Rating Services/w Scored Report</td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Risk Validation & Prioritization Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Remediation Tracking Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  Security Risk Questionnaire Assessment Services/w Scored Report
-                </td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Document Collections & Triage Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>SOCK Assessments Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Risk Validation Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Remediation Tracking Services</td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-times"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td>Trusted TPRM Program Advisory Services</td>
-                <td>$65/Hour</td>
-                <td>$65/Hour</td>
-                <td>$65/Hour</td>
-                <td>$65/Hour</td>
-                <td>Included (10 hours/Month)</td>
-              </tr>
-              <tr>
-                <td>Cybersecurity Continuous Monitoring Service - TBD</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-              </tr>
-              <tr>
-                <td>On-site Assessment Services - TBD</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-                <td>Ad-HOC</td>
-              </tr>
+              <?php
+              for($i=2; $i<12; $i++){
+                echo '<tr>';
+                $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT $i,1");
+              while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
+                foreach ($row as $value) {
+                  echo '<td>';
+                  if($value == 'true')
+                    echo '<i class="fa fa-check">';
+                  else if($value == 'false')
+                    echo '<i class="fa fa-times">';
+                  else
+                    echo $value;
+                  echo '</td>';
+                }
+              }
+              echo '</tr>';
+              }
+              ?>
               <tr>
                 <td></td>
                 <td class="price">
@@ -231,7 +152,8 @@
       </div>
       <?php include_once 'footer.php'; ?>
     </div>
-    <script  src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>

@@ -4,19 +4,14 @@ require 'commonFunction.php';
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    $service_id = $_REQUEST['edit'];
-    $type = $_POST['type'];
-    $title = $_POST['title'];
     $description = $_POST['description'];
-        mysqli_query($connection, "UPDATE services
-        SET type = '$type', title = '$title', description = '$description'
-        WHERE id = $service_id");
-    header('location: service.php');
-    $service_fetch = $connection->query("SELECT * from services");
-} else if (isset($_GET['edit'])) {
-    // echo("EDITt Side");
-    $service_id = $_REQUEST['edit'];
-    $editSerevice = $connection->query("SELECT * from services WHERE id=$service_id");
+        mysqli_query($connection, "UPDATE aboutus
+        SET description = '$description'
+        WHERE id = '1'");
+    header('location: aboutus.php');
+    $aboutus_fetch = $connection->query("SELECT * from aboutus");
+} else{
+    $aboutus_fetch = $connection->query("SELECT * from aboutus");
 }
 
 
@@ -98,9 +93,9 @@ if (isset($_POST['submit'])) {
                                 <form action="" enctype="multipart/form-data" method="POST">
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
-                                    $editRow = mysqli_fetch_row($editSerevice);
+                                    $editRow = mysqli_fetch_row($aboutus_fetch);
                                     echo '<label for="inputEmail4">About Us Description</label>
-                                                    <textarea class="form-control" name="description" required id="editor1"></textarea>
+                                                    <textarea class="form-control" name="description" required id="editor1">' . $editRow[2] . '</textarea>
                                                     </br>
                                     <br>
                                     
@@ -125,13 +120,13 @@ if (isset($_POST['submit'])) {
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h6 class="modal-title">ADD service</h6>
+                                                <h6 class="modal-title">ADD Commitment</h6>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             </div>
                                             <div class="modal-body">
                                                 <form action="" enctype="multipart/form-data" method="POST">
                                                     <label for="inputEmail4">Commitment Title</label>
-                                                    <input type="text" class="form-control" name="title" placeholder="Service Title">
+                                                    <input type="text" class="form-control" name="title" placeholder="Commitment Title">
                                                     <br>
                                                     <label for="inputEmail4">Commitment Description</label>
                                                     <input type="text" class="form-control" name="description" placeholder="Commitment Description">

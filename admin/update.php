@@ -1,0 +1,16 @@
+<?php
+require_once '../db.php';
+if(isset($_POST['field']) && isset($_POST['value']) && isset($_POST['id'])){
+   $field = $_POST['field'];
+   $value = $_POST['value'];
+   $editid = $_POST['id'];
+ 
+    $sql = "UPDATE pricelist SET ".$field."='".$value."' WHERE id = $editid"; 
+    $update = $connection->query($sql); 
+ 
+   echo 1;
+}else{
+   echo 0;
+}
+exit;
+?>

@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <title>Travel Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
   <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
   <link rel="stylesheet" type="text/css" href="css/responsiveslides.css" />
   <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -105,6 +105,7 @@
     <?php include_once 'footer.php'; ?>
   </div>
   <script src="./js/script.js"></script>
+  <script src="./js/navbar.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/Chart.min.js"></script>
   <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>

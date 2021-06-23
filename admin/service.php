@@ -9,7 +9,10 @@ if (isset($_POST['submit'])) {
     mysqli_query($connection, "INSERT INTO  services(type,title,description) VALUES ('$type','$title','$description')");
     header('location: service.php');
     $service_fetch = $connection->query("SELECT * from services");
-} else if (isset($_GET['delete'])) {
+}else if (isset($_GET['service_type'])) {
+    $service_type = $_REQUEST['service_type'];
+    $service_fetch = $connection->query("SELECT * from services where type='$service_type'");
+}else if (isset($_GET['delete'])) {
     $service_id = $_REQUEST['delete'];
     $delprod = $connection->query("DELETE FROM services WHERE id='$service_id'");
     $service_fetch = $connection->query("SELECT * from services");
@@ -110,7 +113,7 @@ if (isset($_POST['submit'])) {
                                                     <input type="text" class="form-control" name="title" placeholder="Service Title">
                                                     <br>
                                                     <label for="inputEmail4">Description</label>
-                                                    <input type="text" class="form-control" name="description" placeholder="Service Description">
+                                                    <textarea class="form-control" name="description" required id="editor1"></textarea>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>

@@ -1,3 +1,7 @@
+<?php 
+require_once 'db.php';
+$blog_fetch = $connection->query("SELECT * from blog");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,14 +9,13 @@
   <meta charset="UTF-8" />
   <title>Travel Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <!-- <link rel="stylesheet" type="text/css" href="css/nikunjs-blank-site-dee19a.webflow.css" /> -->
   <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
   <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
   <link rel="stylesheet" type="text/css" href="css/responsiveslides.css" />
   <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="css/blog.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-  <link rel="stylesheet" type="text/css" href="css/blog.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -26,88 +29,26 @@
 
         <div class="container my-5">
             <div class="half-logo text-center">
-              <img src="images/half-logo.png" class="w-25"/>
+              <img src="images/half-logo.png" style="width: 15%" />
             </div>
             <section class="timeline">
+              <p class="h3 text-center">Blog</span></p>
               <ul>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                      <a href="#" class="displayblogtitle w-inline-block">
-                        <h6>Blog / 25-06-2021</h6> <h5>The 43 best design blogs for inspiration</h5>
-                      </a>
-                      <p>Creative design blogs come in handy while working in the field of graphic design. After all, it’s too easy to loose steam in the midst of cranking out design after design. Fear not!</p>
-                      <a href="#" class="blogbutton w-inline-block">
-                        <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
-                      </a>
-                  </div>
-                </li>
-                
+                <?php
+                while ($row = mysqli_fetch_array($blog_fetch)) {
+                echo '<li>
+                        <div>
+                          <a href="blogdetail.php?id=' . $row['id'] . '" class="displayblogtitle w-inline-block">
+                            <h6>Blog / ' . $row['date'] . '</h6> <h5>' . $row['title'] . '</h5>
+                          </a>
+                          <p>' . $row['shortdescription'] . '</p>
+                          <a href="blogdetail.php?id=' . $row['id'] . '" class="blogbutton w-inline-block">
+                            <p class="readmore">Read More</p><img src="images/ReadMore.svg" loading="lazy" alt="">
+                          </a>
+                      </div>
+                    </li>';
+                }
+                ?>
               </ul>
             </section>
         </div>

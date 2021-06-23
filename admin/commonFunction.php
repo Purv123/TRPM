@@ -79,16 +79,23 @@ $sideNav = '<!--MAIN NAVIGATION-->
                             </a>
                             <!--Submenu-->
                             <ul class="collapse">
-                            <li><a href="service.php?service_type=ourservice">Our service</a>
+                            <li><a href="service.php?service_type=ourservices">Our service</a>
                             </li> 
-                            <li><a href="service.php?cat_id=forthirdparty">For Third Party</a>
+                            <li><a href="service.php?service_type=forthirdparties">For Third Party</a>
                             </li> 
-                            <li><a href="service.php?cat_id=forenterprise">For Enterprise</a>
+                            <li><a href="service.php?service_type=forenterprise">For Enterprise</a>
                             </li> 
                             </ul>
                         </li>
 
                         <!--Menu list item-->
+                        <li>
+                            <a href="pricelist.php">
+                                <i class="fa fa-money"></i>
+                                <span class="menu-title">Price list</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
                         <li>
                             <a href="aboutus.php">
                                 <i class="fa fa-info"></i>
@@ -106,12 +113,12 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         </li>
                         
                         <li>
-                        <a href="contact.php">
-                            <i class="fa fa-phone"></i>
-                            <span class="menu-title">Contact Us</span>
-                            <i class="arrow"></i>
-                        </a>
-                    </li>
+                            <a href="contact.php">
+                                <i class="fa fa-phone"></i>
+                                <span class="menu-title">Contact Us</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
 
                     <li>
                         <a href="logout.php">

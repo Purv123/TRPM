@@ -112,7 +112,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" class="form-control" name="title" placeholder="Service Title" value=" ' . $editRow[2] . '">
                                     <br>
                                     <label for="inputEmail4">Description</label>
-                                    <input type="text" class="form-control" name="description" placeholder="Service Description" value=" ' . $editRow[3] . '">
+                                    <textarea class="form-control" name="description" required id="editor1">' . $editRow[3] . '</textarea>
                                     ';
                                     ?>
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">

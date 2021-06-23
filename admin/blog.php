@@ -4,19 +4,20 @@ require 'commonFunction.php';
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    $service_id = $_REQUEST['edit'];
-    $type = $_POST['type'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-        mysqli_query($connection, "UPDATE services
-        SET type = '$type', title = '$title', description = '$description'
-        WHERE id = $service_id");
-    header('location: service.php');
-    $service_fetch = $connection->query("SELECT * from services");
-} else if (isset($_GET['edit'])) {
-    // echo("EDITt Side");
-    $service_id = $_REQUEST['edit'];
-    $editSerevice = $connection->query("SELECT * from services WHERE id=$service_id");
+    // $service_id = $_REQUEST['edit'];
+    $date = trim($_POST['date']);
+    $title = trim($_POST['title']);
+    $shortdescription = trim($_POST['shortdescription']);
+    $description = trim($_POST['description']);
+        // mysqli_query($connection, "UPDATE services
+        // SET type = '$type', title = '$title', description = '$description'
+        // WHERE id = $service_id");
+    mysqli_query($connection, "INSERT INTO  blog(`date`,`title`,`shortdescription`,`description`)
+     VALUES ('$date','$title','$shortdescription', '$description')");
+    // header('location: index.php');
+    // $service_fetch = $connection->query("SELECT * from services");
+} else {
+    // $editSerevice = $connection->query("SELECT * from services WHERE id=$service_id");
 }
 
 
@@ -96,18 +97,16 @@ if (isset($_POST['submit'])) {
                         <!-- panel content -->
                         <div class="panel-body">
                                 <form action="" enctype="multipart/form-data" method="POST">
-                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
-                                    <?php
-                                    $editRow = mysqli_fetch_row($editSerevice);
-                                    echo '<label for="inputEmail4">Blog Title</label>
-                                                    <textarea class="form-control" name="description" required id="editor1"></textarea>
-                                                    </br>
-                                                    <label for="inputEmail4">Blog Description</label>
-                                                    <textarea class="form-control" name="description" required id="editor2"></textarea>
-                                    <br>
-                                    
-                                    ';
-                                    ?>
+                                    <input type="text" class="form-control" name="date" placeholder="Date">
+                                    <label for="inputEmail4">Blog Title</label>
+                                    <textarea class="form-control" name="title" required id="editor1"></textarea>
+                                    <br />
+                                    <label for="inputEmail4">Blog Short Description</label>
+                                    <textarea class="form-control" name="shortdescription" required id="editor2"></textarea>
+                                    <br />
+                                    <label for="inputEmail4">Blog Description</label>
+                                    <textarea class="form-control" name="description" required id="editor3"></textarea>
+                                    <br />
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
                                 </form>
                         </div>
@@ -177,6 +176,7 @@ if (isset($_POST['submit'])) {
     <script>
   CKEDITOR.replace( 'editor1' );
   CKEDITOR.replace( 'editor2' );
+  CKEDITOR.replace( 'editor3' );
 </script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>

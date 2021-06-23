@@ -177,6 +177,20 @@ a {
 	background-repeat: repeat-x;
 }
 
+.bg_pinwheel {
+	height: 6.7rem;
+	width: 100%;
+	background-image: url(../images/pinwheels/singlepin.png);
+	background-size: 29rem; 
+    background-repeat:   no-repeat;
+    background-position: top;
+    z-index: -1;
+    display: block;
+	position: absolute;
+	margin-bottom: 5rem;
+    /*transform: rotate(180deg)*/
+}
+
 /* #header.travel:after {
 	background-color: #3faa96;
 } */
@@ -4193,17 +4207,18 @@ ul {
 }
 
 .footer-social-icon span {
-	color: #fff;
+	color: #ffffff;
 	display: block;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 900;
 	font-family: 'Poppins', sans-serif;
 	margin-bottom: 20px;
 }
 
 .footer-social-icon a {
-	color: #fff;
+	color: #ffffff;
 	font-size: 16px;
+	font-weight: 900;
 	margin-right: 8px;
 }
 
@@ -5185,4 +5200,16 @@ a:hover {
 
 .li-mb-1 li {
 	margin-bottom: 1rem;
+}
+
+.heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.heading h2 span {
+    color: #F24259;
 }

@@ -28,7 +28,7 @@
         <?php include_once 'navbar.php'; ?>
 
         <div class="container my-5">
-            <p class="h3 mt-3" style="margin-left: 8rem;">Why Risk Karma</p>
+            <div class="heading text-center mt-3" style="margin-left: 3rem;""><h2><span>Why</span> Risk Karma</div></h2>
          <div class="row vertical_content_manage mt-5">
             
         <div class="col-lg-5">
