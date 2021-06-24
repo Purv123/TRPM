@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Travel Group</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
@@ -28,7 +28,7 @@
         <?php include_once 'navbar.php'; ?>
 
         <div class="container my-5">
-            <p class="h3 text-center mb-5">Common <span class="text-danger">Use Cases</span></span></p>
+            <p class="h3 text-center mb-5">Use <span class="text-danger">Cases</span></span></p>
             <ul>
                 <li>Allow existing staff to focus on contracted third parties and us to handle third party assessments during RFI/RFP evaluations.</li>
                 <li>Allow existing staff to focus on high-risk complex strategic third parties and us to handle med-risk tactical third parties leveraged for short-term project work.</li>

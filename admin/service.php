@@ -2,21 +2,37 @@
 require_once '../db.php';
 require 'commonFunction.php';
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['servicesubmit'])) {
     $type = $_POST['type'];
     $title = $_POST['title'];
     $description = $_POST['description'];
     mysqli_query($connection, "INSERT INTO  services(type,title,description) VALUES ('$type','$title','$description')");
+    $service_type = $_REQUEST['service_type'];
+    header('location: service.php?service_type='.$service_type);
+    $service_fetch = $connection->query("SELECT * from services");
+}else if (isset($_POST['descriptionupdate'])) {
+    $description = $_POST['description'];
+    mysqli_query($connection, "UPDATE servicedescription
+        SET description = '$description'
+        WHERE servicetype = 'ourservices'");
     header('location: service.php');
     $service_fetch = $connection->query("SELECT * from services");
-}else if (isset($_GET['service_type'])) {
     $service_type = $_REQUEST['service_type'];
+    header('location: service.php?service_type=ourservices');
+}
+else if (isset($_GET['service_type'])) {
+    $service_type = $_REQUEST['service_type'];
+    if($service_type == 'ourservices'){
+        $service_description_fetch = $connection->query("SELECT * from servicedescription where servicetype='$service_type'");
+        $description_row = mysqli_fetch_assoc($service_description_fetch);
+        }  
     $service_fetch = $connection->query("SELECT * from services where type='$service_type'");
 }else if (isset($_GET['delete'])) {
     $service_id = $_REQUEST['delete'];
+    $service_type = $connection->query("SELECT type from services WHERE id='$service_id'");
+    $service_type_row = mysqli_fetch_assoc($service_type);
     $delprod = $connection->query("DELETE FROM services WHERE id='$service_id'");
-    $service_fetch = $connection->query("SELECT * from services");
-    header('location: service.php');
+    header('location: service.php?service_type='.$service_type_row['type']);
 } else {
     $service_fetch = $connection->query("SELECT * from services");
 }
@@ -45,6 +61,7 @@ if (isset($_POST['submit'])) {
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>
@@ -91,7 +108,10 @@ if (isset($_POST['submit'])) {
                     <div id="panel-1" class="panel panel-default">
                         <div class="panel-heading">
                             <div id="page-title">
-
+                                <form action="" enctype="multipart/form-data" method="POST" style="margin-bottom: 3rem; <?php if($service_type != 'ourservices') echo'display: none';?>">
+                                    <textarea class="form-control" name="description" required id="editor1"><?php echo $description_row['description']; ?></textarea>
+                                    <input type="submit" name="descriptionupdate" value="Update Description" class="btn btn-primary" style="margin-top: 1rem;">
+                                </form>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD SERVICE</button>
                                 <div class="modal fade" id="myModal" role="dialog">
                                     <div class="modal-dialog">
@@ -117,7 +137,7 @@ if (isset($_POST['submit'])) {
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
-                                                <input type="submit" name="submit" value="ADD" class="btn btn-primary">
+                                                <input type="submit" name="servicesubmit" value="ADD" class="btn btn-primary">
                                             </div>
                                             </form>
                                         </div>
@@ -226,6 +246,9 @@ if (isset($_POST['submit'])) {
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script>
+    CKEDITOR.replace( 'editor1' );
+    </script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">

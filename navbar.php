@@ -48,7 +48,7 @@
                 </div>
                 <div class="logo-button-wrapper">
                     <li class="logo">
-                        <a href="travelgroup.html">
+                        <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
                             <h6>TPRM as-a-Service</h6>

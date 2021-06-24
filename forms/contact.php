@@ -5,12 +5,13 @@ require_once '../db.php';
   // $receiving_email_address = '';
   
     // $to = $receiving_email_address;
+    $date = date("d-m-Y");
     $from_name = $_POST['name'];
     $from_email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    mysqli_query($connection, "INSERT INTO contact (`name`, `email`, `subject`, `message`) VALUES ('$from_name','$from_email','$subject', '$message')");
+    mysqli_query($connection, "INSERT INTO contact (`date`, `name`, `email`, `subject`, `message`) VALUES ('$date', '$from_name','$from_email','$subject', '$message')");
 
     header('location: ../index.php');
 

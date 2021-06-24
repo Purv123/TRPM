@@ -111,8 +111,9 @@ require 'commonFunction.php';
                     <div class="table-responsive">
                     <table class="table table-bordered table-hover">
                       <thead>   
-                        <tr>   
-                          <th width="10%">Name</th>   
+                        <tr>
+                          <th>Date</th>     
+                          <th>Name</th>   
                           <th>Email</th>   
                           <th>Subject</th>   
                           <th>Message</th>   
@@ -122,8 +123,9 @@ require 'commonFunction.php';
                         <?php     
                         while ($row = mysqli_fetch_array($rs_result)) {
                         ?>     
-                        <tr>     
-                         <td><?php echo $row["name"]; ?></td>     
+                        <tr>
+                        <td><?php echo $row["date"]; ?></td>     
+                        <td><?php echo $row["name"]; ?></td>     
                         <td><?php echo $row["email"]; ?></td>   
                         <td><?php echo $row["subject"]; ?></td>   
                         <td><?php echo $row["message"]; ?></td>                                           

@@ -11,7 +11,7 @@ $blog_fetch_Row = mysqli_fetch_assoc($blog_fetch);
 
 <head>
   <meta charset="UTF-8" />
-  <title>Travel Group</title>
+  <title>TPRM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
   <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
@@ -49,6 +49,11 @@ $blog_fetch_Row = mysqli_fetch_assoc($blog_fetch);
               <?php echo $blog_fetch_Row['description']; ?>
             </div>
           </div>
+        </div>
+        <div class="center backbutton">
+        <button onclick="window.history.back()">
+        <i class="fa fa-backward"></i>  
+        Back</button>
         </div>
       </div>
       <!-- <div class="blogherowrapper relatedblogs">

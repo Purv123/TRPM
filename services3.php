@@ -7,31 +7,21 @@ $service_fetch = $connection->query("SELECT * from services where type='forthird
 
 <head>
     <meta charset="UTF-8" />
-    <title>Travel Group</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/services.css" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
     <link rel="stylesheet" type="text/css" href="css/responsiveslides.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="./pricetable/stylesheets/price-table.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Favicon and touch icons  -->
-    <link href="icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed" sizes="48x48" />
-    <link href="icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed" />
-    <!-- Bootstrap  -->
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
-
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
-
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 </head>
 
 <body class="no-blog">

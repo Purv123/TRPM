@@ -3,25 +3,20 @@ require 'commonFunction.php';
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    // $service_id = $_REQUEST['edit'];
-    $date = date("d-m-Y");
+    $blog_id = $_REQUEST['edit'];
+    $date = $_POST['date'];
     $title = trim($_POST['title']);
     $shortdescription = trim($_POST['shortdescription']);
     $description = trim($_POST['description']);
         // mysqli_query($connection, "UPDATE services
         // SET type = '$type', title = '$title', description = '$description'
         // WHERE id = $service_id");
-    mysqli_query($connection, "INSERT INTO  blog(`date`,`title`,`shortdescription`,`description`)
-     VALUES ('$date','$title','$shortdescription', '$description')");
+    mysqli_query($connection, "UPDATE blog SET `date` = '$date', title = '$title', shortdescription = '$shortdescription' , description = '$description'
+        WHERE id = $blog_id");
     header('location: blog.php');
-    $blog_fetch = $connection->query("SELECT * from blog");
-}else if (isset($_GET['delete'])) {
-    $blog_id = $_REQUEST['delete'];
-    $delprod = $connection->query("DELETE FROM blog WHERE id='$blog_id'");
-    header('location: blog.php');
-    $blog_fetch = $connection->query("SELECT * from blog");
-}else {
-    $blog_fetch = $connection->query("SELECT * from blog");
+} else if (isset($_GET['edit'])){
+    $blog_id = $_REQUEST['edit'];
+    $editBlog = $connection->query("SELECT * from blog WHERE id=$blog_id");
 }
 
 
@@ -97,71 +92,26 @@ if (isset($_POST['submit'])) {
                                 All pannels should have an unique ID or the panel collapse status will not be stored!
                     -->
                     <div id="panel-1" class="panel panel-default">
-                        <div class="panel-heading">
-                            <div id="page-title">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD BLOG</button>
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h6 class="modal-title">ADD Blog</h6>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                               <form action="" enctype="multipart/form-data" method="POST">
-                                                <label for="inputEmail4">Blog Title</label>
-                                                <textarea class="form-control" name="title" required id="editor1"></textarea>
-                                                <br />
-                                                <label for="inputEmail4">Blog Short Description</label>
-                                                <textarea class="form-control" name="shortdescription" required id="editor2"></textarea>
-                                                <br />
-                                                <label for="inputEmail4">Blog Description</label>
-                                                <textarea class="form-control" name="description" required id="editor3"></textarea>
-                                                <br />
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
-                                                <input type="submit" name="submit" value="ADD" class="btn btn-primary">
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Searchbox-->
-                                <br>
-                            </div>
-
-                            <!-- /right options -->
-                        </div>
-
+                        
+                        <!-- panel content -->
+                        <?php
+                            $editRow = mysqli_fetch_assoc($editBlog);
+                        ?>
                         <div class="panel-body">
-
-                            <div id="flot-sales" class="fullwidth ">
-
-                                <?php
-                                echo '<div class="table-responsive">
-                               <table class="table table-bordered table-hover">
-                                        <tr> 
-                                            <th></th>
-                                            <th></th>
-                                            <th>Date</th>
-                                            <th>title</th>
-                                        </tr>';
-
-                                while ($row = mysqli_fetch_array($blog_fetch)) {
-                                    echo '<tr>
-                                            <td><a href="blog_edit.php?edit=' . $row['id'] . '">EDIT</a></td>
-                                            <td><a href="blog.php?delete=' . $row['id'] . '">DELETE</a></td>
-                                            <td>' . $row["date"] . '</td>
-                                            <td>' . $row["title"] . '</td>
-                                            </tr>';
-                                }
-                                echo '</table></div>';
-                                ?>
-
-                            </div>
-
+                                <form action="" enctype="multipart/form-data" method="POST">
+                                    <label for="inputEmail4">Date</label>
+                                    <input type="text" class="form-control" name="date" placeholder="Date" value=<?php echo $editRow['date'] ;?>>
+                                    <label for="inputEmail4">Blog Title</label>
+                                    <textarea class="form-control" name="title" required id="editor1"><?php echo $editRow['title'] ;?></textarea>
+                                    <br />
+                                    <label for="inputEmail4">Blog Short Description</label>
+                                    <textarea class="form-control" name="shortdescription" required id="editor2"><?php echo $editRow['shortdescription'] ;?></textarea>
+                                    <br />
+                                    <label for="inputEmail4">Blog Description</label>
+                                    <textarea class="form-control" name="description" required id="editor3"><?php echo $editRow['description'] ;?></textarea>
+                                    <br />
+                                    <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
+                                </form>
                         </div>
                     </div>
                         <!-- /panel content -->

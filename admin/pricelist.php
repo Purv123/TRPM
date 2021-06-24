@@ -121,9 +121,9 @@ require 'commonFunction.php';
                                   <th width='20%' style="text-align: center;">Subscription Pricing</th>
                                  </tr>
                                  <?php 
-                                 include('dbcon.php');
+                                 include('db.php');
                                  $count = 1;
-                                 $query = $conn->query("SELECT * FROM pricelist");
+                                 $query = $connection->query("SELECT * FROM pricelist");
                                  while ($row = $query ->fetch_object()) {
                                   $id = $row->id;
                                   $col1 = $row->col1;

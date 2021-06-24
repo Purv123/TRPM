@@ -74,7 +74,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         <li>
                             <a href="service.php">
                                 <i class="fa fa-server"></i>
-                                <span class="menu-title">service</span>
+                                <span class="menu-title">Service</span>
                                 <i class="arrow"></i>
                             </a>
                             <!--Submenu-->

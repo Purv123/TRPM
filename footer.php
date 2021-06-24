@@ -1,15 +1,15 @@
 <footer class="footer-section">
             <div class="container">
-                <div class="footer-content pt-5">
+                <div class="footer-content pt-3">
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="footer-widget">
-                                <div class="footer-cta">
+                                <div class="footer-cta mt-3">
                                     <div class="mb-3">
                                         <div class="single-cta">
                                             <i class="fas fa-map-marker-alt"></i>
                                             <div class="cta-text">
-                                                <h4>Find us</h4>
+                                                <h6>Find us</h6>
                                                 <span>California (Headquarters)
                                                     Irvine, CA 92603</span>
                                             </div>
@@ -19,16 +19,16 @@
                                         <div class="single-cta">
                                             <i class="fas fa-phone"></i>
                                             <div class="cta-text">
-                                                <h4>Call us</h4>
+                                                <h6>Call us</h6>
                                                 <span>949-421-7294</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <div class="single-cta">
                                             <i class="far fa-envelope-open"></i>
                                             <div class="cta-text">
-                                                <h4>Mail us</h4>
+                                                <h6>Mail us</h6>
                                                 <span>support@RiskKarma.com</span>
                                             </div>
                                         </div>
@@ -36,24 +36,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="footer-widget">
-                                <div class="footer-widget-heading">
-                                    <h3>Useful Links</h3>
-                                </div>
+                                    <div class="footer-widget-heading">
+                                        <h3>Useful Links</h3>
+                                    </div>
                                 <ul>
                                     <li><a href="aboutus.php">About Us</a></li>
                                     <li><a href="whyriskkarma.php">Why Risk Karma</a></li>
-                                    <li><a href="tprmasservice.php">(TPRM) as-a-Service</a></li>
                                     <li><a href="services1.html">Our Services</a></li>
                                     <li><a href="pricelist.php">Pricing</a></li>
                                     <li><a href="commonusecases.php">Use Cases</a></li>
                                     <li><a href="blogindex.php">Blog</a></li>
                                     <li><a href="contact.php">Contact us</a></li>
+                                    <li><a href="tprmasservice.php">(TPRM) as-a-Service</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50 center mt-3">
+                        <div class="col-xl-2 col-lg-2 col-md-6 mb-50 center mt-3">
                             <div class="footer-widget">
                                 <div class="footer-menu">
                                     <div class="footer-social-icon">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="row center">
-                        <b class="p-3" style="color: white"><q><?php
+                        <b class="p-3" style="color: white; font-size: 0.8rem;"><q><?php
                         if(basename($_SERVER['PHP_SELF']) == "index.php")
                             echo 'You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It.';
                         elseif(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
@@ -86,6 +86,7 @@
                             echo'Vendor Management is a Grind… but it doesn’t have to be';
                         elseif(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
                             echo'Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
+                            
                                 45% reduction in time to identify and mitigate risk, and 300% increase in team productivity';
                         elseif(basename($_SERVER['PHP_SELF']) == "pricelist.php")
                             echo'It’s no longer a question of if, but when. </br>

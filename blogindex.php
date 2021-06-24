@@ -7,7 +7,7 @@ $blog_fetch = $connection->query("SELECT * from blog");
 
 <head>
   <meta charset="UTF-8" />
-  <title>Travel Group</title>
+  <title>TPRM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
   <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
