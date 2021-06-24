@@ -5079,9 +5079,9 @@ a:hover {
 	line-height: 28px;
 }
 
-.blogpost {
+./*blogpost {
 	padding: 20vh 20% 6vh;
-}
+}*/
 
 .blogpost.article {
 	padding-top: 50px;
@@ -5247,7 +5247,21 @@ a:hover {
   background:#fff;
   border-radius:5px;
   display:block;
-  margin:20px;
+  margin-left: 12rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.backbutton button
+	{
+	  padding:7px 10px;
+	  border:solid 2px #e31e24;
+	  background:#fff;
+	  border-radius:5px;
+	  display:block;
+	  margin-left: 2rem;
+	  margin-top: 2rem;
+	}
 }
 
 .backbutton button:hover

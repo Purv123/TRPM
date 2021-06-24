@@ -31,6 +31,11 @@ $blog_fetch_Row = mysqli_fetch_assoc($blog_fetch);
   <div class="box">
     <?php include_once 'navbar.php'; ?>
     <div class="blogpostsection">
+      <div class="backbutton">
+        <button onclick="window.history.back()">
+        <i class="fa fa-backward"></i>  
+        Back</button>
+      </div>
       <div class="container">
         <div class="blogpost" style="padding-bottom: 0">
           <div class="blogheadingwrapper">
@@ -49,11 +54,6 @@ $blog_fetch_Row = mysqli_fetch_assoc($blog_fetch);
               <?php echo $blog_fetch_Row['description']; ?>
             </div>
           </div>
-        </div>
-        <div class="center backbutton">
-        <button onclick="window.history.back()">
-        <i class="fa fa-backward"></i>  
-        Back</button>
         </div>
       </div>
       <!-- <div class="blogherowrapper relatedblogs">

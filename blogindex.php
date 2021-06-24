@@ -1,6 +1,6 @@
 <?php 
 require_once 'db.php';
-$blog_fetch = $connection->query("SELECT * from blog");
+$blog_fetch = $connection->query("SELECT * from blog ORDER BY id DESC");
 ?>
 <!DOCTYPE html>
 <html>
