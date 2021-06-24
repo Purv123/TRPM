@@ -28,7 +28,7 @@ if (isset($_SESSION["name"])) {
         }
 
         form {
-            border: 3px solid #f1f1f1;
+            /*border: 3px solid #f1f1f1;*/
         }
 
         input[type=text],
@@ -42,7 +42,7 @@ if (isset($_SESSION["name"])) {
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: gray;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -82,7 +82,6 @@ if (isset($_SESSION["name"])) {
         }
 
         .container {
-
             padding: 16px;
             margin: 0;
             position: absolute;
@@ -107,6 +106,45 @@ if (isset($_SESSION["name"])) {
             .cancelbtn {
                 width: 100%;
             }
+
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .logo {
+            text-align: center;
+            height: 150px;
+            width: auto;
+            margin-top: 3rem;
+        }
+
+        .logo a img {
+            height: 75px;
+            width: auto;
+        }
+
+        .logo h3 {
+            margin: 15px 0 0;
+            font-size: 1.75rem;
+        }
+
+        .logo h6 {
+            margin: 15px 0 0;
+            font-size: 1rem;
+        }
+
+        .logo a {
+            color: #000;
+            text-decoration: none;
+            -webkit-transition: all linear .2s;
+            -moz-transition: all linear .2s;
+            -o-transition: all linear .2s;
+            transition: all linear .2s;
+            -ms-transition: all linear .2s;
         }
     </style>
 </head>
@@ -114,6 +152,13 @@ if (isset($_SESSION["name"])) {
 <body>
     <form method="post">
         <div class="superContainer">
+            <div class="logo center">
+                <a href="index.php">
+                    <img src="../images/logo.svg" alt="" />
+                    <h3>RISK KARMA</h3>
+                    <h6>TPRM as-a-Service</h6>
+                </a>
+            </div>
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
