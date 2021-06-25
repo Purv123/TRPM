@@ -58,20 +58,20 @@
                                 <div class="footer-menu">
                                     <div class="footer-social-icon xl">
                                         <div class="row">
-                                        <a href="#"><i class="fab fa-facebook-f facebook-bg mr-3"></i></a>
-                                        <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                        <a href="#"><i class="fab fa-facebook-f mr-3"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="row mt-5">    
-                                        <a href="#"><i class="fab fa-instagram instagram-bg mr-3"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                                        <a href="#"><i class="fab fa-instagram mr-3"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
                                         </div>
                                     </div>
                                     <div class="footer-social-icon mb">
                                         <div class="row">
-                                        <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                        <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                        <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>

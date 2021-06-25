@@ -166,6 +166,27 @@ a {
 	bottom: 0;
 } */
 
+@keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-moz-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-webkit-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-ms-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-o-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+
 .bg {
 	z-index: -1;
 	height: 80vh;
@@ -175,6 +196,11 @@ a {
 	background-color: #fff;
 	background-image: url(../images/travel/bg.png);
 	background-repeat: repeat-x;
+	animation: animatedBackground 10s linear infinite;
+	-moz-animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 10s linear infinite;
+	-ms-animation: animatedBackground 10s linear infinite;
+	-o-animation: animatedBackground 10s linear infinite;
 }
 
 .bg_pinwheel {
@@ -265,6 +291,16 @@ body.blog-sidebar #header:after {
 
 .header ul li a {
 	color: #000;
+	text-decoration: none;
+	-webkit-transition: all linear .2s;
+	-moz-transition: all linear .2s;
+	-o-transition: all linear .2s;
+	transition: all linear .2s;
+	-ms-transition: all linear .2s;
+}
+
+.header ul li a.active{
+	color: #e31e24;
 	text-decoration: none;
 	-webkit-transition: all linear .2s;
 	-moz-transition: all linear .2s;
@@ -4234,13 +4270,15 @@ ul {
 	font-size: 16px;
 	font-weight: 900;
 	margin-right: 8px;
+	text-decoration: none;
 }
 
 .footer-social-icon i {
-	height: 2.5rem;
-	width: 2.5rem;
+	height: auto;
+	width: 3rem;
 	text-align: center;
 	line-height: 2.5rem;
+	border-style: solid;
 	border-radius: 8px;
 }
 
