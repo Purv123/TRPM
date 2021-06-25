@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 usefullinks">
                             <div class="footer-widget">
                                     <div class="footer-widget-heading">
                                         <h3>Useful Links</h3>
@@ -56,7 +56,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-6 mb-50 center mt-3">
                             <div class="footer-widget">
                                 <div class="footer-menu">
-                                    <div class="footer-social-icon">
+                                    <div class="footer-social-icon xl">
                                         <div class="row">
                                         <a href="#"><i class="fab fa-facebook-f facebook-bg mr-3"></i></a>
                                         <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
@@ -66,34 +66,41 @@
                                         <a href="#"><i class="fab fa-linkedin linkedin-bg"></i></a>
                                         </div>
                                     </div>
+                                    <div class="footer-social-icon mb">
+                                        <div class="row">
+                                        <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                        <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                        <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row center">
-                        <b class="p-3" style="color: white; font-size: 0.8rem;"><q><?php
+                        <b class="p-3" style="color: white; font-size: 0.8rem;"><?php
                         if(basename($_SERVER['PHP_SELF']) == "index.php")
-                            echo 'You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It.';
+                            echo '<q> You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It. </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
-                            echo'63% of Data Breaches are Linked to a Third Party';
+                            echo'<q> 63% of Data Breaches are Linked to a Third Party </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "services1.php")
-                            echo'Let Us Simplify Your Cyber Risk Assessment Process';
+                            echo'<q> Let Us Simplify Your Cyber Risk Assessment Process </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "aboutus.php")
-                            echo'Manage third-party cyber risk with speed and certainty';
+                            echo'<q> Manage third-party cyber risk with speed and certainty </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "contact.php")
-                            echo'Leave your vendor risk assessment to us, so you can focus on what matters';
+                            echo'<q> Leave your vendor risk assessment to us, so you can focus on what matters </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "service2.php")
-                            echo'Vendor Management is a Grind… but it doesn’t have to be';
+                            echo'<q> Vendor Management is a Grind… but it doesn’t have to be </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
-                            echo'Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
-                            
-                                45% reduction in time to identify and mitigate risk, and 300% increase in team productivity';
+                            echo'<q> Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
+                                45% reduction in time to identify and mitigate risk, and 300% increase in team productivity </q>';
                         elseif(basename($_SERVER['PHP_SELF']) == "pricelist.php")
-                            echo'It’s no longer a question of if, but when. </br>
+                            echo'<q> It’s no longer a question of if, but when. </br>
                             At some point a vendor failure will impact your company’s ability to deliver. </br>
-                            The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you?';
+                            The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you? </q>';
                         ?>
-                        </q></b>
+                        </b>
                     </div>
                 </div>
             </div>
@@ -105,7 +112,7 @@
                                 <p>Copyright @ 2021 Risk Karma LLC, All Rights Reserved | Risk Karma TPRM is a Risk Karma LLC Service Offering</p>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 text-center py-3">
+                        <div class="col-xl-3 col-lg-3 text-center">
                         </div>
                     </div>
                 </div>

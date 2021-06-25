@@ -72,93 +72,23 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                 </div>
 
                 <h4 class="mb-5 mt-3 center">Our Commitment</h4>
-                <div class="row mt-3">
-                    <div class="col-lg-3">
+                <div class="row mt-3 justify-content-center">
+                    <?php
+                    $commitment_fetch = $connection->query("SELECT * from commitment");
+                    while ($row = mysqli_fetch_array($commitment_fetch)) {
+                    echo'<div class="col-lg-3">
                         <div class="about_content_box_all mt-3">
                             <div class="about_detail text-center">
                                 <div class="about_icon">
-                                    <i class="fas fa-thumbs-up"></i>
+                                    <i class="' . $row[1] . '"></i>
                                 </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Guide With Expertise</h5>
-                                <p class="edu_desc mt-3 mb-0 text-muted">We work with customers and vendors in a consultative/advisory and collaborative way. </p>
+                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">' . $row[2] . '</h5>
+                                <p class="edu_desc mb-0 mt-3 text-muted">' . $row[3] . '</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fab fa-angellist"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Keep Promises</h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">We are vigilant and focused on doing what we say and, where possible, exceed customer expectations. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fas fa-paper-plane"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Cultivate Progress </h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">We help customers evolve their vendor risk management maturity at the right pace. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Constantly Evolve & Mature</h5>
-                                <p class="edu_desc mt-3 mb-0 text-muted">We continuously improve what we do, and increase the value we bring to our customers. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-3 center">
-
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Help Customer Achieve Desired Outcomes</h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">We help businesses prioritize their efforts in a practical manner that’s impactful </p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Help Customer Achieve Desired Outcomes</h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">We help businesses prioritize their efforts in a practical manner that’s impactful </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="about_content_box_all mt-3">
-                            <div class="about_detail text-center">
-                                <div class="about_icon">
-                                    <i class="fas fa-unlink"></i>
-                                </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Remain Connected</h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">Our client relationships matter. We invest in our client relationship with a shared risk/shared reward model. We do the right thing to build trust. </p>
-                            </div>
-                        </div>
-                    </div>
-
+                    </div>';
+                    }
+                    ?>
                 </div>
             </div>
         </section>

@@ -92,12 +92,19 @@
     top: calc(150px - 100vh);
 }
 
-.nav-item.dropdown .dropdown-menu {
-    display: none;
-}
-
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+
+    .nav-item.dropdown:hover .dropdown-menu {
+    display: none;
 }
 
 @media screen and (max-width: 1250px) {

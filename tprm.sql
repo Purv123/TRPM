@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2021 at 08:38 PM
+-- Generation Time: Jun 25, 2021 at 08:20 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -62,6 +62,32 @@ INSERT INTO `blog` (`id`, `date`, `title`, `shortdescription`, `description`) VA
 (1, '23-06-2021', '<p>Mollitiam Industries is the Newest Cyberweapons Arms Manufacturer</p>', '<p>Wired is reporting on a company called Mollitiam Industries:</p>', '<p>Marketing materials left exposed online by a third-party claim Mollitiam&rsquo;s interception products, dubbed &ldquo;Invisible Man&rdquo; and &ldquo;Night Crawler,&rdquo; are capable of remotely accessing a target&rsquo;s files, location, and covertly turning on a device&rsquo;s camera and microphone. Its spyware is also said to be equipped with a keylogger, which means every keystroke made on an infected device &mdash; including passwords, search queries and messages sent via encrypted messaging apps &mdash; can be tracked and monitored.</p>\r\n\r\n<p>To evade detection, the malware makes use of the company&rsquo;s so-called &ldquo;invisible low stealth technology&rdquo; and its Android product is advertised as having &ldquo;low data and battery consumption&rdquo; to prevent people from suspecting their phone or tablet has been infected. Mollitiam is also currently marketing a tool that it claims enables &ldquo;mass surveillance of digital profiles and identities&rdquo; across social media and the dark web.</p>'),
 (4, '24-06-2021', '<p>Targeted Cache Control</p>', '<p>Content delivery networks (CDNs) have been around and have evolved over a long time (in internet years). They all speak HTTP and you can safely rely on them to work with just about anything else that speaks HTTP. This is the beauty of standards -- HTTP in this case. What you cannot count on is there being a standard way to configure them. In some cases, this is understandable: they</p>', '<p>Content delivery networks (CDNs) have been around and have evolved over a long time (in internet years). They all speak HTTP and you can safely rely on them to work with just about anything else that speaks HTTP. This is the beauty of standards -- HTTP in this case. What you cannot count on is there being a standard way to configure them. In some cases, this is understandable: they all have different advanced features, after all. But when it comes to the basics, such as controlling how content is cached, it just makes sense to have one common way to do it. Standards tend to mean simpler documentation and fewer oddities (read: bugs).&nbsp; The winners are the users who end up saving time and gaining agility.</p>\r\n\r\n<p><a href=\"https://datatracker.ietf.org/doc/html/draft-cdn-control-header-01\">Targeted Cache Control</a>&nbsp;is the result of CDNs working together to come up with a clear and simple tool to make it easy for origins to address the CDN layer. The result is even more general and powerful: a technique to target practically any layer in the delivery of HTTP content. The first field to be defined by the draft spec is the&nbsp;<a href=\"https://datatracker.ietf.org/doc/html/draft-cdn-control-header-01#section-3\">CDN-Cache-Control</a>. A valid first reaction might be &quot;What? Another mechanism for controlling cache?&quot; But there are good reasons this is being added to the available tools. Read on to learn more.</p>\r\n\r\n<h2>What we have today</h2>\r\n\r\n<p>The standard header for controlling cache is aptly called&nbsp;<a href=\"https://datatracker.ietf.org/doc/html/rfc7234#section-5.2\">Cache-Control</a>. It provides a method for origins to indicate caching rules downstream. The original intent was between origin and browser. For example, a Cache-Control header in a response for a company&#39;s logo.jpg might look like:</p>'),
 (5, '25-06-2021', '<p>Crypto Threats Surge by 500%, and It&#39;s All About the</p>', '<p>Previously reserved for early adopters and tech-savvy consumers, cryptocurrencies have gone mainstream -- with tech entrepreneurs and prominent financial institutions leading the charge. In the past year, rapidly increasing cryptocurrency rates, the introduction of new currencies, and the official trading of cryptocurrencies have called into question the threats posed by cryptomining abuse and cryptocurrency scams. In this blog, we&#39;ll examine how escalating currency rates and the continued adoption of cryptocurrencies</p>', '<p>Previously reserved for early adopters and tech-savvy consumers, cryptocurrencies have gone mainstream -- with&nbsp;<a href=\"https://www.cnbc.com/2021/02/08/tesla-buys-1point5-billion-in-bitcoin.html\">tech entrepreneurs</a>&nbsp;and prominent financial institutions leading the charge.</p>\r\n\r\n<p>In the past year, rapidly increasing cryptocurrency rates, the introduction of new currencies, and the official trading of cryptocurrencies have called into question the threats posed by cryptomining abuse and cryptocurrency scams.</p>\r\n\r\n<p>In this blog, we&#39;ll examine how escalating currency rates and the continued adoption of cryptocurrencies impact the threat landscape -- and what our data can tell us to expect in the future.</p>\r\n\r\n<h2>Malicious cryptomining malware traffic&nbsp;</h2>\r\n\r\n<p>In the past few years, malware variants that infect both personal computers and corporate servers have become an increasing trend. Their objective is to utilize infected device computing resources for cryptomining activities. Sampled DNS traffic data between January 2020 and March 2021 shows a correlation in the surging increase in traffic from cryptomining malware and the price increases of both Bitcoin and Ethereum cryptocurrencies.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `commitment`
+--
+
+CREATE TABLE `commitment` (
+  `id` int(11) NOT NULL,
+  `icon` varchar(100) NOT NULL,
+  `title` varchar(1000) NOT NULL,
+  `description` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `commitment`
+--
+
+INSERT INTO `commitment` (`id`, `icon`, `title`, `description`) VALUES
+(1, ' fas fa-thumbs-up', ' Guide With Expertise', ' We work with customers and vendors in a consultative/advisory and collaborative way'),
+(2, ' fab fa-angellist', '  Keep Promises', '  We are vigilant and focused on doing what we say and, where possible, exceed customer expectations.'),
+(3, ' fas fa-paper-plane', ' Cultivate Progress', ' We help customers evolve their vendor risk management maturity at the right pace.'),
+(4, ' fas fa-clock', ' Constantly Evolve & Mature', ' We continuously improve what we do, and increase the value we bring to our customers.'),
+(5, ' fas fa-handshake', ' Help Customer Achieve Desired Outcomes', ' We help businesses prioritize their efforts in a practical manner that’s impactful'),
+(6, ' fas fa-phone', ' Help Customer Achieve Desired Outcomes', ' We help businesses prioritize their efforts in a practical manner that’s impactful'),
+(7, ' fas fa-unlink', ' Remain Connected', ' Our client relationships matter. We invest in our client relationship with a shared risk/shared reward model. We do the right thing to build trust.');
 
 -- --------------------------------------------------------
 
@@ -215,6 +241,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `commitment`
+--
+ALTER TABLE `commitment`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -253,6 +285,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `commitment`
+--
+ALTER TABLE `commitment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contact`

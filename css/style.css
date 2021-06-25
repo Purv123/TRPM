@@ -4278,6 +4278,10 @@ ul {
 	background: #e31e24;
 }
 
+.footer-social-icon.mb{
+	display: none;
+}
+
 @media screen and (max-width: 768px) {
 	.footer-widget ul li {
 	display: inline-block;
@@ -4293,7 +4297,19 @@ ul {
 	margin-bottom: 40px;
 	position: relative;
 	margin-top: 1rem;
-}
+	}
+
+	.usefullinks{
+		display: none;
+	}
+
+	.footer-social-icon.xl{
+		display: none;
+	}
+
+	.footer-social-icon.mb{
+		display: block;
+	}
 }
 
 .footer-widget ul li {

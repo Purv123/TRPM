@@ -6,11 +6,24 @@
 .pricetbl {
   margin: 5rem;
 }
+@media screen and (max-width: 768px) {
+.pricetbl {
+  margin: 0;
+}
+
+.pricetbl table td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #fafafa;
+}
+
+}
 .price-table {
   width: 100%;
   border-collapse: collapse;
   border: 0 none;
 }
+
 .price-table tr:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -60,12 +73,14 @@
   font-weight: 600;
   font-family: "Montserrat";
   text-transform: uppercase;
+  background-color: gray !important;
 }
 .price-table tr.price-table-head {
-  background-color: gray;
+  background-color: gray !important;
   color: #ffffff;
   font-weight: bolder;
 }
+
 .price-table td.price {
   color: #e31e24;
   padding: 16px 24px;

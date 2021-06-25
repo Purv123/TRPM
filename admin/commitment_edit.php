@@ -4,19 +4,17 @@ require 'commonFunction.php';
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    $service_id = $_REQUEST['edit'];
-    $type = $_POST['type'];
+    $commitment_id = $_REQUEST['edit'];
+    $icon = $_POST['icon'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-        mysqli_query($connection, "UPDATE services
-        SET type = '$type', title = '$title', description = '$description'
-        WHERE id = $service_id");
-    header('location: service.php');
-    $service_fetch = $connection->query("SELECT * from services");
+        mysqli_query($connection, "UPDATE commitment
+        SET icon = '$icon', title = '$title', description = '$description'
+        WHERE id = $commitment_id");
+    header('location: aboutus.php');
 } else if (isset($_GET['edit'])) {
-    // echo("EDITt Side");
-    $service_id = $_REQUEST['edit'];
-    $editSerevice = $connection->query("SELECT * from services WHERE id=$service_id");
+    $commitment_id = $_REQUEST['edit'];
+    $editCommitment = $connection->query("SELECT * from commitment WHERE id=$commitment_id");
 }
 
 
@@ -95,16 +93,18 @@ if (isset($_POST['submit'])) {
                         <!-- panel content -->
                         <div class="panel-body">
                                 <form action="" enctype="multipart/form-data" method="POST">
-                                    <label for="inputEmail4">Catagory</label>
-                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
-                                    $editRow = mysqli_fetch_row($editSerevice);
+                                    $editRow = mysqli_fetch_row($editCommitment);
+                                    // print_r($editRow);
                                     echo '
+                                    <label for="inputEmail4">Icon</label>
+                                    <input type="text" class="form-control" name="icon" placeholder="Icon" value=" ' . $editRow[1] . '">
+                                    <br>
                                     <label for="inputEmail4">Commitment Title</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Service Title" value=" ' . $editRow[2] . '">
+                                    <input type="text" class="form-control" name="title" placeholder="Commitment Title" value=" ' . $editRow[2] . '">
                                     <br>
                                     <label for="inputEmail4">Commitment Description</label>
-                                    <input type="text" class="form-control" name="description" placeholder="Commitment Description" ' . $editRow[3] . '">
+                                    <input type="text" class="form-control" name="description" placeholder="Commitment Description" value=" ' . $editRow[3] . '">
                                     ';
                                     ?>
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">

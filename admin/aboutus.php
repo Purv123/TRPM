@@ -10,8 +10,20 @@ if (isset($_POST['submit'])) {
         WHERE id = '1'");
     header('location: aboutus.php');
     $aboutus_fetch = $connection->query("SELECT * from aboutus");
-} else{
+}else if (isset($_POST['submitCommitment'])) {
+    $icon = $_POST['icon'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+        mysqli_query($connection, "INSERT INTO  commitment(icon,title,description) VALUES ('$icon','$title','$description')");
+    header('location: aboutus.php');
+}else if (isset($_GET['delete'])) {
+    $commitment_id = $_REQUEST['delete'];
+    $delcom = $connection->query("DELETE FROM commitment WHERE id='$commitment_id'");
+    header('location: aboutus.php');
+}
+else{
     $aboutus_fetch = $connection->query("SELECT * from aboutus");
+    $commitment_fetch = $connection->query("SELECT * from commitment");
 }
 
 
@@ -125,6 +137,8 @@ if (isset($_POST['submit'])) {
                                             </div>
                                             <div class="modal-body">
                                                 <form action="" enctype="multipart/form-data" method="POST">
+                                                    <label for="inputEmail4">Icon</label>
+                                                    <input type="text" class="form-control" name="icon" placeholder="Icon" value=" ' . $editRow[1] . '">
                                                     <label for="inputEmail4">Commitment Title</label>
                                                     <input type="text" class="form-control" name="title" placeholder="Commitment Title">
                                                     <br>
@@ -133,7 +147,7 @@ if (isset($_POST['submit'])) {
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
-                                                <input type="submit" name="submit" value="ADD" class="btn btn-primary">
+                                                <input type="submit" name="submitCommitment" value="ADD" class="btn btn-primary">
                                             </div>
                                             </form>
                                         </div>
@@ -158,14 +172,16 @@ if (isset($_POST['submit'])) {
                                         <tr> 
                                             <th></th>
                                             <th></th>
+                                            <th>Icon</th>
                                             <th>Commitment Title</th>
                                             <th>Commitment Description</th>
                                         </tr>';
 
-                                while ($row = mysqli_fetch_array($service_fetch)) {
+                                while ($row = mysqli_fetch_array($commitment_fetch)) {
                                     echo '<tr>
                                             <td><a href="commitment_edit.php?edit=' . $row['id'] . '">EDIT</a></td>
-                                            <td><a href="commitment_edit.php?delete=' . $row['id'] . '">DELETE</a></td>
+                                            <td><a href="aboutus.php?delete=' . $row['id'] . '">DELETE</a></td>
+                                            <td>' . $row["icon"] . '</td>
                                             <td>' . $row["title"] . '</td>
                                             <td>' . $row["description"] . '</td>
                                             </tr>';
