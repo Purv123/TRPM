@@ -65,7 +65,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="img_about mt-5">
+                        <div class="img_about mt-3">
                             <img src="images/half-logo.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                     </div>
@@ -121,17 +121,19 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                     </div>
                 </div>
                 <div class="row mt-3 center">
+
                     <div class="col-lg-3">
                         <div class="about_content_box_all mt-3">
                             <div class="about_detail text-center">
                                 <div class="about_icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
-                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Remain Dedicated Pre & Post Engagements</h5>
-                                <p class="edu_desc mb-0 mt-3 text-muted">We’re very passionate about our clients. When they win, we in. </p>
+                                <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Help Customer Achieve Desired Outcomes</h5>
+                                <p class="edu_desc mb-0 mt-3 text-muted">We help businesses prioritize their efforts in a practical manner that’s impactful </p>
                             </div>
                         </div>
                     </div>
+
 
                     <div class="col-lg-3">
                         <div class="about_content_box_all mt-3">

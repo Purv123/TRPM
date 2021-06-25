@@ -512,12 +512,19 @@ body.blog-sidebar #header.small_scene .header.scroll_menu {
 }
 
 .section-title h2 {
-	font-size: 32px;
-	font-weight: bold;
+	font-size: 1.75rem;
 	position: relative;
 	margin-bottom: 30px;
-	color: #2f4d5a;
-	z-index: 2;
+	text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.blogTitle {
+	font-size: 1.75rem;
+	position: relative;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+    letter-spacing: 6px;	
 }
 
 .section-title h2::after {
@@ -594,7 +601,7 @@ body.blog-sidebar #header.small_scene .header.scroll_menu {
 }
 
 .header ul li a:hover, .headline a:hover span, .headline a:hover span.numder::before {
-	color: #5ea281;
+	color: gray;
 }
 
 .more_arrow {

@@ -32,7 +32,7 @@ $blog_fetch = $connection->query("SELECT * from blog ORDER BY id DESC");
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
             <section class="timeline">
-              <p class="h3 text-center">Blog</span></p>
+              <p class="h3 text-center blogTitle">Blog</span></p>
               <ul>
                 <?php
                 while ($row = mysqli_fetch_array($blog_fetch)) {
