@@ -66,7 +66,7 @@ else{
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Common Use Cases</h1>
+                    <h1 class="page-header text-overflow">Use Cases</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -95,7 +95,7 @@ else{
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
                                     $editRow = mysqli_fetch_assoc($aboutus_fetch);
-                                    echo '<label for="inputEmail4">Common Use Cases Description</label>
+                                    echo '<label for="inputEmail4">Use Cases Description</label>
                                                     <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
                                                     </br>
                                     <br>
