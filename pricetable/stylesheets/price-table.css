@@ -99,6 +99,7 @@
   text-transform: uppercase;
   display: inline-block;
   border-radius: 64px;
+  width: 8rem;
 }
 .price-table td.price-table-popular {
   font-family: "Montserrat";

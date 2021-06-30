@@ -195,7 +195,7 @@ a {
 	position: absolute;
 	background-color: #fff;
 	background-image: url(../images/travel/bg.png);
-	background-repeat: repeat-x;
+	background-repeat: repeat;
 	animation: animatedBackground 10s linear infinite;
 	-moz-animation: animatedBackground 10s linear infinite;
 	-webkit-animation: animatedBackground 10s linear infinite;
@@ -5285,7 +5285,7 @@ a:hover {
 	align-items: center;
 }
 
-.li-mb-1 li {
+.li-mb-1 ul li {
 	margin-bottom: 1rem;
 }
 

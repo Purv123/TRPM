@@ -1,3 +1,7 @@
+<?php 
+require_once 'db.php';
+$aboutus_fetch = $connection->query("SELECT * from whyriskkarma");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -40,21 +44,12 @@
             </div>
         </div>
         <div class="col-lg-7">
-            <div class="mt-3">
+            <div class="mt-3 li-mb-1">
                         
-            <ul class="li-mb-1">
-                <li>Industry Expertise. At the center of the Risk Karma’s (TPRM) as-a-Service solution are industry thought leaders and security practitioners with deep experience in developing third-party risk programs and/or executing high quality 3<sup>rd</sup> party risk assessments for companies of all sizes and industry sectors.
-                <li>Ability to cost effectively scale third-party risk management program efforts.</li>
-                <li>Make quick, intelligent and consistent decisions on your relationships with your third parties.</li>
-                <li>Reduced overall costs with conducting third party assessments.</li>
-                <li>It lets you address potential risks with fewer resources and in less time.</li>
-                <li>Gives you an opportunity to concentrate on your core business functions.</li>
-                <li>Offers you a framework for your organization and your vendors.</li>
-                <li>Enhances the integrity, confidentiality, and obtainability of your services.</li>
-                <li>Drives financial and operational competences.</li>
-                <li>Better assurances that the reputation and quality of your services and products are not ruined.</li>
-                <li>Bottom line - Drive better desired risk-based outcomes with your third parities relationships.</li>
-            </ul>
+                <?php
+                    $editRow = mysqli_fetch_row($aboutus_fetch);
+                    echo $editRow[1];
+                ?>
             </div>
             </div>
         </div>

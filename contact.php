@@ -70,7 +70,7 @@
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" pattern="^[0-9]*[A-Za-z]+[0-9]*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" title="only number are not allowed" required />
                     <div class="validate"></div>
                   </div>
                   <div class="col-md-6 form-group">
@@ -79,7 +79,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"  pattern="^[0-9]*[A-Za-z]+[0-9]*" data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" title="only number are not allowed" required/>
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">

@@ -111,6 +111,27 @@ $sideNav = '<!--MAIN NAVIGATION-->
                                 <i class="arrow"></i>
                             </a>
                         </li>
+                        <li>
+                            <a href="whyriskkarma.php">
+                                <i class="fa fa-question"></i>
+                                <span class="menu-title">Why RiskKarma</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tprmasservice.php">
+                                <i class="fa fa fa-sliders"></i>
+                                <span class="menu-title">(TPRM) as service</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="usecases.php">
+                                <i class="fa fa-briefcase"></i>
+                                <span class="menu-title">Use cases</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
                         
                         <li>
                             <a href="contact.php">

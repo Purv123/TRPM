@@ -1,3 +1,7 @@
+<?php 
+require_once 'db.php';
+$aboutus_fetch = $connection->query("SELECT * from usecases");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -29,12 +33,10 @@
 
         <div class="container my-5">
             <p class="h3 text-center mb-5">Use <span class="text-danger">Cases</span></span></p>
-            <ul>
-                <li>Allow existing staff to focus on contracted third parties and us to handle third party assessments during RFI/RFP evaluations.</li>
-                <li>Allow existing staff to focus on high-risk complex strategic third parties and us to handle med-risk tactical third parties leveraged for short-term project work.</li>
-                <li>Augment existing staff and allow us to take care of supplier assessment overflow when and as needed like during end-of-quarter when deals need to be executed.</li>
-                <li>Better empower tools investments -  Tools (automation) alone can only help collect and gather data, human-based risk analysis drive true risk identification through validation and remediation services.</li>
-            </ul>
+            <?php
+                    $editRow = mysqli_fetch_row($aboutus_fetch);
+                    echo $editRow[1];
+            ?>
         </div>
 
         <?php include_once 'footer.php'; ?>

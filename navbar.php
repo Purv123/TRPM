@@ -44,7 +44,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
                             echo "class=active";
-                        ?> >Use case</a></li>
+                        ?> >Use cases</a></li>
                     <li><a href="blogindex.php" <?php
                         if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
                             echo "class=active";
@@ -95,7 +95,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
                             echo "class=active";
-                        ?> >Use case</a></li>
+                        ?> >Use cases</a></li>
                     <li><a href="blogindex.php" <?php
                         if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
                             echo "class=active";

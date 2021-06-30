@@ -4,27 +4,15 @@ require 'commonFunction.php';
 ?>
 <?php
 if (isset($_POST['submit'])) {
-    $tagline = $_POST['tagline'];
     $description = $_POST['description'];
-        mysqli_query($connection, "UPDATE aboutus
-        SET description = '$description', tagline = '$tagline'
+        mysqli_query($connection, "UPDATE usecases
+        SET description = '$description'
         WHERE id = '1'");
-    header('location: aboutus.php');
-    $aboutus_fetch = $connection->query("SELECT * from aboutus");
-}else if (isset($_POST['submitCommitment'])) {
-    $icon = $_POST['icon'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-        mysqli_query($connection, "INSERT INTO  commitment(icon,title,description) VALUES ('$icon','$title','$description')");
-    header('location: aboutus.php');
-}else if (isset($_GET['delete'])) {
-    $commitment_id = $_REQUEST['delete'];
-    $delcom = $connection->query("DELETE FROM commitment WHERE id='$commitment_id'");
-    header('location: aboutus.php');
+    header('location: usecases.php');
+    $aboutus_fetch = $connection->query("SELECT * from usecases");
 }
 else{
-    $aboutus_fetch = $connection->query("SELECT * from aboutus");
-    $commitment_fetch = $connection->query("SELECT * from commitment");
+    $aboutus_fetch = $connection->query("SELECT * from usecases");
 }
 
 
@@ -78,7 +66,7 @@ else{
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">About Us</h1>
+                    <h1 class="page-header text-overflow">Common Use Cases</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -106,13 +94,9 @@ else{
                                 <form action="" enctype="multipart/form-data" method="POST">
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
-                                    $editRow = mysqli_fetch_row($aboutus_fetch);
-                                    echo '
-                                    <label for="inputEmail4">About Us Tag Line</label>
-                                                    <textarea class="form-control" name="tagline" required id="editor1">' . $editRow[1] . '</textarea>
-                                                    </br>
-                                                    <label for="inputEmail4">About Us Description</label>
-                                                    <textarea class="form-control" name="description" required id="editor2">' . $editRow[2] . '</textarea>
+                                    $editRow = mysqli_fetch_assoc($aboutus_fetch);
+                                    echo '<label for="inputEmail4">Common Use Cases Description</label>
+                                                    <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
                                                     </br>
                                     <br>
                                     
@@ -123,82 +107,7 @@ else{
                         </div>
                     </div>
 
-                    <p>Please add your commitment details here.</p>
-                    <!--===================================================-->
-                    <!--End page content-->
-
-
-                    <div id="panel-1" class="panel panel-default">
-                        <div class="panel-heading">
-                            <div id="page-title">
-
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ADD Commitment</button>
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h6 class="modal-title">ADD Commitment</h6>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="" enctype="multipart/form-data" method="POST">
-                                                    <label for="inputEmail4">Icon</label>
-                                                    <input type="text" class="form-control" name="icon" placeholder="Icon" value=" ' . $editRow[1] . '">
-                                                    <label for="inputEmail4">Commitment Title</label>
-                                                    <input type="text" class="form-control" name="title" placeholder="Commitment Title">
-                                                    <br>
-                                                    <label for="inputEmail4">Commitment Description</label>
-                                                    <input type="text" class="form-control" name="description" placeholder="Commitment Description">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
-                                                <input type="submit" name="submitCommitment" value="ADD" class="btn btn-primary">
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Searchbox-->
-                                <br>
-                            </div>
-
-                            <!-- /right options -->
-                        </div>
-
-                        <!-- panel content -->
-                        <div class="panel-body">
-
-                            <div id="flot-sales" class="fullwidth ">
-
-                                <?php
-                                echo '<div class="table-responsive">
-                               <table class="table table-bordered table-hover">
-                                        <tr> 
-                                            <th></th>
-                                            <th></th>
-                                            <th>Icon</th>
-                                            <th>Commitment Title</th>
-                                            <th>Commitment Description</th>
-                                        </tr>';
-
-                                while ($row = mysqli_fetch_array($commitment_fetch)) {
-                                    echo '<tr>
-                                            <td><a href="commitment_edit.php?edit=' . $row['id'] . '">EDIT</a></td>
-                                            <td><a href="aboutus.php?delete=' . $row['id'] . '">DELETE</a></td>
-                                            <td>' . $row["icon"] . '</td>
-                                            <td>' . $row["title"] . '</td>
-                                            <td>' . $row["description"] . '</td>
-                                            </tr>';
-                                }
-                                echo '</table></div>';
-                                ?>
-
-                            </div>
-
-                        </div>
-                        <!-- /panel content -->
-                    </div>
+                   
                         <!-- /panel content -->
                     </div>
                     <!-- /PANEL -->
