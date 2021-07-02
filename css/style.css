@@ -167,24 +167,48 @@ a {
 } */
 
 @keyframes animatedBackground {
-	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
 }
+
 @-moz-keyframes animatedBackground {
-	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
 }
+
 @-webkit-keyframes animatedBackground {
-	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
 }
+
 @-ms-keyframes animatedBackground {
-	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
 }
+
 @-o-keyframes animatedBackground {
-	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
 }
 
 .bg {
@@ -196,25 +220,25 @@ a {
 	background-color: #fff;
 	background-image: url(../images/travel/bg.png);
 	background-repeat: repeat;
-	animation: animatedBackground 10s linear infinite;
-	-moz-animation: animatedBackground 10s linear infinite;
-	-webkit-animation: animatedBackground 10s linear infinite;
-	-ms-animation: animatedBackground 10s linear infinite;
-	-o-animation: animatedBackground 10s linear infinite;
+	animation: animatedBackground 10s linear infinite alternate;
+	-moz-animation: animatedBackground 10s linear infinite alternate;
+	-webkit-animation: animatedBackground 10s linear infinite alternate;
+	-ms-animation: animatedBackground 10s linear infinite alternate;
+	-o-animation: animatedBackground 10s linear infinite alternate;
 }
 
 .bg_pinwheel {
 	height: 6.7rem;
 	width: 100%;
 	background-image: url(../images/pinwheels/singlepin.png);
-	background-size: 29rem; 
-    background-repeat:   no-repeat;
-    background-position: top;
-    z-index: -1;
-    display: block;
+	background-size: 29rem;
+	background-repeat: no-repeat;
+	background-position: top;
+	z-index: -1;
+	display: block;
 	position: absolute;
 	margin-bottom: 5rem;
-    /*transform: rotate(180deg)*/
+	/*transform: rotate(180deg)*/
 }
 
 /* #header.travel:after {
@@ -299,7 +323,7 @@ body.blog-sidebar #header:after {
 	-ms-transition: all linear .2s;
 }
 
-.header ul li a.active{
+.header ul li a.active {
 	color: #e31e24;
 	text-decoration: none;
 	-webkit-transition: all linear .2s;
@@ -552,7 +576,7 @@ body.blog-sidebar #header.small_scene .header.scroll_menu {
 	position: relative;
 	margin-bottom: 30px;
 	text-transform: uppercase;
-    letter-spacing: 6px;
+	letter-spacing: 6px;
 }
 
 .blogTitle {
@@ -560,7 +584,7 @@ body.blog-sidebar #header.small_scene .header.scroll_menu {
 	position: relative;
 	margin-bottom: 30px;
 	text-transform: uppercase;
-    letter-spacing: 6px;	
+	letter-spacing: 6px;
 }
 
 .section-title h2::after {
@@ -4185,9 +4209,9 @@ ul {
 
 .footer-section {
 	background: black;
---	background-image: url(../images/travel/bg.png);
+	-- background-image: url(../images/travel/bg.png);
 	position: relative;
-  	opacity: 0.6;
+	opacity: 0.6;
 }
 
 .footer-cta {
@@ -4316,36 +4340,32 @@ ul {
 	background: #e31e24;
 }
 
-.footer-social-icon.mb{
+.footer-social-icon.mb {
 	display: none;
 }
 
 @media screen and (max-width: 768px) {
 	.footer-widget ul li {
-	display: inline-block;
-	float: left;
-	width: 50%;
-	margin-bottom: 12px;
+		display: inline-block;
+		float: left;
+		width: 50%;
+		margin-bottom: 12px;
 	}
-
 	.footer-widget-heading h3 {
-	color: #fff;
-	font-size: 20px;
-	font-weight: 600;
-	margin-bottom: 40px;
-	position: relative;
-	margin-top: 1rem;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 40px;
+		position: relative;
+		margin-top: 1rem;
 	}
-
-	.usefullinks{
+	.usefullinks {
 		display: none;
 	}
-
-	.footer-social-icon.xl{
+	.footer-social-icon.xl {
 		display: none;
 	}
-
-	.footer-social-icon.mb{
+	.footer-social-icon.mb {
 		display: block;
 	}
 }
@@ -5140,7 +5160,8 @@ a:hover {
 	line-height: 28px;
 }
 
-./*blogpost {
+.
+/*blogpost {
 	padding: 20vh 20% 6vh;
 }*/
 
@@ -5290,42 +5311,38 @@ a:hover {
 }
 
 .heading h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-
+	font-size: 30px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
 }
 
 .heading h2 span {
-    color: #F24259;
+	color: #F24259;
 }
 
-.backbutton button
-{
-  padding:7px 10px;
-  border:solid 2px #e31e24;
-  background:#fff;
-  border-radius:5px;
-  display:block;
-  margin-left: 12rem;
-  margin-top: 2rem;
+.backbutton button {
+	padding: 7px 10px;
+	border: solid 2px #e31e24;
+	background: #fff;
+	border-radius: 5px;
+	display: block;
+	margin-left: 12rem;
+	margin-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-	.backbutton button
-	{
-	  padding:7px 10px;
-	  border:solid 2px #e31e24;
-	  background:#fff;
-	  border-radius:5px;
-	  display:block;
-	  margin-left: 2rem;
-	  margin-top: 2rem;
+	.backbutton button {
+		padding: 7px 10px;
+		border: solid 2px #e31e24;
+		background: #fff;
+		border-radius: 5px;
+		display: block;
+		margin-left: 2rem;
+		margin-top: 2rem;
 	}
 }
 
-.backbutton button:hover
-{
-  box-shadow:0px 1px 7px 0px #ccc;
+.backbutton button:hover {
+	box-shadow: 0px 1px 7px 0px #ccc;
 }
