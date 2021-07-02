@@ -166,51 +166,6 @@ a {
 	bottom: 0;
 } */
 
-@keyframes animatedBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -300px 0;
-	}
-}
-
-@-moz-keyframes animatedBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -300px 0;
-	}
-}
-
-@-webkit-keyframes animatedBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -300px 0;
-	}
-}
-
-@-ms-keyframes animatedBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -300px 0;
-	}
-}
-
-@-o-keyframes animatedBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -300px 0;
-	}
-}
-
 .bg {
 	z-index: -1;
 	height: 80vh;
@@ -219,12 +174,11 @@ a {
 	position: absolute;
 	background-color: #fff;
 	background-image: url(../images/travel/bg.png);
-	background-repeat: repeat;
-	animation: animatedBackground 10s linear infinite alternate;
-	-moz-animation: animatedBackground 10s linear infinite alternate;
-	-webkit-animation: animatedBackground 10s linear infinite alternate;
-	-ms-animation: animatedBackground 10s linear infinite alternate;
-	-o-animation: animatedBackground 10s linear infinite alternate;
+	background-repeat: repeat-x;
+	-webkit-transition: background-position 1s linear;
+	-moz-transition: background-position 1s linear;
+	-o-transition: background-position 1s linear;
+	transition: background-position 1s linear;
 }
 
 .bg_pinwheel {

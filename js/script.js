@@ -1,4 +1,14 @@
 window.addEventListener("load", () => {
+
+	// moving the map background from right to left continously
+	const mapBackground = document.querySelector('.bg');
+	let counter = 0;
+	setInterval(() => {
+		mapBackground.style.backgroundPositionX = `${counter - 30}px`;
+		counter -= 30;
+	}, 1000);
+
+
 	const headings = [...document.getElementsByClassName("heading")];
 	for (let i = 0; i < headings.length / 2; i++) {
 		let timeout = setTimeout(() => {
