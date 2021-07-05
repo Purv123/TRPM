@@ -153,6 +153,37 @@ svg {
   }
 }
 
+@media screen and (max-height: 600px), screen and (max-width: 768px) {
+  svg path {
+    transform-origin: center center;
+    transform: scale(0.85);
+  }
+  #pinwheel-section .heading:nth-child(1) {
+    transform: translate(-50%, -47vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(2) {
+    transform: translate(21vmin, -40vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(3) {
+    transform: translate(25vmin, -17vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(4) {
+    transform: translate(21vmin, 3.5vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(5) {
+    transform: translate(-50%, 14vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(6) {
+    transform: translate(-50.5vmin, 3.5vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(7) {
+    transform: translate(-55vmin, -17vmin) scale(0.75);
+  }
+  #pinwheel-section .heading:nth-child(8) {
+    transform: translate(-50.5vmin, -40vmin) scale(0.75);
+  }
+}
+
 @media screen and (max-width: 550px) {
   section.pinwheel {
     display: none;
