@@ -50,9 +50,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                 </div>
 
 
-                <div class="row mt-3 justify-content-center">
-                <p class="h2 text-center mb-3">Our <span class="text-danger">Commitment</span></p>
-                </div>
+                <div style="text-align:center" class="my-3"><span style="font-size:26px"><strong>Our<span style="color:#dc3545"> Commitment</span></strong></span></div>
                 <div class="row justify-content-center">
 
                     <?php

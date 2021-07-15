@@ -56,6 +56,21 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
             </div>
         <?php include_once 'footer.php'; ?>
     </div>
+    <script type="text/javascript">
+        const removeShowMore =  () => {
+            collapsed = [...document.querySelectorAll(`p[id*='collapseExample']`)]
+            collapsed.forEach(collapse => {
+                const height = +window.getComputedStyle(collapse).getPropertyValue('height').replace('px','');
+                collapse.classList.add('show');
+                const newHeight = +window.getComputedStyle(collapse).getPropertyValue('height').replace('px','');
+                collapse.classList.remove('show');
+                if(newHeight <= height){
+                    collapse.nextElementSibling.style.visibility = "hidden";
+                }
+            });
+        }
+        removeShowMore();
+    </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
@@ -68,7 +83,7 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
     <script type="text/javascript" src="js/responsiveslides.js"></script>
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/_front.js"></script>
-    <script type="text/javascript" src="services.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
 </body>
 
 </html>

@@ -59,28 +59,21 @@
                         if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo "class=active";
                         ?> >(TPRM) as service</a></li>
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link dropdown-toggle" href="#" 
-                        <?php
-                        if(basename($_SERVER['PHP_SELF']) == "service1.php" || basename($_SERVER['PHP_SELF']) == "service2.php" || basename($_SERVER['PHP_SELF']) == "service3.php")
-                            echo "class=active";
-                        ?> >What we offer</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="services1.php">Our Services</a>
-                            <a class="dropdown-item" href="services2.php">For Enterprise</a>
-                            <a class="dropdown-item" href="services3.php">For Third Party</a>
-                        </div>
-                    </li>
                     <li><a href="pricelist.php" 
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "pricelist.php")
                             echo "class=active";
                         ?> >Pricing</a></li>
-                    <li><a href="commonusecases.php" 
+                    <li><a href="services1.php" 
                         <?php
-                        if(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
+                        if(basename($_SERVER['PHP_SELF']) == "services1.php")
                             echo "class=active";
-                        ?> >Use cases</a></li>
+                        ?> >Our </br> Services</a></li>
+                    <li class="largeName"><a href="services2.php" 
+                        <?php
+                        if(basename($_SERVER['PHP_SELF']) == "services2.php")
+                            echo "class=active";
+                        ?> >Benifits For</br>(Enterprises/Third Parties)</a></li>
                     <li><a href="blogindex.php" <?php
                         if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
                             echo "class=active";
