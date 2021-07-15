@@ -1,6 +1,7 @@
 <?php 
 require_once 'db.php';
 $service_fetch = $connection->query("SELECT * from services where type='forenterprise'");
+$service_fetch3 = $connection->query("SELECT * from services where type='forthirdparties'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,14 +31,13 @@ $service_fetch = $connection->query("SELECT * from services where type='forenter
     <!--/Custom panel -->
     <div class="box">
         <?php include_once 'navbar.php'; ?>
-        <section class="services-section mt-5">
-            <div class="bg_pinwheel"></div>
-            <div class="container section_title_all text-center" style="margin-top: 2.3rem">
-                <h3 class="font-weight-bold">For Enterprises</h3>
-                <!-- <p class="section_subtitle mx-auto text-muted">Risk Karma is Third Party Risk Management Company. <br/>Risk Karma’s (TPRM) as-a-Service is an advisory and consulting service offering.</p> -->
+            <div class="container mt-5">
+                <div class="half-logo text-center">
+                  <img src="images/half-logo.png" style="width: 15%" />
+                </div>
+                <p class="h1 text-center">For<span class="text-danger"> Enterprises</span></p>
             </div>
             <div class="services">
-                <div class="services row mt-5">
                 <?php
                 while ($row = mysqli_fetch_array($service_fetch)) {
                     echo '
@@ -48,11 +48,24 @@ $service_fetch = $connection->query("SELECT * from services where type='forenter
                     ';
                 }
                 ?>
-                </div>
             </div>
-        </section>
+            <div class="container section_title_all text-center" style="margin-bottom: 2rem;">
+                <p class="h1 text-center">Third<span class="text-danger"> Parties</span></p>
+            </div>
+            <div class="services">
+                <?php
+                while ($row = mysqli_fetch_array($service_fetch3)) {
+                    echo '
+                    <div class="service-item centerService" id="module">
+                    <h5>' . $row["title"] . '</h5>
+                    <p class="collapse" id="collapseExample' . $row['id'] . '" aria-expanded="false">' . $row["description"] . '</p> <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample' . $row['id'] . '" aria-expand="false" aria-controls="collapseExample"> </a>
+                    </div>
+                    ';
+                }
+                ?>
+            </div>
         <?php include_once 'footer.php'; ?>
-            </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>

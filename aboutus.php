@@ -28,8 +28,11 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
     <div class="box">
         <?php include_once 'navbar.php'; ?>
 
-        <section class="section_all" id="about">
-            <div class="container">
+            <div class="container my-5">
+                <div class="half-logo text-center">
+              <img src="images/half-logo.png" style="width: 15%" />
+            </div>
+            <p class="h1 text-center mb-3">About<span class="text-danger"> Us</span></p>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section_title_all text-center">
@@ -39,40 +42,19 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                             echo $editRow[1];
                             ?>
                             </p>
-                            <div class="">
-                                <i class=""></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                        <div class="col-lg-6"> </div> 
-                        <div class="col-lg-6 mt-3"> 
-                                <h3 class="text-center">About Us</h3> 
-                        </div>   
-                    </div>
-                <div class="row vertical_content_manage">
-                    <div class="col-lg-6">
-                        <div class="about_header_main mt-3">
-                            <!-- <div class="about_icon_box">
-                            <p class="text_custom font-weight-bold">Lorem Ipsum is simply dummy text</p>
-                        </div> -->
-                            <!-- <h4 class="about_heading text-capitalize font-weight-bold mt-4">Lorem Ipsum is simply dummy text of the printing industry.</h4> -->
                             <?php
                             echo $editRow[2];
                             ?>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="img_about mt-3">
-                            <img src="images/half-logo.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                    </div>
                 </div>
 
-                <h4 class="mb-5 mt-3 center">Our Commitment</h4>
+
                 <div class="row mt-3 justify-content-center">
+                <p class="h2 text-center mb-3">Our <span class="text-danger">Commitment</span></p>
+                </div>
+                <div class="row justify-content-center">
+
                     <?php
                     $commitment_fetch = $connection->query("SELECT * from commitment");
                     while ($row = mysqli_fetch_array($commitment_fetch)) {
@@ -91,7 +73,6 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
                     ?>
                 </div>
             </div>
-        </section>
 
         <?php include_once 'footer.php'; ?>
     </div>

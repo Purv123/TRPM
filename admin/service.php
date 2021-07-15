@@ -42,7 +42,7 @@ else if (isset($_GET['service_type'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.ravijaiswal.com/Jais_admin/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 04 Aug 2017 15:24:40 GMT -->
+
 
 <head>
     <meta charset="utf-8">

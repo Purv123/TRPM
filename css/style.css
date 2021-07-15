@@ -263,6 +263,30 @@ body.blog-sidebar #header:after {
 	margin: 0 50px;
 }
 
+.header ul li {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 800;
+	color: #000;
+	font-size: 12px;
+	width: 9rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 0 50px;
+}
+
+.header ul li.largeName {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 800;
+	color: #000;
+	font-size: 12px;
+	width: 9rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 50px;
+}
+
 .travel .header ul li {
 	margin: 0 10px;
 }
@@ -615,7 +639,7 @@ body.blog-sidebar #header.small_scene .header.scroll_menu {
 }
 
 .header ul li a:hover, .headline a:hover span, .headline a:hover span.numder::before {
-	color: gray;
+	color: #e31e24;
 }
 
 .more_arrow {
@@ -4162,10 +4186,9 @@ ul {
 }
 
 .footer-section {
-	background: black;
+	background: #4a4a4a;
 	-- background-image: url(../images/travel/bg.png);
 	position: relative;
-	opacity: 0.6;
 }
 
 .footer-cta {
@@ -4245,6 +4268,14 @@ ul {
 
 .footer-social-icon a {
 	color: #ffffff;
+	font-size: 16px;
+	font-weight: 900;
+	margin-right: 8px;
+	text-decoration: none;
+}
+
+.footer-social-icon a:hover {
+	color: #e31e24;
 	font-size: 16px;
 	font-weight: 900;
 	margin-right: 8px;
@@ -5066,6 +5097,11 @@ a:hover {
 	color: #171717;
 }
 
+a.displayblogtitle:hover{
+	width: 100%;
+	color: #e31e24;
+}
+
 .displayblogtext {
 	width: 100%;
 }
@@ -5084,6 +5120,10 @@ a:hover {
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: 600;
+}
+
+p.readmore:hover {
+	color: #e31e24;
 }
 
 .blogauthor {
@@ -5276,25 +5316,74 @@ a:hover {
 }
 
 .backbutton button {
-	padding: 7px 10px;
-	border: solid 2px #e31e24;
-	background: #fff;
-	border-radius: 5px;
-	display: block;
-	margin-left: 12rem;
-	margin-top: 2rem;
+  width: auto;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #fff;
+  color: black;
+  box-shadow: 0 7px 20px rgba(100, 28, 2, 0.135);
+  -webkit-transition: all 300ms ease,
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  height: fit-content;
+  margin-left: 12rem;
+  margin-top: 4rem;
+}
+
+.backbutton button:hover {
+  background-color: #e07e81;
+  transform: translateY(-0.5rem);
+}
+
+.backbutton button:active {
+  width: auto;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #fff;
+  color: black;
+  box-shadow: 0 7px 20px rgba(100, 28, 2, 0.135);
+  cursor: pointer;
+  height: fit-content;
+  margin-left: 12rem;
+  margin-top: 4rem;
+  background-color: #e07e81;
+  transform: translateY(-0.5rem);
 }
 
 @media screen and (max-width: 768px) {
 	.backbutton button {
-		padding: 7px 10px;
-		border: solid 2px #e31e24;
-		background: #fff;
-		border-radius: 5px;
-		display: block;
-		margin-left: 2rem;
-		margin-top: 2rem;
-	}
+  width: auto;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #fff;
+  color: black;
+  box-shadow: 0 7px 20px rgba(100, 28, 2, 0.135);
+  -webkit-transition: all 300ms ease,
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 300ms ease,
+    transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  height: fit-content;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.backbutton button:hover {
+  background-color: #e07e81;
+  transform: translateY(-0.5rem);
+}
 }
 
 .backbutton button:hover {

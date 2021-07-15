@@ -125,13 +125,6 @@ $sideNav = '<!--MAIN NAVIGATION-->
                                 <i class="arrow"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="usecases.php">
-                                <i class="fa fa-briefcase"></i>
-                                <span class="menu-title">Use cases</span>
-                                <i class="arrow"></i>
-                            </a>
-                        </li>
                         
                         <li>
                             <a href="contact.php">

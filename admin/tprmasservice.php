@@ -38,7 +38,7 @@ else{
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>

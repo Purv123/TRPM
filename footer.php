@@ -44,12 +44,12 @@
                                 <ul>
                                     <li><a href="aboutus.php">About Us</a></li>
                                     <li><a href="whyriskkarma.php">Why Risk Karma</a></li>
-                                    <li><a href="services1.html">Our Services</a></li>
+                                    <li><a href="services1.php">Our Services</a></li>
                                     <li><a href="pricelist.php">Pricing</a></li>
-                                    <li><a href="commonusecases.php">Use Cases</a></li>
                                     <li><a href="blogindex.php">Blog</a></li>
                                     <li><a href="contact.php">Contact us</a></li>
                                     <li><a href="tprmasservice.php">(TPRM) as-a-Service</a></li>
+                                    <li><a href="services2.php">Benifits For (Enterprises/Third Parties)</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -79,26 +79,26 @@
                         </div>
                     </div>
                     <div class="row center">
-                        <b class="p-3" style="color: white; font-size: 0.8rem;"><?php
+                        <b class="p-3" style="color: white; font-size: 1rem;"><?php
                         if(basename($_SERVER['PHP_SELF']) == "index.php")
-                            echo '<q> You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It. </q>';
+                            echo '<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[ </span> <q>  You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It. </q> <span style="color: #e31e24; font-weight:900; font-size:1.5rem;">] </span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
-                            echo'<q> 63% of Data Breaches are Linked to a Third Party </q>';
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>63% of Data Breaches are Linked to a Third Party </q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "services1.php")
-                            echo'<q> Let Us Simplify Your Cyber Risk Assessment Process </q>';
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Let Us Simplify Your Cyber Risk Assessment Process</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "aboutus.php")
-                            echo'<q> Manage third-party cyber risk with speed and certainty </q>';
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Manage third-party cyber risk with speed and certainty</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "contact.php")
-                            echo'<q> Leave your vendor risk assessment to us, so you can focus on what matters </q>';
-                        elseif(basename($_SERVER['PHP_SELF']) == "service2.php")
-                            echo'<q> Vendor Management is a Grind… but it doesn’t have to be </q>';
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Leave your vendor risk assessment to us, so you can focus on what matters</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "services2.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Vendor Management is a Grind… but it doesn’t have to be</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
-                            echo'<q> Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
-                                45% reduction in time to identify and mitigate risk, and 300% increase in team productivity </q>';
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
+                                45% reduction in time to identify and mitigate risk, and 300% increase in team productivity</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "pricelist.php")
-                            echo'<q> It’s no longer a question of if, but when. </br>
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>It’s no longer a question of if, but when. </br>
                             At some point a vendor failure will impact your company’s ability to deliver. </br>
-                            The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you? </q>';
+                            The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you?</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         ?>
                         </b>
                     </div>

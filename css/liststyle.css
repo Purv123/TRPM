@@ -1,6 +1,18 @@
-ul {
-    list-style-image: url('../images/logo.jpeg');
-    padding-left: 18px;
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container.whyriskkarma ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  font-size: 170%;
+  vertical-align: center;
+  /*margin-left: -1em;*/
 }
 
 .pinwheel_icon {

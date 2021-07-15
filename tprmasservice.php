@@ -32,8 +32,11 @@ $aboutus_fetch = $connection->query("SELECT * from tprmasservice");
     <div class="box">
         <?php include_once 'navbar.php'; ?>
 
-        <div class="container my-5">
-            <p class="h3 text-center mb-5">TPRM As <span class="text-danger">Service</span></p>
+        <div class="container whyriskkarma my-5">
+            <div class="half-logo text-center">
+              <img src="images/half-logo.png" style="width: 15%" />
+            </div>
+            <p class="h1 text-center mb-5">TPRM As <span class="text-danger">Service</span></p>
             <?php
                     $editRow = mysqli_fetch_row($aboutus_fetch);
                     echo $editRow[1];

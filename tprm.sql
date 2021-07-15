@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2021 at 08:20 PM
+-- Generation Time: Jul 15, 2021 at 11:08 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -38,7 +38,7 @@ CREATE TABLE `aboutus` (
 --
 
 INSERT INTO `aboutus` (`id`, `tagline`, `description`) VALUES
-(1, 'Risk Karma is Third Party Risk Management                                 Company. <br />Risk Karma’s (TPRM) as-a-Service is an advisory and consulting service offering.', '<p>The risks third parties pose to enterprises continue to mount even as security leaders accelerate their efforts to improve security overall. As CISOs improve network, cloud, endpoint, application and user level security, third parties have become the entry points for some of the largest breaches to date.&nbsp;The need to make third-party assessments in all organizations a top concern has already been validated. The proven way to fulfill and act on this growing concern is to conduct third-party risk assessments either yourself or through a trusted outsourced service provider. A third-party risk assessment is an analysis of&nbsp;vendor risk&nbsp;posed by an organization&rsquo;s third-party relationships along the entire supply chain, including vendors, service providers, and&nbsp;suppliers. Risks to be considered include security risk, business continuity risk, privacy risk, and reputational risk. Third-party risk assessments continue to remain a crucial part of every third-party risk management program (TPRM).</p>\r\n\r\n<p>Risk Karma&rsquo;s (TPRM) as-a-Service&nbsp;is an advisory and consulting service offering driven to help solve the many challenges organizations face when managing the ever-increasing risks from outsourcing to third parties.&nbsp;We are talented team of ex-CISOs and top-notch security professional that have a passion in the TPRM space.</p>\r\n');
+(1, '<p>Risk Karma is Third Party Risk Management Company.<br />\r\nRisk Karma&rsquo;s (TPRM) as-a-Service&nbsp;is an advisory and consulting service offering.</p>\r\n', '<p>The risks third parties pose to enterprises continue to mount even as security leaders accelerate their efforts to improve security overall. As CISOs improve network, cloud, endpoint, application and user level security, third parties have become the entry points for some of the largest breaches to date.&nbsp;The need to make third-party assessments in all organizations a top concern has already been validated. The proven way to fulfill and act on this growing concern is to conduct third-party risk assessments either yourself or through a trusted outsourced service provider. A third-party risk assessment is an analysis of&nbsp;vendor risk&nbsp;posed by an organization&rsquo;s third-party relationships along the entire supply chain, including vendors, service providers, and&nbsp;suppliers. Risks to be considered include security risk, business continuity risk, privacy risk, and reputational risk. Third-party risk assessments continue to remain a crucial part of every third-party risk management program (TPRM).</p>\r\n\r\n<p>Risk Karma&rsquo;s (TPRM) as-a-Service&nbsp;is an advisory and consulting service offering driven to help solve the many challenges organizations face when managing the ever-increasing risks from outsourcing to third parties.&nbsp;We are talented team of ex-CISOs and top-notch security professional that have a passion in the TPRM space.</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -87,7 +87,8 @@ INSERT INTO `commitment` (`id`, `icon`, `title`, `description`) VALUES
 (4, ' fas fa-clock', ' Constantly Evolve & Mature', ' We continuously improve what we do, and increase the value we bring to our customers.'),
 (5, ' fas fa-handshake', ' Help Customer Achieve Desired Outcomes', ' We help businesses prioritize their efforts in a practical manner that’s impactful'),
 (6, ' fas fa-phone', ' Help Customer Achieve Desired Outcomes', ' We help businesses prioritize their efforts in a practical manner that’s impactful'),
-(7, ' fas fa-unlink', ' Remain Connected', ' Our client relationships matter. We invest in our client relationship with a shared risk/shared reward model. We do the right thing to build trust.');
+(7, ' fas fa-unlink', ' Remain Connected', ' Our client relationships matter. We invest in our client relationship with a shared risk/shared reward model. We do the right thing to build trust.'),
+(12, 'fa fa-archive', 'Test Purpose', 'You can add any description currently i am adding for test purpose');
 
 -- --------------------------------------------------------
 
@@ -110,6 +111,24 @@ CREATE TABLE `contact` (
 
 INSERT INTO `contact` (`id`, `date`, `name`, `email`, `subject`, `message`) VALUES
 (3, '24-06-2021', 'test111', 'test@test.com', 'test', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactdescription`
+--
+
+CREATE TABLE `contactdescription` (
+  `id` int(11) NOT NULL,
+  `description` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contactdescription`
+--
+
+INSERT INTO `contactdescription` (`id`, `description`) VALUES
+(1, '<p style=\"text-align:center\"><strong>We would love to hear from you</strong><br />\r\nWhat ever questions you have about pricing, features, trails, need a demo.<br />\r\nOur team will be ready to help you.</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -183,7 +202,7 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `type`, `title`, `description`) VALUES
-(1, 'ourservices', 'TPRM Program Advisory Services', 'Gain valuable insight, visibility and guidance to help launch, operate and mature your TPRM program'),
+(1, 'ourservices', '  TPRM Program </br> Advisory Services', 'Gain valuable insight, visibility and guidance to help </br> launch, operate and mature your TPRM program'),
 (5, 'ourservices', 'Third-Party Security Questionnaire Assessment Services', 'Automate the collection of data and scoring on the security risk questionnaires you send to vendors. We leverage industry standard risk frameworks like ISO, NIST, SIG and Vendor Security Alliance as well compliance frameworks like PCI & HIPAA. Included in this service is our document collections & triage services that ensures that you have the right documents on file for review and that they are current and comprehensive.'),
 (6, 'ourservices', 'Third-Party Document Collection Service', 'his service is our document collections & triage service that ensures that you have the right documents on file for review and that they are current and comprehensive. Our team is gathering audit reports (SOC2 TYPEII), Industry Certifications (ISO 27001), Information security policies, business continuity plans, Certificates of insurance (COIs) and results from security testing results just to name a few.'),
 (7, 'ourservices', 'Third-Party SOC Assessments', 'Systems and Organization Controls (SOC) audit report review. SOC reports have become the go-to evidence request for organizations when performing third-party due diligence and ongoing monitoring of their third party’s technical controls. Collecting, analyzing and understanding these SOC reports is crucial to ensure the vendor is a safe partner. Risk Karma has a highly trained and qualiﬁed staﬀ of security professionals who assess the vendor’s SOC reports and provide a comprehensive assessment regarding the vendor’s internal controls.'),
@@ -201,6 +220,42 @@ INSERT INTO `services` (`id`, `type`, `title`, `description`) VALUES
 (19, 'forthirdparties', 'Get Back to your day job', 'Get either or both: Cyber Risk Scan & Scored Report / Industry-Standard Security Risk Assessment Questionnaire & Score Report and proactively share it with prospects and customers and then just only deal with any potential deltas in terms or questions/concerns versus starting from scratch every time a prospect or customer request a third party risk assessment on your organization. Save time and effort. We call this approach - draw blood once and re-use.'),
 (20, 'forthirdparties', 'Mitigate Risk', 'Proactively managing risk on continuous bases.'),
 (21, 'forthirdparties', 'Grow Your Business', 'Drive business growth with proactive security engagement with other vendors as well as enterprises.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tprmasservice`
+--
+
+CREATE TABLE `tprmasservice` (
+  `id` int(11) NOT NULL,
+  `description` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tprmasservice`
+--
+
+INSERT INTO `tprmasservice` (`id`, `description`) VALUES
+(1, '<p>Risk Karma&rsquo;s Third-Party Risk Management as-a-Service is helping organizations of all sizes, in all the verticals to manage their third party risks; through its manage services approach. Select and engage in services based on your needs and pay as you go or simply leverage our entire services offering with a straightforward annual subscription fee.</p>\r\n\r\n<ul>\r\n	<li>If you&rsquo;re just getting started in setting up a TRPM program in your organization and need some guidance we can help accelerate your third-party risk management program and drive forward solutions/services that deliver outcomes.</li>\r\n	<li>If you already have a mature TPRM program in place and just need help augmenting existing staff &ndash; we can help.</li>\r\n	<li>If you need to assess third parties as part of a RFP/RFI process only &ndash; we can help.</li>\r\n	<li>If you need help and guidance in evaluating GRC solutions or cyber risk rating solutions &ndash; we can help.</li>\r\n	<li>If you simply just need help in certain aspects of your third-party risk assessment processes like: 1) document collection and gathering for supplier due diligence activities or 2) validating controls stated by suppliers in their questionnaire responses or 3) tracking and managing remediation activities on assessed suppliers or all of the above - we can help.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"text-align:center\"><span style=\"font-size:22px\"><strong><span style=\"color:#dc3545\">Our&nbsp;Goals</span>&nbsp;Are&nbsp;Simple</strong></span></div>\r\n\r\n<div style=\"text-align:center\">&nbsp;</div>\r\n\r\n<ul>\r\n	<li>To offer solutions/services you can select as you grow and at the time needed with flexible pricing options that meet most all budgets requirements and needs.</li>\r\n	<li>To offer integrated TPRM related services that drive desired program outcomes for your organization.</li>\r\n</ul>\r\n\r\n<p>Risk Karma (TPRM) as-a-Service offering can bring an average 60% reduction in manual work, 45% reduction in time to identify and mitigate risk, and 300% increase in team productivity.</p>\r\n\r\n<p>In short &ndash; You need third party risk assessments done and we do third party risk assessments. In fact&rsquo;s it ALL we do. This is a serendipitous collision made in haven&hellip;</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usecases`
+--
+
+CREATE TABLE `usecases` (
+  `id` int(11) NOT NULL,
+  `description` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `usecases`
+--
+
+INSERT INTO `usecases` (`id`, `description`) VALUES
+(1, '<ul>\r\n	<li>Allow existing staff to focus on contracted third parties and us to handle third party assessments during RFI/RFP evaluations.</li>\r\n	<li>Allow existing staff to focus on high-risk complex strategic third parties and us to handle med-risk tactical third parties leveraged for short-term project work.</li>\r\n	<li>Augment existing staff and allow us to take care of supplier assessment overflow when and as needed like during end-of-quarter when deals need to be executed.</li>\r\n	<li>Better empower tools investments - Tools (automation) alone can only help collect and gather data, human-based risk analysis drive true risk identification through validation and remediation services.</li>\r\n</ul>\r\n');
 
 -- --------------------------------------------------------
 
@@ -223,6 +278,24 @@ INSERT INTO `users` (`id`, `username`, `name`) VALUES
 (9, 'caite', 'Caite Ednalan'),
 (11, 'NarutoUzumaki', 'Naruto Uzumaki'),
 (12, 'SasukeUchiha', 'Sasuke Uchiha');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `whyriskkarma`
+--
+
+CREATE TABLE `whyriskkarma` (
+  `id` int(11) NOT NULL,
+  `description` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `whyriskkarma`
+--
+
+INSERT INTO `whyriskkarma` (`id`, `description`) VALUES
+(1, '<ul>\r\n	<li>Industry Expertise. At the center of the Risk Karma&rsquo;s (TPRM) as-a-Service solution are industry thought leaders and security practitioners with deep experience in developing third-party risk programs and/or executing high quality 3rd party risk assessments for companies of all sizes and industry sectors. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\r\n	<li>Ability to cost effectively scale third-party risk management program efforts.</li>\r\n	<li>Make quick, intelligent and consistent decisions on your relationships with your third parties.&nbsp; &nbsp;&nbsp;</li>\r\n	<li>Reduced overall costs with conducting third party assessments.</li>\r\n	<li>It lets you address potential risks with fewer resources and in less time.</li>\r\n	<li>Gives you an opportunity to concentrate on your core business functions.</li>\r\n	<li>Offers you a framework for your organization and your vendors.</li>\r\n	<li>Enhances the integrity, confidentiality, and obtainability of your services.</li>\r\n	<li>Drives financial and operational competences.</li>\r\n	<li>Better assurances that the reputation and quality of your services and products are not ruined.</li>\r\n	<li>Bottom line - Drive better desired risk-based outcomes with your third parities relationships.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"text-align:center\"><span style=\"font-size:26px\"><strong>Use<span style=\"color:#dc3545\"> Cases</span></strong></span></div>\r\n\r\n<div style=\"text-align:center\">&nbsp;</div>\r\n\r\n<div>\r\n<ul>\r\n	<li>Allow existing staff to focus on contracted third parties and us to handle third party assessments during RFI/RFP evaluations.</li>\r\n	<li>Allow existing staff to focus on high-risk complex strategic third parties and us to handle med-risk tactical third parties leveraged for short-term project work.</li>\r\n	<li>Augment existing staff and allow us to take care of supplier assessment overflow when and as needed like during end-of-quarter when deals need to be executed.</li>\r\n	<li>Better empower tools investments - Tools (automation) alone can only help collect and gather data, human-based risk analysis drive true risk identification through validation and remediation services.</li>\r\n</ul>\r\n</div>\r\n\r\n<div style=\"text-align:center\">&nbsp;</div>\r\n');
 
 --
 -- Indexes for dumped tables
@@ -253,6 +326,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contactdescription`
+--
+ALTER TABLE `contactdescription`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pricelist`
 --
 ALTER TABLE `pricelist`
@@ -271,9 +350,27 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tprmasservice`
+--
+ALTER TABLE `tprmasservice`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `usecases`
+--
+ALTER TABLE `usecases`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `whyriskkarma`
+--
+ALTER TABLE `whyriskkarma`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -290,7 +387,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `commitment`
 --
 ALTER TABLE `commitment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -317,10 +414,22 @@ ALTER TABLE `services`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
+-- AUTO_INCREMENT for table `usecases`
+--
+ALTER TABLE `usecases`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `whyriskkarma`
+--
+ALTER TABLE `whyriskkarma`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

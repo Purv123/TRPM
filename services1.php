@@ -30,11 +30,12 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
     <!--/Custom panel -->
     <div class="box">
         <?php include_once 'navbar.php'; ?>
-        </header>
-        <section class="mt-5 services-section">
-            <div class="bg_pinwheel"></div>
-            <div class="container section_title_all text-center" style="margin-top: 2.5rem">
-                <h3 class="font-weight-bold">Our Services</h3>
+            <div class="container mt-5">
+                <div class="half-logo text-center">
+                  <img src="images/half-logo.png" style="width: 15%" />
+                </div>
+                <p class="h1 text-center">Our<span class="text-danger"> Services</span></p>
+      
                 <p class="section_subtitle mx-auto text-muted mt-5">Businesses and regulators expect organizations to assess the security of their third parties, but how can we assess the security of so many and keep the cost under control? Third-party breaches leave an organization powerless, exposed to severe reputation damage and complicated clean-up to get back on track. Third-party relationships are vital to the success of an organization, but are the risk of doing business higher than the value? Establishing a third-party risk management program is essential to help organizations maintain visibility into their vendor ecosystem. </p>
 
                 <p class="section_subtitle mx-auto text-muted">The operational drain to keep up with hundreds to thousands of vendor relationships can be suffocating to an organization’s resources. Vendors must be inventoried, analyzed for risk, have completed security risk assessments, implemented remediation requirements and maintained year after year for upto-date information. And what about when risks change? Organizations need a partner to help plan, develop and manage their third-party risk program successfully.</p>
@@ -53,7 +54,6 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
                 }
                 ?>
             </div>
-        </section>
         <?php include_once 'footer.php'; ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

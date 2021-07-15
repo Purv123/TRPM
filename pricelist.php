@@ -55,7 +55,13 @@ require_once 'db.php';
     <!--/Custom panel -->
     <div class="box">
       <?php include_once 'navbar.php'; ?>
-      <div class="pricetbl" style="overflow-x: auto;">
+      <div class="container mt-5">
+            <div class="half-logo text-center">
+              <img src="images/half-logo.png" style="width: 15%" />
+            </div>
+            <p class="h1 text-center">Prici<span class="text-danger">ng</span></p>
+      </div>
+      <div class="pricetbl mt-3" style="overflow-x: auto;">
         <table class="price-table">
             <tbody>
               <tr>

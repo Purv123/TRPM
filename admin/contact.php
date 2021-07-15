@@ -16,10 +16,22 @@ require 'commonFunction.php';
         $query = "SELECT * FROM contact LIMIT $start_from, $per_page_record";     
         $rs_result = mysqli_query ($connection, $query);   
 ?> 
+<?php
+if (isset($_POST['submit'])) {
+    $description = $_POST['description'];
+        mysqli_query($connection, "UPDATE contactdescription
+        SET description = '$description'
+        WHERE id = '1'");
+    header('location: contact.php');
+    $contactdescription_fetch = $connection->query("SELECT * from contactdescriptions");
+}
+else{
+    $contactdescription_fetch = $connection->query("SELECT * from contactdescription");
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.ravijaiswal.com/Jais_admin/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 04 Aug 2017 15:24:40 GMT -->
+
 
 <head>
     <meta charset="utf-8">
@@ -38,6 +50,7 @@ require 'commonFunction.php';
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
     <style>
@@ -105,7 +118,21 @@ require 'commonFunction.php';
 
                 <!--Page content-->
                 <!--===================================================-->
-                
+                <div class="panel-body">
+                        <form action="" enctype="multipart/form-data" method="POST">
+                            <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
+                            <?php
+                            $editRow = mysqli_fetch_assoc($contactdescription_fetch);
+                            echo '<label for="inputEmail4">Contact us Description</label>
+                                            <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
+                                            </br>
+                            <br>
+                            
+                            ';
+                            ?>
+                            <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
+                        </form>
+                </div>
                 <div id="content" class="dashboard padding-20">
                     <div id="panel-1" class="panel panel-default">
                     <div class="table-responsive">
@@ -226,6 +253,10 @@ require 'commonFunction.php';
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script>
+  CKEDITOR.replace( 'editor1' );
+  CKEDITOR.replace( 'editor2' );
+</script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">

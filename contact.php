@@ -1,3 +1,7 @@
+<?php 
+require_once 'db.php';
+$aboutus_fetch = $connection->query("SELECT * from contactdescription");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,17 +27,17 @@
   <div class="box">
     <?php include_once 'navbar.php'; ?>
 
-    <section id="contact" class="contact section-bg">
+    <section id="contact" class="contact section-bg mt-5">
         <div class="container">
           <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-            <h2>Contact Us</h2>
-            <p>
-              <strong>We would love to hear from you</strong>
-              </br>
-              What ever questions you have about pricing, features, trails, need a demo.
-              </br>
-              Our team will be ready to help you.
-            </p>
+            <div class="half-logo text-center">
+                  <img src="images/half-logo.png" style="width: 15%" />
+                </div>
+                <p class="h1 text-center mb-3">Contact<span class="text-danger"> Us</span></p>
+                <?php
+                    $editRow = mysqli_fetch_row($aboutus_fetch);
+                    echo $editRow[1];
+                ?>
           </div>
 
           <div class="row" data-aos="fade-up" data-aos-delay="100">

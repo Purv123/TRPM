@@ -1,6 +1,7 @@
 <?php 
 require_once 'db.php';
 $aboutus_fetch = $connection->query("SELECT * from whyriskkarma");
+$usecases_fetch = $connection->query("SELECT * from usecases");
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,27 +32,16 @@ $aboutus_fetch = $connection->query("SELECT * from whyriskkarma");
     <div class="box">
         <?php include_once 'navbar.php'; ?>
 
-        <div class="container my-5">
-            <div class="heading mt-3" style="margin-left: 7rem;">
-                <h2><span>Why</span> Risk Karma</div></h2>
-         <div class="row vertical_content_manage mt-5">
-            
-        <div class="col-lg-5">
-            <div class="">
-                <div class="img_about mt-3">
-                        <img src="images/pinwheels/halfempty.svg" alt="" class="img-fluid mx-auto d-block" style="transform: rotate(180deg);">
-                </div>
+        <div class="container whyriskkarma my-5">
+            <div class="half-logo text-center">
+              <img src="images/half-logo.png" style="width: 15%" />
             </div>
-        </div>
-        <div class="col-lg-7">
-            <div class="mt-3 li-mb-1">
-                        
-                <?php
-                    $editRow = mysqli_fetch_row($aboutus_fetch);
-                    echo $editRow[1];
-                ?>
-            </div>
-            </div>
+            <p class="h1 text-center mb-3"><span class="text-danger">Why</span> Risk Karma</p>
+            <?php
+                        $editRow = mysqli_fetch_row($aboutus_fetch);
+                        echo $editRow[1];
+            ?>
+                
         </div>
             
         </div>
