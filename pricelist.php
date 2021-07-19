@@ -59,7 +59,7 @@ require_once 'db.php';
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center">Prici<span class="text-danger">ng</span></p>
+            <p class="h1 text-center">Pricing</p>
       </div>
       <div class="pricetbl mt-3" style="overflow-x: auto;">
         <table class="price-table">
@@ -70,39 +70,18 @@ require_once 'db.php';
                 <td class="price-blank">Subscription Pricing</td>
               </tr>
               <tr class="price-table-head">
-                <td></td>
-                <td class="green-width">
-                  Basic
-                  <br /><small style="font-size: 12px; font-weight: 400"
-                    >Starter plan</small
-                  >
-                </td>
-                <td class="green-width">
-                  Normal
-                  <br /><small style="font-size: 12px; font-weight: 400"
-                    >Limited Solution</small
-                  >
-                </td>
-                <td class="green-width">
-                  Advanced
-                  <br /><small style="font-size: 12px; font-weight: 400"
-                    >Advanced Solution</small
-                  >
-                </td>
-                <td class="green-width">
-                  Pro
-                  <br /><small style="font-size: 12px; font-weight: 400"
-                    >Our complete solution</small
-                  >
-                </td>
-                <td class="green-width">
-                    Cap of up to 15 Suppliers/Month
-                    <br /><small style="font-size: 12px; font-weight: 400"
-                      >120 Supplier/Year</small
-                    >
-                  </td>
+              <?php
+              $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT 0,1");
+                while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
+                foreach ($row as $value) {
+                  echo '<td class="green-width">
+                  <br />';
+                  echo $value;
+                  echo '<br />
+                  </td>';
+                }
+              }?>
               </tr>
-              <tr>
               <?php
               $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT 1,1");
               while ($row = mysqli_fetch_assoc($pricelist_fetch)) {

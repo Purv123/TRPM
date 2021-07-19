@@ -99,6 +99,8 @@
                             echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>It’s no longer a question of if, but when. </br>
                             At some point a vendor failure will impact your company’s ability to deliver. </br>
                             The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you?</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "whyriskkarma.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Third-party risk management done right - either as your outsourced partner or as a cost-effective staff augmentation answer</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         ?>
                         </b>
                     </div>

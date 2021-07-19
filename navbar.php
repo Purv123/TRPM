@@ -15,12 +15,12 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo "class=active";
-                        ?> >(TPRM) as service</a></li>
+                        ?> >(TPRM)-AS-A-SERVICE</a></li>
                     <li class="logo">
                         <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
-                            <h6>TPRM as-a-Service</h6>
+                            <p>THIRD-PARTY RISK MANAGEMENT</p>
                         </a>
                     </li>
                     <li><a href="pricelist.php" 
@@ -58,7 +58,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo "class=active";
-                        ?> >(TPRM) as service</a></li>
+                        ?> >(TPRM)-AS-A-SERVICE</a></li>
                     <li><a href="pricelist.php" 
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "pricelist.php")
@@ -89,7 +89,7 @@
                         <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
-                            <h6>TPRM as-a-Service</h6>
+                            <h6>THIRD-PARTY RISK MANAGEMENT</h6>
                         </a>
                     </li>
                     <button class="navbar-toggler" type="button">

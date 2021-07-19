@@ -24,7 +24,7 @@ if (isset($_SESSION["name"])) {
             font-family: Arial,
                 Helvetica,
                 sans-serif;
-            overflow: hidden;
+                overflow: hidden;
         }
 
         form {
@@ -84,10 +84,7 @@ if (isset($_SESSION["name"])) {
         .container {
             padding: 16px;
             margin: 0;
-            position: absolute;
-            top: 50%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+            position: relative;
 
         }
 
@@ -97,7 +94,7 @@ if (isset($_SESSION["name"])) {
         }
 
         /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
+        @media screen and (max-width: 768px) {
             span.psw {
                 display: block;
                 float: none;
@@ -106,6 +103,45 @@ if (isset($_SESSION["name"])) {
             .cancelbtn {
                 width: 100%;
             }
+
+            .container {
+            padding: 16px;
+            margin-top: 2rem;
+            position: relative;
+
+        }
+
+
+        .superContainer {
+            margin: auto;
+            width: 100%;
+            /* border: 3px solid green; */
+            padding: 10px;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: gray;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
 
         }
 
@@ -156,10 +192,11 @@ if (isset($_SESSION["name"])) {
                 <a href="index.php">
                     <img src="../images/logo.svg" alt="" />
                     <h3>RISK KARMA</h3>
-                    <h6>TPRM as-a-Service</h6>
+                    <p>THIRD-PARTY RISK MANAGEMENT</p>
                 </a>
             </div>
             <div class="container">
+                <div class="row">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
 

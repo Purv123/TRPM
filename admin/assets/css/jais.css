@@ -606,7 +606,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 }
 
 .navbar-top-links .tgl-menu-btn>a,.navbar-top-links .tgl-menu-btn>a:hover,.navbar-top-links .tgl-menu-btn>a:focus {
-    color: #fff
+    color: #000000;
 }
 
 .navbar-top-links .tgl-menu-btn>a:hover,.navbar-top-links .tgl-menu-btn a:focus {
