@@ -37,7 +37,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "services2.php")
                             echo "class=active";
-                        ?> >Benifits For</br>(Enterprises/Third Parties)</a></li>
+                        ?> >Benefits For</br>(Enterprises/Third Parties)</a></li>
                 </ul>
             </nav>
 
@@ -73,7 +73,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "services2.php")
                             echo "class=active";
-                        ?> >Benifits For</br>(Enterprises/Third Parties)</a></li>
+                        ?> >Benefits For</br>(Enterprises/Third Parties)</a></li>
                     <li><a href="blogindex.php" <?php
                         if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
                             echo "class=active";

@@ -36,7 +36,7 @@ $aboutus_fetch = $connection->query("SELECT * from tprmasservice");
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-5">TPRM As <span class="text-danger">Service</span></p>
+            <p class="h1 text-center mb-5">(TPRM)-AS-A-<span class="text-danger">SERVICE</span></p>
             <?php
                     $editRow = mysqli_fetch_row($aboutus_fetch);
                     echo $editRow[1];

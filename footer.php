@@ -49,7 +49,7 @@
                                     <li><a href="blogindex.php">Blog</a></li>
                                     <li><a href="contact.php">Contact us</a></li>
                                     <li><a href="tprmasservice.php">(TPRM) as-a-Service</a></li>
-                                    <li><a href="services2.php">Benifits For (Enterprises/Third Parties)</a></li>
+                                    <li><a href="services2.php">Benefits For (Enterprises/Third Parties)</a></li>
                                 </ul>
                             </div>
                         </div>
