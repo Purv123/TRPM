@@ -20,7 +20,7 @@
                         <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
-                            <p>THIRD-PARTY RISK MANAGEMENT</p>
+                            <p>ENTERPRISE & THIRD-PARTY RISK MANAGEMENT</p>
                         </a>
                     </li>
                     <li><a href="pricelist.php" 

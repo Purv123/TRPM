@@ -41,14 +41,14 @@
                     </svg>
                 </div>
                 <div class="headings">
-                    <span class="heading">TPRM Program </br> Advisory </br> Services</span>
-                    <span class="heading">Third-Party </br> Security Questionnaire </br> Assessment Services</span>
-                    <span class="heading">Third-Party </br> Document Collection </br> Service</span>
-                    <span class="heading">Third-Party </br> SOC Assessments </br> Services</span>
-                    <span class="heading">Third-Party </br> Risk Validation </br> Services</span>
-                    <span class="heading">Third-Party </br> Remediation Tracking </br> Services</span>
-                    <span class="heading">Third-Party </br> Cyber Risk Rating </br> Services</span>
-                    <span class="heading">Third-Party </br> On-site Assessment </br> Services</span>
+                    <span class="heading">TPRM Program </br> Advisory & Consulting </br> Services</span>
+                    <span class="heading">Security Risk Questionnaire Assessment Services/w Scored Report</span>
+                    <span class="heading">Evidence Document </br> Gathering & Collection </br> Services</span>
+                    <span class="heading">(RAAS) Ransomware-as-a-Service Early warning Ransomware Susceptibility Identification and Remediation Services</span>
+                    <span class="heading">Risk Triage & </br> Risk Validation </br> Services</span>
+                    <span class="heading">Residual Risk </br> Remediation & Tracking </br> Services</span>
+                    <span class="heading">Comprehensive continuous cyber risk rating and monitoring services</span>
+                    <span class="heading">On-site 3rd Party </br> Risk Assessment </br> Services</span>
                 </div>
             </div>
         </section>
@@ -70,7 +70,7 @@
                     <span class="heading">TPRM Program Advisory Services</span>
                     <span class="heading">Third-Party Security Questionnaire Assessment Services</span>
                     <span class="heading">Third-Party Document Collection Service</span>
-                    <span class="heading">Third-Party SOC Assessments Services</span>
+                    <span class="heading">(RAAS) Ransomware-as-a-Service - Early warning Ransomware Susceptibility Identification and Remediation Services</span>
                     <span class="heading">Third-Party Risk Validation Services</span>
                     <span class="heading">Third-Party Remediation Tracking Services</span>
                     <span class="heading">Third-Party Cyber Risk Rating Services</span>

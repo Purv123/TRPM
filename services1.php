@@ -1,6 +1,7 @@
 <?php 
 require_once 'db.php';
 $service_fetch = $connection->query("SELECT * from services where type='ourservices'");
+$service_desc = $connection->query("SELECT * from servicedescription");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,7 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
     <link rel="stylesheet" type="text/css" href="css/responsiveslides.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/liststyle.css" />
     <link rel="stylesheet" type="text/css" href="css/navbar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
@@ -34,13 +36,14 @@ $service_fetch = $connection->query("SELECT * from services where type='ourservi
                 <div class="half-logo text-center">
                   <img src="images/half-logo.png" style="width: 15%" />
                 </div>
-                <p class="h1 text-center">Our<span class="text-danger"> Services</span></p>
-      
-                <p class="section_subtitle mx-auto text-muted mt-5">Businesses and regulators expect organizations to assess the security of their third parties, but how can we assess the security of so many and keep the cost under control? Third-party breaches leave an organization powerless, exposed to severe reputation damage and complicated clean-up to get back on track. Third-party relationships are vital to the success of an organization, but are the risk of doing business higher than the value? Establishing a third-party risk management program is essential to help organizations maintain visibility into their vendor ecosystem. </p>
 
-                <p class="section_subtitle mx-auto text-muted">The operational drain to keep up with hundreds to thousands of vendor relationships can be suffocating to an organization’s resources. Vendors must be inventoried, analyzed for risk, have completed security risk assessments, implemented remediation requirements and maintained year after year for upto-date information. And what about when risks change? Organizations need a partner to help plan, develop and manage their third-party risk program successfully.</p>
-
-                <p class="section_subtitle mx-auto text-muted">Let us handle the manual labor of third party risk assessment by collaborating with our experts to reduce the workload and to mature your program while confidently achieving your true desired program outcome. Our talented team can review and validate the security controls of your vendors and as well help track and manage remediation activity with your vendors. Here is a snap shot of our services:</p>
+                <div class="container whyriskkarma my-5">
+                <?php
+                while ($row = mysqli_fetch_array($service_desc)) {
+                    echo $row["description"] ;
+                }
+                ?>
+                </div>
             </div>
             <div class="services row mt-5">
                 <?php

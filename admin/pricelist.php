@@ -1,6 +1,34 @@
 <?php 
 require_once '../db.php';
 require 'commonFunction.php';
+
+if (isset($_POST['addcolumnsubmit'])) {
+    $cat = $_POST['cat'];
+    $addafter = $_POST['addafter'];
+    $nametodisplay = $_POST['colname'];
+     $last_col = $connection->query("SELECT colname from pricelistcolumns_mapping ORDER BY colname DESC LIMIT 1");
+    $x = mysqli_fetch_assoc($last_col);
+    $lastColumnNumber = substr($x['colname'], -1);
+    $lastColumnNumber = (int)$lastColumnNumber+1;
+    $colname = 'col' . $lastColumnNumber;
+    mysqli_query($connection, "INSERT INTO  pricelistcolumns_mapping(colname,nametodisplay,cat) VALUES ('$colname','$nametodisplay','$cat')");
+
+    $columntoaddafter = $connection->query("SELECT colname from pricelistcolumns_mapping where nametodisplay='$addafter'");
+    $x = mysqli_fetch_assoc($columntoaddafter);
+    $columntoaddafter = $x['colname'];
+    mysqli_query($connection, "ALTER TABLE pricelist ADD $colname VARCHAR(255) NOT NULL DEFAULT('-') AFTER $columntoaddafter");
+    header('location: pricelist.php');
+}else if (isset(($_POST['addrowsubmit']))) {
+    $sequence = $_POST['sequence'];
+    mysqli_query($connection, "INSERT INTO  pricelist(sequence) VALUES ('$sequence')");
+    header('location: pricelist.php');
+}else if (isset($_POST['submit'])) {
+    $description = $_POST['description'];
+        mysqli_query($connection, "UPDATE pricelistdesc
+        SET description = '$description'
+        WHERE id = '1'");
+    header('location: pricelist.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +52,7 @@ require 'commonFunction.php';
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 <script type='text/javascript'>
@@ -115,56 +144,140 @@ require 'commonFunction.php';
                         <div class="panel-body">
                             <div class="row" style="padding:50px;">
                                 <table width='100%' border='1' style="text-align: center;">
-                                 <tr>
-                                  <!-- <th width='10%' style="text-align: center;">No</th> -->
-                                  <th width='80%'colspan="5" style="text-align: center;">Pricing per Supplier Assessment/Report</th>
-                                  <th width='20%' style="text-align: center;">Subscription Pricing</th>
-                                 </tr>
+                                 
                                  <?php 
                                  include('db.php');
+                                 $totalCol_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping");
+                                 $totalCol = mysqli_fetch_assoc($totalCol_Query);
+                                 $totalCol = $totalCol['COUNT(*)'];
+                                 $widthperCol = 80/$totalCol;
+
+                                 $totalcat1_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping where cat='Point-in-Time Snapshot Assessment (Duration: 60-days)'");
+                                 $totalcat1Col = mysqli_fetch_assoc($totalcat1_Query);
+                                 $totalcat1Col = $totalcat1Col['COUNT(*)'];
+                                 $widthCat1Col = $totalcat1Col * $widthperCol . '%';
+                                 
+
+
+                                 $totalcat2_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping where cat='Point-in-Time Snapshot Assessment (Duration: 60-days)'");
+                                 $totalcat2Col = mysqli_fetch_assoc($totalcat2_Query);
+                                 $totalcat2Col = $totalcat2Col['COUNT(*)'];
+                                 $widthCat2Col = $totalcat2Col * $widthperCol . '%';
+                                 
+
+                                 $fields = array();
+                                 $query = $connection->query("SHOW COLUMNS FROM pricelist");
+                                 while ($x = mysqli_fetch_assoc($query)){
+                                    $fields[] = $x['Field'];
+                                  }
+                                 $fields = array_diff($fields, array("id","sequence","datemodified"));
                                  $count = 1;
-                                 $query = $connection->query("SELECT * FROM pricelist");
-                                 while ($row = $query ->fetch_object()) {
-                                  $id = $row->id;
-                                  $col1 = $row->col1;
-                                  $col2 = $row->col2;
-                                  $col3 = $row->col3;
-                                  $col4 = $row->col4;
-                                  $col5 = $row->col5;
-                                  $col6 = $row->col6;
+                                 $query = $connection->query("SELECT * FROM `pricelist` ORDER BY sequence ASC , datemodified DESC");
                                  ?>
                                  <tr>
+                                  <th width='20%' style="text-align: center;"></th>
+                                  <th width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>
+                                  <th width="<?php echo $widthCat2Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Continuous Assessment & Monitoring (Duration: Annual)</th>
+                                 </tr>
+                                 <?php
+                                 while ($row = $query ->fetch_object()) {
+                                  $id = $row->id;
+                                 ?>
+                                 <tr>
+                                  <?php
+                                    foreach ($fields as $key) {
+                                  ?>
                                   <!-- <td><?php echo $count; ?></td> -->
                                   <td> 
-                                    <div class='edit' > <?php echo $col1; ?></div> 
-                                    <input type='text' class='txtedit' value='<?php echo $col1; ?>' id='col1_<?php echo $id; ?>' >
+                                    <div class='edit' > <?php echo $row->$key; ?></div> 
+                                    <input type='text' class='txtedit' value='<?php echo $row->$key; ?>' id='<?php echo $key.'_'.$id; ?>' >
                                   </td>
-                                  <td> 
-                                   <div class='edit' ><?php echo $col2; ?> </div> 
-                                   <input type='text' class='txtedit' value='<?php echo $col2; ?>' id='col2_<?php echo $id; ?>' >
-                                  </td>
-                                  <td> 
-                                   <div class='edit' ><?php echo $col3; ?> </div> 
-                                   <input type='text' class='txtedit' value='<?php echo $col3; ?>' id='col3_<?php echo $id; ?>' >
-                                  </td>
-                                  <td> 
-                                   <div class='edit' ><?php echo $col4; ?> </div> 
-                                   <input type='text' class='txtedit' value='<?php echo $col4; ?>' id='col4_<?php echo $id; ?>' >
-                                  </td>
-                                  <td> 
-                                   <div class='edit' ><?php echo $col5; ?> </div> 
-                                   <input type='text' class='txtedit' value='<?php echo $col5; ?>' id='col5_<?php echo $id; ?>' >
-                                  </td>
-                                  <td> 
-                                   <div class='edit' ><?php echo $col6; ?> </div> 
-                                   <input type='text' class='txtedit' value='<?php echo $col6; ?>' id='col6_<?php echo $id; ?>' >
-                                  </td>
+                                   <?php
+                                    }
+                                   ?>
                                  </tr>
                                  <?php
                                  $count ++;
                                  }
                                  ?> 
                                 </table>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-top: 3rem;">ADD COLUMN</button>
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title">ADD COLUMN</h6>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" enctype="multipart/form-data" method="POST">
+                                                    <label for="inputEmail4">Catagory</label>
+                                                    <select class="form-control" name="cat" onchange='load_new_content()' id="select">
+                                                        <option value="Point-in-Time Snapshot Assessment (Duration: 60-days)">Point-in-Time Snapshot Assessment (Duration: 60-days)</option>
+                                                        <option value="Continuous Assessment & Monitoring (Duration: Annual)">Continuous Assessment & Monitoring (Duration: Annual)</option>
+                                                    </select>
+                                                    <label for="inputEmail4">Add After</label>
+                                                    <select class="form-control" name="addafter">
+                                                        <?php 
+                                                         $s="select nametodisplay from pricelistcolumns_mapping";
+                                                         $q = $connection->query($s);
+                                                        while($rw=mysqli_fetch_array($q))
+                                                        { ?>
+                                                        <option value="<?php echo $rw['nametodisplay']; ?>"><?php echo $rw['nametodisplay']; ?>
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
+                                                    <br>
+                                                    <label for="inputEmail4">Column Name</label>
+                                                    <input type="text" class="form-control" name="colname" placeholder="Service Title">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
+                                                <input type="submit" name="addcolumnsubmit" value="ADD" class="btn btn-primary">
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1" style="margin-top: 3rem;">ADD ROW</button>
+                                <div class="modal fade" id="myModal1" role="dialog">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title">ADD ROW</h6>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" enctype="multipart/form-data" method="POST">
+                                                    <label for="inputEmail4">Sequence</label>
+                                                    <input type="text" class="form-control" name="sequence" placeholder="Sequence">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
+                                                <input type="submit" name="addrowsubmit" value="ADD" class="btn btn-primary">
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                              </br>
+                              </br>
+                                <form action="" enctype="multipart/form-data" class="mt-2" method="POST">
+                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
+                                    <?php
+                                    $fetch_data = $connection->query("SELECT * from pricelistdesc");
+                                    $editRow = mysqli_fetch_assoc($fetch_data);
+                                    echo '<label for="inputEmail4">Price List Description</label>
+                                                    <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
+                                                    </br>
+                                    <br>
+                                    
+                                    ';
+                                    ?>
+                                    <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -228,6 +341,10 @@ require 'commonFunction.php';
     </div>
     <!--JAVASCRIPT-->
     <!--=================================================-->
+    <script>
+  CKEDITOR.replace( 'editor1' );
+  CKEDITOR.replace( 'editor2' );
+</script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">

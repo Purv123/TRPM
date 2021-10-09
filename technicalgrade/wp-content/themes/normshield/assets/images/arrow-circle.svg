@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="arrow-circle" transform="translate(-213 -43)">
+    <g id="Oval" transform="translate(213 43)" fill="none" stroke="#3dcc77" stroke-miterlimit="10" stroke-width="1">
+      <circle cx="21" cy="21" r="21" stroke="none"/>
+      <circle cx="21" cy="21" r="20.5" fill="none"/>
+    </g>
+    <path id="_" data-name="”" d="M8.625,9a.729.729,0,0,0,.55-.262L17.009,1.32a.739.739,0,0,0,0-1.091.888.888,0,0,0-1.191,0L8.625,7.08,1.386.229a.83.83,0,0,0-1.145,0,.739.739,0,0,0,0,1.091L8.029,8.738A.754.754,0,0,0,8.625,9Z" transform="translate(225 60)" fill="#fff"/>
+  </g>
+</svg>

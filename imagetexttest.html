@@ -1,0 +1,109 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./imagetexttest.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="landing-page-wrap">
+	<section id="featured-products">
+		<div class="content-container">
+			
+			<div id="os2" class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/dashboardandreport.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Vendor Cyber Security Risk Assessment – Dashboard & Report</h3>
+					<p>Cyber Risk rating is calculated using the MITRE Cyber Threat Susceptibility Assessment (CTSA), Common weakness Risk Analysis Framework (CWRAF), Common Weakness Scoring System (CWSS) and Common Vulnerability Scoring System (CVVS).</p>
+					<div class="product-buttons">
+						<a href="http://bit.ly/2hHWmgN" target="_blank" id="OneStep2" class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/RiskScoreCard.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Risk Score Card</h3>
+					<p>Our System evaluates the security posture for 4 main groups namely Safeguard, Privacy, Resiliency & Reputation and 20 unique categories. This data is compiled into a simple, readable report with letter-grade scores to help identify and mitigate potential security risks. Each category has summary or top riskiest assets and technical details along with mitigation, compliance, standards & regulation details can be found at the bottom of each category and the Knowledge Base.</p>
+					<div class="product-buttons">
+						<a href="http://bit.ly/2hqwtm2" target="_blank" id="Instant-Film" class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/RSI.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Ransomware (RSI) Assessment</h3>
+					<p>Uncover your ransomware susceptibility – know the likelihood of a ransomware attack on your organization or your third parties. The ransomware susceptibility index (RSI) follows a process of inspecting, transforming, and modeling collected data from a variety of OSINT sources (internet wide scanners, hacker forums, the deep/dark web and more). Using the data and machine learning, the correlation between controls items is identified to provide approximations. The susceptibility scale ranges from 1.0 (lowest likelihood of attack) to 1.0 (highest likelihood of attack). The RSI examines 26 unique controls to calculate index approximations.</p>
+					<div class="product-buttons">
+						<a href="http://geni.us/W3bI" target="_blank" id="POP" class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/CyberSecurityRiskAssessment.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Cyber Security Risk Assessment</h3>
+					<p>Our System evaluates the security posture for 4 main groups namely Safeguard, Privacy, Resiliency & Reputation and 20 unique categories. </p>
+					<div class="product-buttons">
+						<a href="http://geni.us/tK6WBB" target="_blank" id="Snap-Touch" class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/FairRiskRating.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Fair Risk Rating</h3>
+					<p>The FAIRTM (Factor Analysis of Information Risk) cyber risk framework has emerged as the premier Value at Risk (VaR) framework for cybersecurity and operational risk. The FAIRTM Institute is a non-profit professional organization dedicated to advancing the discipline of measuring and managing information risk.</p>
+					<div class="product-buttons">
+						<a href="https://goto.target.com/c/251552/81938/2092?u=https%3A%2F%2Fwww.target.com%2Fs%3FsearchTerm%3Dpolaroid%2Bhdtvs" target="_blank" id="HDTVs" class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product-image"><img src="http://tprmtest.000webhostapp.com/images/solutions/OpensourceIntelligence.png"></div>
+				<div class="product-text">
+					<h3 class="product-title">Opensource Intelligence</h3>
+					<p>Cyber Risk Scorecard uses Open Source Intelligence services to collect, analyze and report security related events and findings. Security companies and hackers are always scanning publicly accessible networks and share their data on the internet. This commonly referred to as Open-Source Intelligence (OSINT).</p>
+					<div class="product-buttons">
+						<a href="http://amzn.to/2kgSHaA" target="_blank" id="Draw-3D-Pen"  class="gift-guide-2017 shop btn">View More</a>
+					</div>
+				</div>
+			</div>
+		
+	</section>
+</div>
+
+<script type="text/javascript">
+
+// $('.animation-element').removeClass('in-view');
+
+var $animation_elements = $('.product-row > div');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+ 
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+ 
+		
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      // $element.removeClass('in-view');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+</script>
+</body>
+</html>

@@ -125,7 +125,41 @@ $sideNav = '<!--MAIN NAVIGATION-->
                                 <i class="arrow"></i>
                             </a>
                         </li>
-                        
+                        <li>
+                            <a href="solutions.php">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">Solutions</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proofofsolutions.php">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">Proof Of Solutions</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="consulting.php">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">TPRM Advisory And Consulting</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacypolicy.php">
+                                <i class="fa fa-question"></i>
+                                <span class="menu-title">Privacy Policy</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="termsofuse.php">
+                                <i class="fa fa-question"></i>
+                                <span class="menu-title">Terms Condition</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li
                         <li>
                             <a href="contact.php">
                                 <i class="fa fa-phone"></i>

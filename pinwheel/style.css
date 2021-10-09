@@ -63,7 +63,7 @@ svg {
 
 #pinwheel-section .heading:nth-child(2) {
   transform-origin: left bottom;
-  transform: translate(21vmin, -35.5vmin);
+  transform: translate(21vmin, -39.5vmin);
 }
 
 #pinwheel-section .heading:nth-child(3) {

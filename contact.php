@@ -46,8 +46,9 @@ $aboutus_fetch = $connection->query("SELECT * from contactdescription");
                 <i class="fa fa-map"></i>
                 <h3>Our Address</h3>
                 <p>
-                    California (Headquarters)
-                    Irvine, CA 92603
+                    Risk Karma LLC 6789 Quail Hill Parkway, 
+                    Suite 533 Irvine 
+                    CA 92603.
                 </p>
               </div>
             </div>
@@ -64,7 +65,7 @@ $aboutus_fetch = $connection->query("SELECT * from contactdescription");
               <div class="info-box mb-4">
                 <i class="fa fa-phone"></i>
                 <h3>Call Us</h3>
-                <p>949-421-7294</p>
+                <p>949-736-2512</p>
               </div>
             </div>
           </div>

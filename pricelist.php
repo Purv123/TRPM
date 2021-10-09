@@ -1,5 +1,6 @@
 <?php 
 require_once 'db.php';
+$aboutus_fetch = $connection->query("SELECT * from pricelistdesc");
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +49,21 @@ require_once 'db.php';
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <style type="text/css">
+            fieldset {
+                padding: 1rem;
+  width: 100%;
+  border: 1px solid #e31e24;
+}
+legend {
+  width: auto;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+}
+        </style>
+
   </head>
   <body class="no-blog">
     <div class="body_background"></div>
@@ -63,77 +79,76 @@ require_once 'db.php';
       </div>
       <div class="pricetbl mt-3" style="overflow-x: auto;">
         <table class="price-table">
-            <tbody>
-              <tr>
-                <td class="price-blank"></td>
-                <td colspan="4" class="price-merge">Pricing per Supplier Assessment/Report</td>
-                <td class="price-blank">Subscription Pricing</td>
-              </tr>
-              <tr class="price-table-head">
-              <?php
-              $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT 0,1");
-                while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
-                foreach ($row as $value) {
-                  echo '<td class="green-width">
-                  <br />';
-                  echo $value;
-                  echo '<br />
-                  </td>';
-                }
-              }?>
-              </tr>
-              <?php
-              $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT 1,1");
-              while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
-                foreach ($row as $value) {
-                  echo '<td class="price">
-                  <br />';
-                  echo $value;
-                  echo '<br />
-                </td>';
-                }
-              }
-              ?>
-              </tr>
-              <?php
-              for($i=2; $i<12; $i++){
-                echo '<tr>';
-                $pricelist_fetch = $connection->query("SELECT col1,col2,col3,col4,col5,col6 from pricelist LIMIT $i,1");
-              while ($row = mysqli_fetch_assoc($pricelist_fetch)) {
-                foreach ($row as $value) {
-                  echo '<td>';
-                  if($value == 'true')
-                    echo '<i class="fa fa-check">';
-                  else if($value == 'false')
-                    echo '<i class="fa fa-times">';
-                  else
-                    echo $value;
-                  echo '</td>';
-                }
-              }
-              echo '</tr>';
-              }
-              ?>
-              <tr>
-                <td></td>
-                <td class="price">
-                  <a href="contact.php">Get started</a>
-                </td>
-                <td class="price">
-                  <a href="contact.php">Get started</a>
-                </td>
-                <td class="price">
-                  <a href="contact.php">Get started</a>
-                </td>
-                <td class="price">
-                    <a href="contact.php">Get started</a>
-                  </td>
-                  <td class="price">
-                    <a href="contact.php">Get started</a>
-                  </td>
-              </tr>
-            </tbody>
+            <?php 
+                                 include('db.php');
+                                 $totalCol_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping");
+                                 $totalCol = mysqli_fetch_assoc($totalCol_Query);
+                                 $totalCol = $totalCol['COUNT(*)'];
+                                 $widthperCol = 80/$totalCol;
+
+                                 $totalcat1_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping where cat='Point-in-Time Snapshot Assessment (Duration: 60-days)'");
+                                 $totalcat1Col = mysqli_fetch_assoc($totalcat1_Query);
+                                 $totalcat1Col = $totalcat1Col['COUNT(*)'];
+                                 $widthCat1Col = $totalcat1Col * $widthperCol . '%';
+                                 
+
+
+                                 $totalcat2_Query = $connection->query("SELECT COUNT(*) FROM pricelistcolumns_mapping where cat='Point-in-Time Snapshot Assessment (Duration: 60-days)'");
+                                 $totalcat2Col = mysqli_fetch_assoc($totalcat2_Query);
+                                 $totalcat2Col = $totalcat2Col['COUNT(*)'];
+                                 $widthCat2Col = $totalcat2Col * $widthperCol . '%';
+                                 
+
+                                 $fields = array();
+                                 $query = $connection->query("SHOW COLUMNS FROM pricelist");
+                                 while ($x = mysqli_fetch_assoc($query)){
+                                    $fields[] = $x['Field'];
+                                  }
+                                 $fields = array_diff($fields, array("id","sequence","datemodified"));
+                                 $count = 1;
+                                 $query = $connection->query("SELECT * FROM `pricelist` ORDER BY sequence ASC , datemodified DESC");
+                                 ?>
+                                 <tr>
+                                  <th width='20%' style="text-align: center;"></th>
+                                  <th width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>
+                                  <th width="<?php echo $widthCat2Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Continuous Assessment & Monitoring (Duration: Annual)</th>
+                                 </tr>
+                                 <?php
+                                 while ($row = $query ->fetch_object()) {
+                                  $id = $row->id;
+                                 ?>
+                                 <tr>
+                                  <?php
+                                    foreach ($fields as $key) {
+                                  ?>
+                                  <td> 
+                                      <?php 
+                                      if($row->$key == 'true')
+                                        echo '<i class="fa fa-check" />';
+                                      else if($row->$key == 'false')
+                                        echo '<i class="fa fa-times" />';
+                                      else
+                                        echo $row->$key;
+                                     ?>
+                                  </td>
+                                   <?php
+                                    }
+                                   ?>
+                                 </tr>
+                                 <?php
+                                 $count ++;
+                                 }
+                                 ?> 
           </table>
+          <div class="mt-3">
+          <fieldset>
+            <?php
+                        $editRow = mysqli_fetch_row($aboutus_fetch);
+                        echo $editRow[1];
+            ?>
+            
+            </fieldset>
+          </div>
       </div>
       <?php include_once 'footer.php'; ?>
     </div>

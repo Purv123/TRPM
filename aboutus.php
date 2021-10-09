@@ -35,7 +35,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
             <p class="h1 text-center mb-3">About<span class="text-danger"> Us</span></p>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section_title_all text-center">
+                        <div class="section_title_all">
                             <p class="section_subtitle mx-auto text-muted">
                             <?php
                             $editRow = mysqli_fetch_row($aboutus_fetch);

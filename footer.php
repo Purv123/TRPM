@@ -44,12 +44,16 @@
                                 <ul>
                                     <li><a href="aboutus.php">About Us</a></li>
                                     <li><a href="whyriskkarma.php">Why Risk Karma</a></li>
-                                    <li><a href="services1.php">Our Services</a></li>
+                                    <li><a href="./technicalgrade/technical-grade/technicalriskinsight.php">Technical Risk Insights</a></li>
                                     <li><a href="pricelist.php">Pricing</a></li>
                                     <li><a href="blogindex.php">Blog</a></li>
-                                    <li><a href="contact.php">Contact us</a></li>
-                                    <li><a href="tprmasservice.php">(TPRM) as-a-Service</a></li>
-                                    <li><a href="services2.php">Benefits For (Enterprises/Third Parties)</a></li>
+                                    <li><a href="services1.php">Our Services</a></li>
+                                    <li><a href="solutions.php">Solution Screenshot</a></li>
+                                    <li><a href="tprmasservice.php">(TPRM)-as-a-Service</a></li>
+                                    <li><a href="proofofsolutions.php">Proof-of-Solution</a>
+                                    <li><a href="consulting.php">Advisory/Consulting Services</a></li>
+                                    <li><a href="services2.php">For (Enterprises/Third Parties)</a></li>
+                                    <li><a href="contact.php">Contact us</a></li></li>
                                 </ul>
                             </div>
                         </div>
@@ -57,13 +61,9 @@
                             <div class="footer-widget">
                                 <div class="footer-menu">
                                     <div class="footer-social-icon xl">
-                                        <div class="row">
-                                        <a href="#"><i class="fab fa-facebook-f mr-3"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </div>
-                                        <div class="row mt-5">    
-                                        <a href="#"><i class="fab fa-instagram mr-3"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <div class="row center">
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" class="mb-3"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/">Follow us on LinkedIn</i></a>
                                         </div>
                                     </div>
                                     <div class="footer-social-icon mb">
@@ -81,7 +81,7 @@
                     <div class="row center">
                         <b class="p-3" style="color: white; font-size: 1rem;"><?php
                         if(basename($_SERVER['PHP_SELF']) == "index.php")
-                            echo '<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[ </span> <q>  You need third party risk assessments done… </br> AND all we do is third party risk assessments. (Image that…serendipitous right?!) – Lets Chat About It. </q> <span style="color: #e31e24; font-weight:900; font-size:1.5rem;">] </span>';
+                            echo '<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[ </span> <q>  A firms level of cybersecurity is only as good as the cybersecurity of its vendors. - Risk Karma </q> <span style="color: #e31e24; font-weight:900; font-size:1.5rem;">] </span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>63% of Data Breaches are Linked to a Third Party </q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "services1.php")
@@ -101,6 +101,14 @@
                             The question is: Does your team have the ability and/or bandwidth to identify and counteract vendor risks before they impact you?</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "whyriskkarma.php")
                             echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Third-party risk management done right - either as your outsourced partner or as a cost-effective staff augmentation answer</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "solutions.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>60% of companies do not monitor the security practices of their 3rd party vendors.</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "consulting.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>63% of data breaches are caused by security vulnerabilities introduced by a third party.</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "proofofsolutions.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q> 80% of companies never saw the ransomware attacks coming from their 3rd Party vendors.</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
+                        elseif(basename($_SERVER['PHP_SELF']) == "partnerservices.php")
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q> 66% do not have internal resources to verify their third party vendors security..</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         ?>
                         </b>
                     </div>
@@ -111,7 +119,7 @@
                     <div class="row align-items-center">
                         <div class="text-center">
                             <div class="copyright-text">
-                                <p>Copyright @ 2021 Risk Karma LLC, All Rights Reserved | Risk Karma TPRM is a Risk Karma LLC Service Offering</p>
+                                <p> Copyright @ 2021 Risk Karma LLC, All Rights Reserved</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 text-center">
