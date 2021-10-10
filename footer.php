@@ -49,7 +49,7 @@
                                     <li><a href="blogindex.php">Blog</a></li>
                                     <li><a href="services1.php">Our Services</a></li>
                                     <li><a href="solutions.php">Solution Screenshot</a></li>
-                                    <li><a href="tprmasservice.php">(TPRM)-as-a-Service</a></li>
+                                    <li><a href="tprmasservice.php">(ETPRM)-as-a-Service</a></li>
                                     <li><a href="proofofsolutions.php">Proof-of-Solution</a>
                                     <li><a href="consulting.php">Advisory/Consulting Services</a></li>
                                     <li><a href="services2.php">For (Enterprises/Third Parties)</a></li>
@@ -93,7 +93,7 @@
                         elseif(basename($_SERVER['PHP_SELF']) == "services2.php")
                             echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Vendor Management is a Grind… but it doesn’t have to be</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "commonusecases.php")
-                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Risk Karma TPRM offering can bring an average 60% reduction in manual work, </br>
+                            echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>Risk Karma ETPRM offering can bring an average 60% reduction in manual work, </br>
                                 45% reduction in time to identify and mitigate risk, and 300% increase in team productivity</q><span style="color: #e31e24; font-weight:900; font-size:1.5rem;">]</span>';
                         elseif(basename($_SERVER['PHP_SELF']) == "pricelist.php")
                             echo'<span style="color: #e31e24; font-weight:900; font-size:1.5rem;">[</span><q>It’s no longer a question of if, but when. </br>

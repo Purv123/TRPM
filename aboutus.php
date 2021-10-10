@@ -7,7 +7,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
 
 <head>
     <meta charset="UTF-8" />
-    <title>TPRM</title>
+    <title>ETPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />

@@ -8,7 +8,7 @@ require './commonFunction.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | TPRM</title>
+    <title>Dashboard | ETPRM</title>
     <link href=".././assets/img/favicon.png" rel="icon">
 
 
@@ -62,7 +62,7 @@ require './commonFunction.php';
                     <div id="panel-1" class="panel panel-default">
                         <div class="panel-heading">
                             <div id="page-title">
-                                <span><b>Welcome To TPRM Admin Panel</b></span>
+                                <span><b>Welcome To ETPRM Admin Panel</b></span>
                             </div>
 
                             <!-- /right options -->

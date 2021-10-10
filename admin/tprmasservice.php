@@ -24,7 +24,7 @@ else{
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | TPRM</title>
+    <title>Dashboard | ETPRM</title>
     <link href=".././assets/img/favicon.png" rel="icon">
 
 
@@ -66,7 +66,7 @@ else{
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">TPRM AS SERVICE</h1>
+                    <h1 class="page-header text-overflow">ETPRM AS SERVICE</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -95,7 +95,7 @@ else{
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
                                     $editRow = mysqli_fetch_assoc($aboutus_fetch);
-                                    echo '<label for="inputEmail4">TPRM As Service Description</label>
+                                    echo '<label for="inputEmail4">ETPRM As Service Description</label>
                                                     <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
                                                     </br>
                                     <br>

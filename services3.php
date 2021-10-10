@@ -7,7 +7,7 @@ $service_fetch = $connection->query("SELECT * from services where type='forthird
 
 <head>
     <meta charset="UTF-8" />
-    <title>TPRM</title>
+    <title>ETPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/services.css" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
@@ -34,7 +34,7 @@ $service_fetch = $connection->query("SELECT * from services where type='forthird
             <div class="bg_pinwheel"></div>
             <div class="container section_title_all text-center" style="margin-top: 1.5rem">
                 <h3 class="font-weight-bold">For Third Parties</h3>
-                <!-- <p class="section_subtitle mx-auto text-muted">Risk Karma is Third Party Risk Management Company. <br/>Risk Karma’s (TPRM) as-a-Service is an advisory and consulting service offering.</p> -->
+                <!-- <p class="section_subtitle mx-auto text-muted">Risk Karma is Third Party Risk Management Company. <br/>Risk Karma’s (ETPRM) as-a-Service is an advisory and consulting service offering.</p> -->
             </div>
             <div class="services">
                 <div class="services row mt-5">
