@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="footer-content pt-3">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-cta mt-3">
                                     <div class="mb-3">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 usefullinks">
+                        <div class="col-xl-8 col-lg-8 col-md-6 usefullinks">
                             <div class="footer-widget">
                                     <div class="footer-widget-heading">
                                         <h3>Useful Links</h3>
@@ -57,13 +57,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-6 mb-50 center mt-3">
+                        <div class="col-xl-1 col-lg-1 col-md-6 mb-50 center mt-3">
                             <div class="footer-widget">
                                 <div class="footer-menu">
                                     <div class="footer-social-icon xl">
                                         <div class="row center">
-                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" class="mb-3"><i class="fab fa-linkedin"></i></a>
-                                        <a href="https://www.linkedin.com/company/risk-karma-llc/">Follow us on LinkedIn</i></a>
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" target="_blank" class="mb-3"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" target="_blank">Follow us on LinkedIn</i></a>
                                         </div>
                                     </div>
                                     <div class="footer-social-icon mb">

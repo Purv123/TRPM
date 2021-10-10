@@ -36,7 +36,7 @@ $service_desc = $connection->query("SELECT * from servicedescription");
                 <div class="half-logo text-center">
                   <img src="images/half-logo.png" style="width: 15%" />
                 </div>
-
+                <p class="h1 text-center">Our<span class="text-danger"> Services</span></p>
                 <div class="container whyriskkarma my-5">
                 <?php
                 while ($row = mysqli_fetch_array($service_desc)) {

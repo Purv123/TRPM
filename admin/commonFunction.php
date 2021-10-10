@@ -128,7 +128,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         <li>
                             <a href="solutions.php">
                                 <i class="fa fa-plus"></i>
-                                <span class="menu-title">Solutions</span>
+                                <span class="menu-title">Solution Screenshots</span>
                                 <i class="arrow"></i>
                             </a>
                         </li>
