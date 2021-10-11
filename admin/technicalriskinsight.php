@@ -1,20 +1,18 @@
 <?php require '../db.php';
 require 'commonFunction.php';
+
 ?>
 <?php
 if (isset($_POST['submit'])) {
-     $blog_id = $_REQUEST['edit'];
-    $title = trim($_POST['title']);
-    $content = trim($_POST['content']);
-    $img = trim($_POST['image']);
-        // mysqli_query($connection, "UPDATE services
-        // SET type = '$type', title = '$title', description = '$description'
-        // WHERE id = $service_id");
-    mysqli_query($connection, "UPDATE solution_screenshots SET `title` = '$title', content = '$content', image = '$img' WHERE id = $blog_id");
-    header('location: solutions.php');
-} else if (isset($_GET['edit'])){
-    $blog_id = $_REQUEST['edit'];
-    $editBlog = $connection->query("SELECT * from solution_screenshots WHERE id=$blog_id");
+    $description = $_POST['description'];
+        mysqli_query($connection, "UPDATE technicalriskinsight
+        SET description = '$description'
+        WHERE id = '1'");
+    header('location: technicalriskinsight.php');
+    $aboutus_fetch = $connection->query("SELECT * from technicalriskinsight");
+}
+else{
+    $aboutus_fetch = $connection->query("SELECT * from technicalriskinsight");
 }
 
 
@@ -40,7 +38,7 @@ if (isset($_POST['submit'])) {
     <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-        <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
     <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
 
 </head>
@@ -68,7 +66,7 @@ if (isset($_POST['submit'])) {
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Blog</h1>
+                    <h1 class="page-header text-overflow">Technical Risk Insight</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -92,24 +90,24 @@ if (isset($_POST['submit'])) {
                     <div id="panel-1" class="panel panel-default">
                         
                         <!-- panel content -->
-                        <?php
-                            $editRow = mysqli_fetch_assoc($editBlog);
-                        ?>
                         <div class="panel-body">
                                 <form action="" enctype="multipart/form-data" method="POST">
-                                    <label for="inputEmail4">Title</label>
-                                    <textarea class="form-control" name="title" required id="editor1"><?php echo $editRow['title'] ;?></textarea>
-                                    <br />
-                                    <label for="inputEmail4">Content</label>
-                                    <textarea class="form-control" name="content" required id="editor2"><?php echo $editRow['content'] ;?></textarea>
-                                    <br />
-                                    <label for="inputEmail4">Image</label>
-                                    <input class="form-control" name="image" value="<?php echo $editRow['image'] ?>" required></input>
-                                    <br />
+                                    <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
+                                    <?php
+                                    $editRow = mysqli_fetch_assoc($aboutus_fetch);
+                                    echo '<label for="inputEmail4">Technical Risk Insight</label>
+                                                    <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
+                                                    </br>
+                                    <br>
+                                    
+                                    ';
+                                    ?>
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-primary">
                                 </form>
                         </div>
                     </div>
+
+                   
                         <!-- /panel content -->
                     </div>
                     <!-- /PANEL -->
@@ -175,7 +173,6 @@ if (isset($_POST['submit'])) {
     <script>
   CKEDITOR.replace( 'editor1' );
   CKEDITOR.replace( 'editor2' );
-  CKEDITOR.replace( 'editor3' );
 </script>
     <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>

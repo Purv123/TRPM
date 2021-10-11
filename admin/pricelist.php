@@ -17,8 +17,22 @@ if (isset($_POST['addcolumnsubmit'])) {
     $x = mysqli_fetch_assoc($columntoaddafter);
     $columntoaddafter = $x['colname'];
     mysqli_query($connection, "ALTER TABLE pricelist ADD $colname VARCHAR(255) NOT NULL DEFAULT('-') AFTER $columntoaddafter");
+    mysqli_query($connection, "UPDATE pricelist
+    SET $colname = '$nametodisplay'
+    WHERE id='1'");
     header('location: pricelist.php');
-}else if (isset(($_POST['addrowsubmit']))) {
+}else if (isset($_POST['dropcolumnsubmit'])) {
+    $cat = $_POST['cat'];
+    $addafter = $_POST['addafter'];
+    $nametodisplay = $_POST['colname'];
+    $last_col = $connection->query("SELECT colname from pricelistcolumns_mapping where nametodisplay='$addafter' AND cat='$cat'");
+    $x = mysqli_fetch_assoc($last_col);
+    $colname = $x['colname'];
+    mysqli_query($connection, "DELETE FROM  pricelistcolumns_mapping where colname='$colname'");
+    $columntoaddafter = $connection->query("ALTER TABLE pricelist DROP COLUMN $colname");
+    header('location: pricelist.php');
+}
+else if (isset(($_POST['addrowsubmit']))) {
     $sequence = $_POST['sequence'];
     mysqli_query($connection, "INSERT INTO  pricelist(sequence) VALUES ('$sequence')");
     header('location: pricelist.php');
@@ -27,6 +41,10 @@ if (isset($_POST['addcolumnsubmit'])) {
         mysqli_query($connection, "UPDATE pricelistdesc
         SET description = '$description'
         WHERE id = '1'");
+    header('location: pricelist.php');
+}else if (isset($_GET['delete'])) {
+    $service_id = $_REQUEST['delete'];
+    $delprod = $connection->query("DELETE FROM pricelist WHERE id='$service_id'");
     header('location: pricelist.php');
 }
 ?>
@@ -175,6 +193,9 @@ if (isset($_POST['addcolumnsubmit'])) {
                                  $query = $connection->query("SELECT * FROM `pricelist` ORDER BY sequence ASC , datemodified DESC");
                                  ?>
                                  <tr>
+                                  <th width="100%" colspan="<?php echo $totalCol+1; ?>" style="text-align: center;"> Solutions for Assessing Cyber Risk for Enterprises (1st Party) and/or their Vendors/Suppliers (3rd Party)</th>
+                                 </tr>
+                                 <tr>
                                   <th width='20%' style="text-align: center;"></th>
                                   <th width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>
                                   <th width="<?php echo $widthCat2Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Continuous Assessment & Monitoring (Duration: Annual)</th>
@@ -186,14 +207,23 @@ if (isset($_POST['addcolumnsubmit'])) {
                                  <tr>
                                   <?php
                                     foreach ($fields as $key) {
-                                  ?>
-                                  <!-- <td><?php echo $count; ?></td> -->
+                                  if($count == 1){
+                                   ?>
                                   <td> 
+                                    <div> <?php echo $row->$key; ?></div> 
+                                  </td>
+                                  <?php
+                                   }
+                                   else{
+                                   ?>
+                                   <td> 
                                     <div class='edit' > <?php echo $row->$key; ?></div> 
                                     <input type='text' class='txtedit' value='<?php echo $row->$key; ?>' id='<?php echo $key.'_'.$id; ?>' >
                                   </td>
                                    <?php
                                     }
+                                    }
+                                    echo '<td><a href="pricelist.php?delete=' . $id . '">DELETE</a></td>';
                                    ?>
                                  </tr>
                                  <?php
@@ -217,7 +247,7 @@ if (isset($_POST['addcolumnsubmit'])) {
                                                         <option value="Point-in-Time Snapshot Assessment (Duration: 60-days)">Point-in-Time Snapshot Assessment (Duration: 60-days)</option>
                                                         <option value="Continuous Assessment & Monitoring (Duration: Annual)">Continuous Assessment & Monitoring (Duration: Annual)</option>
                                                     </select>
-                                                    <label for="inputEmail4">Add After</label>
+                                                    <label for="inputEmail4">Drop Column</label>
                                                     <select class="form-control" name="addafter">
                                                         <?php 
                                                          $s="select nametodisplay from pricelistcolumns_mapping";
@@ -257,6 +287,43 @@ if (isset($_POST['addcolumnsubmit'])) {
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
                                                 <input type="submit" name="addrowsubmit" value="ADD" class="btn btn-primary">
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3" style="margin-top: 3rem;">DROP COLUMN</button>
+                                <div class="modal fade" id="myModal3" role="dialog">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title">DROP COLUMN</h6>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" enctype="multipart/form-data" method="POST">
+                                                    <label for="inputEmail4">Catagory</label>
+                                                    <select class="form-control" name="cat" onchange='load_new_content()' id="select">
+                                                        <option value="Point-in-Time Snapshot Assessment (Duration: 60-days)">Point-in-Time Snapshot Assessment (Duration: 60-days)</option>
+                                                        <option value="Continuous Assessment & Monitoring (Duration: Annual)">Continuous Assessment & Monitoring (Duration: Annual)</option>
+                                                    </select>
+                                                    <label for="inputEmail4">Drop Column</label>
+                                                    <select class="form-control" name="addafter">
+                                                        <?php 
+                                                         $s="select nametodisplay from pricelistcolumns_mapping";
+                                                         $q = $connection->query($s);
+                                                        while($rw=mysqli_fetch_array($q))
+                                                        { ?>
+                                                        <option value="<?php echo $rw['nametodisplay']; ?>"><?php echo $rw['nametodisplay']; ?>
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
+                                                    <br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger btn-secondary" data-dismiss="modal">CLOSE</button>
+                                                <input type="submit" name="dropcolumnsubmit" value="ADD" class="btn btn-primary">
                                             </div>
                                             </form>
                                         </div>

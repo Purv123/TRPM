@@ -147,6 +147,13 @@ $sideNav = '<!--MAIN NAVIGATION-->
                             </a>
                         </li>
                         <li>
+                            <a href="technicalriskinsight.php">
+                                <i class="fa fa-plus"></i>
+                                <span class="menu-title">Technical Risk Insight</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="privacypolicy.php">
                                 <i class="fa fa-question"></i>
                                 <span class="menu-title">Privacy Policy</span>
@@ -159,11 +166,18 @@ $sideNav = '<!--MAIN NAVIGATION-->
                                 <span class="menu-title">Terms Condition</span>
                                 <i class="arrow"></i>
                             </a>
-                        </li
+                        </li>
                         <li>
                             <a href="contact.php">
                                 <i class="fa fa-phone"></i>
                                 <span class="menu-title">Contact Us</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="upload.php">
+                                <i class="fa fa-upload"></i>
+                                <span class="menu-title">Upload Your Image</span>
                                 <i class="arrow"></i>
                             </a>
                         </li>
