@@ -1,5 +1,5 @@
 <footer class="footer-section">
-            <div class="container">
+            <div class="container footerContainer">
                 <div class="footer-content pt-3">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
@@ -10,7 +10,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                             <div class="cta-text">
                                                 <h6>Find us</h6>
-                                                <span>California (Headquarters)
+                                                <span>California (Headquarters)</br>
                                                     Irvine, CA 92603</span>
                                             </div>
                                         </div>
@@ -36,28 +36,70 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-8 col-md-6 usefullinks">
+                        <div class="col-xl-7 col-lg-7 col-md-6 usefullinks">
                             <div class="footer-widget">
                                     <div class="footer-widget-heading">
                                         <h3>Useful Links</h3>
                                     </div>
                                 <ul>
-                                    <li><a href="aboutus.php">About Us</a></li>
-                                    <li><a href="whyriskkarma.php">Why Risk Karma</a></li>
+                                    <li><a href="aboutus.php" 
+                                    <?php
+                                    if(basename($_SERVER['PHP_SELF']) == "aboutus.php")
+                                        echo "class=active";
+                                    ?> >About Us</a></li>
+                                    <li><a href="whyriskkarma.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "whyriskkarma.php")
+                                        echo "class=active";
+                                    ?> >Why Risk Karma</a></li>
+                                    <li><a href="pricelist.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "pricelist.php")
+                                        echo "class=active";
+                                    ?> >Pricing</a></li>
+                                    <li><a href="blogindex.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
+                                        echo "class=active";
+                                    ?> >Blog</a></li>
+                                    <li><a href="services1.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "services1.php")
+                                        echo "class=active";
+                                    ?> >Our Services</a></li>
+                                    <li><a href="solutions.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "solutions.php")
+                                        echo "class=active";
+                                    ?> >solutions</a></li>
+                                    <li><a href="contact.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "contact.php")
+                                        echo "class=active";
+                                    ?> >Contact us</a></li>
+                                    <li><a href="proofofsolutions.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "proofofsolutions.php")
+                                        echo "class=active";
+                                    ?> >Proof-of-Solution</a></li>
+                                    <li><a href="tprmasservice.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
+                                        echo "class=active";
+                                    ?> >(ETPRM)-as-a-Service</a></li>
+                                    <li><a href="privacy_policy.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "privacy_policy.php")
+                                        echo "class=active";
+                                    ?> >Privacy & Policy</a></li>
+                                    <li><a href="termsofuse.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "termsofuse.php")
+                                        echo "class=active";
+                                    ?> >Terms Of Use</a></li>
                                     <li><a href="./technicalgrade/technical-grade/technicalriskinsight.php">Technical Risk Insights</a></li>
-                                    <li><a href="pricelist.php">Pricing</a></li>
-                                    <li><a href="blogindex.php">Blog</a></li>
-                                    <li><a href="services1.php">Our Services</a></li>
-                                    <li><a href="solutions.php">Solution Screenshot</a></li>
-                                    <li><a href="tprmasservice.php">(ETPRM)-as-a-Service</a></li>
-                                    <li><a href="proofofsolutions.php">Proof-of-Solution</a>
-                                    <li><a href="consulting.php">Advisory/Consulting Services</a></li>
-                                    <li><a href="services2.php">For (Enterprises/Third Parties)</a></li>
-                                    <li><a href="contact.php">Contact us</a></li></li>
+                                    <li><a href="consulting.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "consulting.php")
+                                        echo "class=active";
+                                    ?> >Advisory/Consulting Services</a></li>
+                                    <li><a href="services2.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "services2.php")
+                                        echo "class=active";
+                                    ?> >For (Enterprises/Third Parties)</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-1 col-lg-1 col-md-6 mb-50 center mt-3">
+                        <div class="col-xl-2 col-lg-2 col-md-6 mb-50 center mt-3">
                             <div class="footer-widget">
                                 <div class="footer-menu">
                                     <div class="footer-social-icon xl">

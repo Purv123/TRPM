@@ -24,6 +24,7 @@ $aboutus_fetch = $connection->query("SELECT * from solution_screenshots");
         crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="./imagetexttest.css" />
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+ 
 </head>
 
 <body class="no-blog">
@@ -39,6 +40,7 @@ $aboutus_fetch = $connection->query("SELECT * from solution_screenshots");
              <div class="container mt-5">
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
+              <div class="h1 text-center"><span class="text-danger">Solutions </span>Screenshots</div>
             </div>
             <!-- <span class="text-danger">Solution</span> Screenshots</p> -->
             </div>
@@ -46,9 +48,9 @@ $aboutus_fetch = $connection->query("SELECT * from solution_screenshots");
                 while ($row = mysqli_fetch_array($aboutus_fetch)) {
                     echo '
                     <div class="product-row">
-                <div class="product-image"><img src="'. $row["image"] . '"></div>
+                <div class="product-image zoomWrapper"><img src="'. $row["image"] . '"></div>
                 <div class="product-text">
-                    <h4 class="product-title">'. $row["title"] . '</h4>
+                    <h4 class="product-title"><span class="text-danger">'. $row["title"] . '</span></h4>
                     <p>'. $row["content"] . '</p>
                     <div class="product-buttons">
                         <!-- <a href="http://bit.ly/2hqwtm2" target="_blank" id="Instant-Film" class="gift-guide-2017 shop btn">View More</a> -->
@@ -67,33 +69,37 @@ $aboutus_fetch = $connection->query("SELECT * from solution_screenshots");
         <?php include_once 'footer.php'; ?>
     </div>
     <script type="text/javascript">
-        var $animation_elements = $('.product-row > div');
-var $window = $(window);
+    var $animation_elements = $('.product-row > div');
+    var $window = $(window);
 
-function check_if_in_view() {
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = (window_top_position + window_height);
- 
-  $.each($animation_elements, function() {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
- 
-        
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
-      $element.addClass('in-view');
-    } else {
-      // $element.removeClass('in-view');
+    function check_if_in_view() {
+      var window_height = $window.height();
+      var window_top_position = $window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+     
+      $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+     
+            
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+            (element_top_position <= window_bottom_position)) {
+          $element.addClass('in-view');
+        } else {
+          // $element.removeClass('in-view');
+        }
+      });
     }
-  });
-}
 
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+
+    $(".zoomWrapper img").click(function(){
+    $(this).toggleClass("flasher");
+});
     </script>
     <script src="./js/script.js"></script>
      <script src="./js/navbar.js"></script>
