@@ -1,3 +1,9 @@
+<?php 
+require_once '../../db.php';
+$aboutus_fetch = $connection->query("SELECT * from technicalriskinsight");
+$usecases_fetch = $connection->query("SELECT * from usecases");
+?>
+
 <!doctype html>
 <html lang="en-US">
 
@@ -514,6 +520,16 @@ ul {
 
 .footer-widget ul li a:hover {
   color: #e31e24;
+}
+
+.footer-widget ul li a.active {
+  color: #e31e24;
+  text-decoration: none;
+  -webkit-transition: all linear .2s;
+  -moz-transition: all linear .2s;
+  -o-transition: all linear .2s;
+  transition: all linear .2s;
+  -ms-transition: all linear .2s;
 }
 
 .footer-widget ul li a {
@@ -2862,10 +2878,15 @@ jQuery(document).ready(function( $ ){
 <div class="box">
   <?php include_once 'navbar.php';
   ?>
+  <div class="half-logo text-center mt-5">
+    <img src="../../images/half-logo.png" style="width: 15%" />
+    <p class="text-center mb-3" style="font-size: 2.5rem; font-weight: 500;
+    line-height: 1.2;"><span class="text-danger">Technical Risk </span>Insight</p>
+  </div>
 </div>
 <div class="wp-block-columns are-vertically-aligned-center mb-0 py-5-percent c-white">
 <div class="wp-block-column is-vertically-aligned-center container" style="flex-basis:100%">
-<h2 class="has-text-align-center h3 mb-0 pb-2 c-black">Powerful Performance behind 20 Categories</h2>
+<h3 class="has-text-align-center h3 mb-0 pb-2 c-black">Powerful Performance behind 20 Categories</h3>
 <p class="has-text-align-center mb-5 c-black"><span class="d-inline d-lg-block">The total score is a weighted average of 20 category components,</span> <span class="d-inline d-lg-block">providing unmatched breadth and insight into detected vulnerabilities.</span></p>
 <div class="container">
 <div id="risk-categories">
@@ -3097,6 +3118,15 @@ jQuery(document).ready(function( $ ){
 </div>
 </div>
 </div>
+
+        <div class="container solutions my-5">
+            <?php
+                        $editRow = mysqli_fetch_row($aboutus_fetch);
+                        echo $editRow[1];
+            ?>
+                
+        </div>
+
 <?php include_once 'footer.php'; ?>
 <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
 		function genesisBlocksShare( url, title, w, h ){
