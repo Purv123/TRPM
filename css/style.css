@@ -4185,6 +4185,10 @@ ul {
 	padding: 0px;
 }
 
+.footerContainer{
+	max-width: 95% !important;
+}
+
 .footer-section {
 	background: #4a4a4a;
 	-- background-image: url(../images/travel/bg.png);
@@ -4364,6 +4368,16 @@ ul {
 
 .footer-widget ul li a:hover {
 	color: #e31e24;
+}
+
+.footer-widget ul li a.active {
+	color: #e31e24;
+	text-decoration: none;
+	-webkit-transition: all linear .2s;
+	-moz-transition: all linear .2s;
+	-o-transition: all linear .2s;
+	transition: all linear .2s;
+	-ms-transition: all linear .2s;
 }
 
 .footer-widget ul li a {
