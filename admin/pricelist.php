@@ -116,7 +116,37 @@ else if (isset(($_POST['addrowsubmit']))) {
    });
    
   });
+
+function fetch_select(val)
+{
+ $.ajax({
+ type: 'post',
+ url: 'fetch_data.php',
+ data: {
+  get_option:val
+ },
+ success: function (response) {
+  document.getElementById("new_select").innerHTML=response; 
+ }
+ });
+}
+
+function fetch_select1(val)
+{
+ $.ajax({
+ type: 'post',
+ url: 'fetch_data.php',
+ data: {
+  get_option:val
+ },
+ success: function (response) {
+  document.getElementById("new_select1").innerHTML=response; 
+ }
+ });
+}
   </script>
+
+
   </head>
 
 <!--TIPS-->
@@ -234,7 +264,7 @@ else if (isset(($_POST['addrowsubmit']))) {
 
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-top: 3rem;">ADD COLUMN</button>
                                 <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog" style=" width: auto;">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h6 class="modal-title">ADD COLUMN</h6>
@@ -243,22 +273,14 @@ else if (isset(($_POST['addrowsubmit']))) {
                                             <div class="modal-body">
                                                 <form action="" enctype="multipart/form-data" method="POST">
                                                     <label for="inputEmail4">Catagory</label>
-                                                    <select class="form-control" name="cat" onchange='load_new_content()' id="select">
+                                                    <select class="form-control" name="cat" onchange="fetch_select(this.value);" id="select">
                                                         <option value="Point-in-Time Snapshot Assessment (Duration: 60-days)">Point-in-Time Snapshot Assessment (Duration: 60-days)</option>
                                                         <option value="Continuous Assessment & Monitoring (Duration: Annual)">Continuous Assessment & Monitoring (Duration: Annual)</option>
                                                     </select>
                                                     <label for="inputEmail4">Drop Column</label>
-                                                    <select class="form-control" name="addafter">
-                                                        <?php 
-                                                         $s="select nametodisplay from pricelistcolumns_mapping";
-                                                         $q = $connection->query($s);
-                                                        while($rw=mysqli_fetch_array($q))
-                                                        { ?>
-                                                        <option value="<?php echo $rw['nametodisplay']; ?>"><?php echo $rw['nametodisplay']; ?>
-                                                        </option>
-                                                        <?php } ?>
-                                                    </select>
-                                                    <br>
+                                                     <select id="new_select" class="form-control" name="addafter">
+                                                     </select>
+                                                     <br>
                                                     <label for="inputEmail4">Column Name</label>
                                                     <input type="text" class="form-control" name="colname" placeholder="Service Title">
                                             </div>
@@ -304,20 +326,12 @@ else if (isset(($_POST['addrowsubmit']))) {
                                             <div class="modal-body">
                                                 <form action="" enctype="multipart/form-data" method="POST">
                                                     <label for="inputEmail4">Catagory</label>
-                                                    <select class="form-control" name="cat" onchange='load_new_content()' id="select">
+                                                    <select class="form-control" name="cat"onchange="fetch_select1(this.value);" id="select">
                                                         <option value="Point-in-Time Snapshot Assessment (Duration: 60-days)">Point-in-Time Snapshot Assessment (Duration: 60-days)</option>
                                                         <option value="Continuous Assessment & Monitoring (Duration: Annual)">Continuous Assessment & Monitoring (Duration: Annual)</option>
                                                     </select>
                                                     <label for="inputEmail4">Drop Column</label>
-                                                    <select class="form-control" name="addafter">
-                                                        <?php 
-                                                         $s="select nametodisplay from pricelistcolumns_mapping";
-                                                         $q = $connection->query($s);
-                                                        while($rw=mysqli_fetch_array($q))
-                                                        { ?>
-                                                        <option value="<?php echo $rw['nametodisplay']; ?>"><?php echo $rw['nametodisplay']; ?>
-                                                        </option>
-                                                        <?php } ?>
+                                                    <select class="form-control" name="addafter" id="new_select1">
                                                     </select>
                                                     <br>
                                             </div>
