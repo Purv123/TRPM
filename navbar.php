@@ -48,7 +48,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "aboutus.php")
                             echo "class=active";
-                        ?> >About Us</a></li>
+                        ?> >About </br> Us</a></li>
                     <li><a href="whyriskkarma.php"
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "whyriskkarma.php")
@@ -74,22 +74,14 @@
                         if(basename($_SERVER['PHP_SELF']) == "services2.php")
                             echo "class=active";
                         ?> >Benefits For</br>(Enterprises/Third Parties)</a></li>
-                    <li><a href="blogindex.php" <?php
-                        if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
-                            echo "class=active";
-                        ?>>Blog</a></li>
-                    <li><a href="contact.php" <?php
-                        if(basename($_SERVER['PHP_SELF']) == "contact.php")
-                            echo "class=active";
-                        ?>>Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="logo-button-wrapper">
+                <div class="logo-button-wrapper mb-3">
                     <li class="logo">
                         <a href="index.php">
                             <img src="images/logo.svg" alt="" />
                             <h3>RISK KARMA</h3>
-                            <h6>THIRD-PARTY RISK MANAGEMENT</h6>
+                            <p>ENTERPRISE & THIRD-PARTY RISK MANAGEMENT</p>
                         </a>
                     </li>
                     <button class="navbar-toggler" type="button">

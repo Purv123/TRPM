@@ -109,8 +109,9 @@ svg {
 .pinwheel-md .headings {
   position: absolute;
   left: 30%;
-  top: 0%;
-  height: 80vh;
+  top: 1%;
+  bottom: 1%;
+  height: 79svh;
   width: 70vw;
   padding: 0.5rem 0.5rem 0.5rem 0;
   display: flex;

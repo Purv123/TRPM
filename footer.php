@@ -109,11 +109,9 @@
                                         </div>
                                     </div>
                                     <div class="footer-social-icon mb">
-                                        <div class="row">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <div class="row center">
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" target="_blank" class="mb-3"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/company/risk-karma-llc/" target="_blank">Follow us on LinkedIn</i></a>
                                         </div>
                                     </div>
                                 </div>

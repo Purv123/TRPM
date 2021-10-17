@@ -126,7 +126,7 @@ else if (isset($_GET['service_type'])) {
                                                     <label for="inputEmail4">Catagory</label>
                                                     <select class="form-control" name="type">
                                                         <option value="ourservices">Our Services</option>
-                                                        <option value="forthirdparty">For Third Party</option>
+                                                        <option value="forthirdparties">For Third Party</option>
                                                         <option value="forenterprise">For Enterprise</option>
                                                     </select>
                                                     <br>
