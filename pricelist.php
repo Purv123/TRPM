@@ -7,7 +7,7 @@ $aboutus_fetch = $connection->query("SELECT * from pricelistdesc");
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>ETPRM</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/pinwheel/style.css" />
     <link

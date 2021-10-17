@@ -15,7 +15,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo "class=active";
-                        ?> >(EETPRM)-AS-A-SERVICE</a></li>
+                        ?> >(ETPRM)-AS-A-SERVICE</a></li>
                     <li class="logo">
                         <a href="index.php">
                             <img src="images/logo.svg" alt="" />
@@ -58,7 +58,7 @@
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                             echo "class=active";
-                        ?> >(EETPRM)-AS-A-SERVICE</a></li>
+                        ?> >(ETPRM)-AS-A-SERVICE</a></li>
                     <li><a href="pricelist.php" 
                         <?php
                         if(basename($_SERVER['PHP_SELF']) == "pricelist.php")

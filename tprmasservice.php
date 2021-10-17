@@ -8,7 +8,7 @@ $aboutus_fetch = $connection->query("SELECT * from tprmasservice");
 
 <head>
     <meta charset="UTF-8" />
-    <title>ETPRM</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
@@ -36,7 +36,7 @@ $aboutus_fetch = $connection->query("SELECT * from tprmasservice");
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-5">(ETPRM)-AS-A-<span class="text-danger">SERVICE</span></p>
+            <p class="h1 text-center mb-5">(TPRM)-AS-A-<span class="text-danger">SERVICE</span></p>
             <?php
                     $editRow = mysqli_fetch_row($aboutus_fetch);
                     echo $editRow[1];

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>ETPRM</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
@@ -41,7 +41,7 @@
                     </svg>
                 </div>
                 <div class="headings">
-                    <span class="heading">ETPRM Program </br> Advisory & Consulting </br> Services</span>
+                    <span class="heading">TPRM Program </br> Advisory & Consulting </br> Services</span>
                     <span class="heading">Security Risk Questionnaire Assessment Services/w Scored Report</span>
                     <span class="heading">Evidence Document </br> Gathering & Collection </br> Services</span>
                     <span class="heading">(RAAS) Ransomware-as-a-Service Early warning Ransomware Susceptibility Identification and Remediation Services</span>
@@ -67,7 +67,7 @@
                     </svg>
                 </div>
                 <div class="headings">
-                    <span class="heading">ETPRM Program Advisory Services</span>
+                    <span class="heading">TPRM Program Advisory Services</span>
                     <span class="heading">Third-Party Security Questionnaire Assessment Services</span>
                     <span class="heading">Third-Party Document Collection Service</span>
                     <span class="heading">(RAAS) Ransomware-as-a-Service - Early warning Ransomware Susceptibility Identification and Remediation Services</span>

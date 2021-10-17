@@ -20,7 +20,7 @@ $nav = '        <header id="navbar">
         <a href="index.php" class="navbar-brand">
             <div class="brand-title">
                 <img class="brand-icon" src="../images/pinwheel.svg"> </img>
-                <span class="brand-text" >ETPRM</span>
+                <span class="brand-text" >TPRM</span>
             </div>
         </a>
     </div>
@@ -121,7 +121,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         <li>
                             <a href="tprmasservice.php">
                                 <i class="fa fa fa-sliders"></i>
-                                <span class="menu-title">(ETPRM) as service</span>
+                                <span class="menu-title">(TPRM) as service</span>
                                 <i class="arrow"></i>
                             </a>
                         </li>
@@ -142,7 +142,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         <li>
                             <a href="consulting.php">
                                 <i class="fa fa-plus"></i>
-                                <span class="menu-title">ETPRM Advisory And Consulting</span>
+                                <span class="menu-title">TPRM Advisory And Consulting</span>
                                 <i class="arrow"></i>
                             </a>
                         </li>

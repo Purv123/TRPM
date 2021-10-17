@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ETPRM</title>
+    <title>Dashboard | TPRM</title>
     <link href=".././assets/img/favicon.png" rel="icon">
 
 

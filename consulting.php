@@ -8,7 +8,7 @@ $usecases_fetch = $connection->query("SELECT * from usecases");
 
 <head>
     <meta charset="UTF-8" />
-    <title>ETPRM</title>
+    <title>TPRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
@@ -36,7 +36,7 @@ $usecases_fetch = $connection->query("SELECT * from usecases");
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-3"><span class="text-danger">Cyber Risk, ETPRM Advisory </span> and Consulting</p>
+            <p class="h1 text-center mb-3"><span class="text-danger">Cyber Risk, TPRM Advisory </span> and Consulting</p>
             <?php
                         $editRow = mysqli_fetch_row($aboutus_fetch);
                         echo $editRow[1];

@@ -78,7 +78,7 @@
                                     <li><a href="../../tprmasservice.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                                         echo "class=active";
-                                    ?> >(ETPRM)-as-a-Service</a></li>
+                                    ?> >(TPRM)-as-a-Service</a></li>
                                     <li><a href="../../privacy_policy.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "privacy_policy.php")
                                         echo "class=active";
