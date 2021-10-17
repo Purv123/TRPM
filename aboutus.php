@@ -15,6 +15,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/liststyle.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -33,7 +34,7 @@ $aboutus_fetch = $connection->query("SELECT * from aboutus");
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
             <p class="h1 text-center mb-3">About<span class="text-danger"> Us</span></p>
-                <div class="row">
+                <div class="container whyriskkarma row">
                     <div class="col-lg-12">
                         <div class="section_title_all">
                             <p class="section_subtitle mx-auto text-muted">
