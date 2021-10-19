@@ -4,7 +4,7 @@ $message = "";
 if (count($_POST) > 0) {
     // $result = mysqli_query($con, "SELECT * FROM login_user WHERE user_name='" . $_POST["user_name"] . "' and password = '" . $_POST["password"] . "'");
     // $row  = mysqli_fetch_array($result);
-    if ($_POST["uname"] == 'admin' && $_POST["psw"] == 'admin') {
+    if ($_POST["uname"] == 'admin' && $_POST["psw"] == 'Karma@7') {
         $_SESSION["name"] = $_POST["uname"];
     } else {
         $message = "Invalid Username or Password!";

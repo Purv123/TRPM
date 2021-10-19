@@ -33,7 +33,7 @@ $newofferings_fetch = $connection->query("SELECT description from newofferings")
                 <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-3">Free<span class="text-danger"> Offerings</span></p>
+            <p class="h1 text-center mb-3">Free<span class="text-danger"> Offers</span></p>
                 <div class="container whyriskkarma row">
                     <div class="col-lg-12">
                         <div class="section_title_all">
