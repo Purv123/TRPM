@@ -66,7 +66,7 @@ else{
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Cyber Risk and TPRM Advisory and Consulting</h1>
+                    <h1 class="page-header text-overflow">TPRM Advisory and Consulting</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->

@@ -90,6 +90,13 @@ $sideNav = '<!--MAIN NAVIGATION-->
 
                         <!--Menu list item-->
                         <li>
+                            <a href="newofferings.php">
+                                <i class="fa fa-info"></i>
+                                <span class="menu-title">Free Offers</span>
+                                <i class="arrow"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="pricelist.php">
                                 <i class="fa fa-money"></i>
                                 <span class="menu-title">Price list</span>
@@ -135,7 +142,7 @@ $sideNav = '<!--MAIN NAVIGATION-->
                         <li>
                             <a href="proofofsolutions.php">
                                 <i class="fa fa-plus"></i>
-                                <span class="menu-title">Proof Of Solutions</span>
+                                <span class="menu-title">Proof Of Solution</span>
                                 <i class="arrow"></i>
                             </a>
                         </li>
@@ -145,6 +152,12 @@ $sideNav = '<!--MAIN NAVIGATION-->
                                 <span class="menu-title">TPRM Advisory And Consulting</span>
                                 <i class="arrow"></i>
                             </a>
+                            <ul class="collapse">
+                            <li><a href="consulting.php">Consulting Content</a>
+                            </li>
+                            <li><a href="consulting_logo.php">Consulting Companies</a>
+                            </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="technicalriskinsight.php">

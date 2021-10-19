@@ -5,14 +5,14 @@ require 'commonFunction.php';
 <?php
 if (isset($_POST['submit'])) {
     $description = $_POST['description'];
-        mysqli_query($connection, "UPDATE proofofsolution
+        mysqli_query($connection, "UPDATE newofferings
         SET description = '$description'
         WHERE id = '1'");
-    header('location: proofofsolutions.php');
-    $aboutus_fetch = $connection->query("SELECT * from proofofsolution");
+    header('location: newofferings.php');
+    $aboutus_fetch = $connection->query("SELECT * from newofferings");
 }
 else{
-    $aboutus_fetch = $connection->query("SELECT * from proofofsolution");
+    $aboutus_fetch = $connection->query("SELECT * from newofferings");
 }
 
 
@@ -66,7 +66,7 @@ else{
                 <!--Page Title-->
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div id="page-title">
-                    <h1 class="page-header text-overflow">Proof Of Solution</h1>
+                    <h1 class="page-header text-overflow"> Free Offers</h1>
                 </div>
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--End page title-->
@@ -95,7 +95,7 @@ else{
                                     <!-- <input type="text" class="form-control" name="product_id" placeholder="Id"> -->
                                     <?php
                                     $editRow = mysqli_fetch_assoc($aboutus_fetch);
-                                    echo '<label for="inputEmail4">Solution Screenshots</label>
+                                    echo '<label for="inputEmail4">Free Offers</label>
                                                     <textarea class="form-control" name="description" required id="editor1">' . $editRow['description'] . '</textarea>
                                                     </br>
                                     <br>
