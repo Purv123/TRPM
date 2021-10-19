@@ -21,11 +21,31 @@
 .price-table {
   width: 100%;
   border-collapse: collapse;
-  border: 0 none;
+  border: 1px solid #e31e24;
 }
 
+.price-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e07e81;
+  color: white;
+}
+
+.price-table th:not(:first-child) {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  border-right: 1px solid red;
+}
+
+.price-table td {
+  border: 1px solid #e31e24;
+}
+
+
 .price-table tr:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #e31e24;
 }
 .price-table tr td {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
@@ -42,7 +62,7 @@
   background-color: #ffffff;
 }
 .price-table tr:hover {
-  background-color: #eeeeee;
+  background-color: #e07e81;
 }
 .price-table .fa-check {
   color: green;
@@ -60,7 +80,7 @@
   padding: 8px 48px;
 } */
 
-.price-table tr:nth-child(even) {background-color: #f2f2f2;}
+/*.price-table tr:nth-child(even) {background-color: gray;}*/
 
 .price-table tr td:nth-child(3) .fa-check,
 .price-table tr:nth-child(2n) td:nth-child(3) .fa-check {
