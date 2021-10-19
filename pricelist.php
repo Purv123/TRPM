@@ -108,6 +108,10 @@ legend {
                                  $count = 1;
                                  $query = $connection->query("SELECT * FROM `pricelist` ORDER BY sequence ASC , datemodified DESC");
                                  ?>
+                                  <tr>
+                                  <th width='20%' style="text-align: center;"></th>
+                                  <th width="80%" colspan="<?php echo $totalCol+1; ?>" style="text-align: center;"> Solutions for Assessing Cyber Risk for Enterprises (1st Party) and/or their Vendors/Suppliers (3rd Party)</th>
+                                 </tr>
                                  <tr>
                                   <th width='20%' style="text-align: center;"></th>
                                   <th width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>

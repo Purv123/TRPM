@@ -20,7 +20,7 @@
                                             <i class="fas fa-phone"></i>
                                             <div class="cta-text">
                                                 <h6>Call us</h6>
-                                                <span>949-421-7294</span>
+                                                <span>949-736-2512</span>
                                             </div>
                                         </div>
                                     </div>
@@ -47,14 +47,14 @@
                                     if(basename($_SERVER['PHP_SELF']) == "aboutus.php")
                                         echo "class=active";
                                     ?> >About Us</a></li>
+                                     <li><a href="pricelist.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "pricelist.php")
+                                        echo "class=active";
+                                    ?> >Pricing</a></li>
                                     <li><a href="whyriskkarma.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "whyriskkarma.php")
                                         echo "class=active";
                                     ?> >Why Risk Karma</a></li>
-                                    <li><a href="pricelist.php"<?php
-                                    if(basename($_SERVER['PHP_SELF']) == "pricelist.php")
-                                        echo "class=active";
-                                    ?> >Pricing</a></li>
                                     <li><a href="blogindex.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "blogindex.php")
                                         echo "class=active";
@@ -66,36 +66,32 @@
                                     <li><a href="solutions.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "solutions.php")
                                         echo "class=active";
-                                    ?> >solutions</a></li>
-                                    <li><a href="contact.php"<?php
-                                    if(basename($_SERVER['PHP_SELF']) == "contact.php")
-                                        echo "class=active";
-                                    ?> >Contact us</a></li>
+                                    ?> >Solutions Screenshots</a></li>
                                     <li><a href="proofofsolutions.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "proofofsolutions.php")
                                         echo "class=active";
                                     ?> >Proof-of-Solution</a></li>
+                                    <li><a href="contact.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "contact.php")
+                                        echo "class=active";
+                                    ?> >Contact us</a></li>
                                     <li><a href="tprmasservice.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "tprmasservice.php")
                                         echo "class=active";
                                     ?> >(TPRM)-as-a-Service</a></li>
-                                    <li><a href="privacy_policy.php"<?php
-                                    if(basename($_SERVER['PHP_SELF']) == "privacy_policy.php")
-                                        echo "class=active";
-                                    ?> >Privacy & Policy</a></li>
-                                    <li><a href="termsofuse.php"<?php
-                                    if(basename($_SERVER['PHP_SELF']) == "termsofuse.php")
-                                        echo "class=active";
-                                    ?> >Terms Of Use</a></li>
                                     <li><a href="./technicalgrade/technical-grade/technicalriskinsight.php">Technical Risk Insights</a></li>
+                                    <li><a href="services2.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "services2.php")
+                                        echo "class=active";
+                                    ?> >Key Benefits</a></li>
+                                    <li><a href="newofferings.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "newofferings.php")
+                                        echo "class=active";
+                                    ?> >Free Offers</a></li>
                                     <li><a href="consulting.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "consulting.php")
                                         echo "class=active";
                                     ?> >Advisory/Consulting Services</a></li>
-                                    <li><a href="services2.php"<?php
-                                    if(basename($_SERVER['PHP_SELF']) == "services2.php")
-                                        echo "class=active";
-                                    ?> >For (Enterprises/Third Parties)</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -155,11 +151,28 @@
                 </div>
             </div>
             <div class="copyright-area">
-                <div class="container">
+                <div class="container footerContainer">
                     <div class="row align-items-center">
-                        <div class="text-center">
-                            <div class="copyright-text">
-                                <p> Copyright @ 2021 Risk Karma LLC, All Rights Reserved</p>
+                        <div class="text-center w-100">
+                            <div class="copyright-text row " style="text-align: left;">
+                                <p class="col"> Copyright @ 2021 Risk Karma LLC, All Rights Reserved | 
+                                <a style="color: #878787;text-transform: capitalize;" href="privacy_policy.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "privacy_policy.php")
+                                        echo "class=active";
+                                    ?> >Privacy & Policy</a> | 
+                                <a style="color: #878787;text-transform: capitalize;" href="termsofuse.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "termsofuse.php")
+                                        echo "class=active";
+                                    ?> >Terms Of Use</a>
+                                </p>
+                                
+                                
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 text-center">

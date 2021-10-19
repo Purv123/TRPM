@@ -2,6 +2,7 @@
 require_once 'db.php';
 $aboutus_fetch = $connection->query("SELECT * from consulting");
 $usecases_fetch = $connection->query("SELECT * from usecases");
+$consulting_logo = $connection->query("SELECT image from consulting_logo");
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,12 +37,41 @@ $usecases_fetch = $connection->query("SELECT * from usecases");
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-3"><span class="text-danger">Cyber Risk, TPRM Advisory </span> and Consulting</p>
+            <p class="h1 text-center mb-3"><span class="text-danger">TPRM Advisory </span> and Consulting</p>
             <?php
                         $editRow = mysqli_fetch_row($aboutus_fetch);
                         echo $editRow[1];
             ?>
-                
+            
+            <table align="center" border="0" cellpadding="5" cellspacing="1" style="width:100%">
+                <tbody>
+                <?php
+                    $totalLogo = $connection->query("SELECT COUNT(*) FROM consulting_logo");
+                    $totalRow = mysqli_fetch_assoc($totalLogo);
+                    $totalRow = $totalRow['COUNT(*)'];
+                    $totalRow = ceil($totalRow/3);
+                    $logoPerRow = 3;
+                    $logos = [];
+                    while ($x = mysqli_fetch_assoc($consulting_logo)){
+                            $logos[] = $x['image'];
+                    }
+                    $logo_Chunked = array_chunk($logos,3);
+                    for($i=0;$i<sizeof($logo_Chunked);$i++){
+                            echo"<tr>";
+                            for($j=0;$j<=sizeof($logo_Chunked[$i]);$j++){
+                            echo'<td style="text-align:center">
+                            <div>
+                                <img alt="" src="'. $logo_Chunked[$i][$j] .'" style="max-height:100px; max-width: 150px;" />
+                            </div>
+                            </td>';
+                           }
+                           echo "</tr>";
+                    }
+                    
+                ?>
+                </tbody>
+            </table>
+ 
         </div>
             
         </div>

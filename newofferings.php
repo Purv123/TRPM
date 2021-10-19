@@ -1,6 +1,6 @@
 <?php 
 require_once 'db.php';
-$aboutus_fetch = $connection->query("SELECT * from proofofsolution");
+$newofferings_fetch = $connection->query("SELECT description from newofferings");
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,8 +20,6 @@ $aboutus_fetch = $connection->query("SELECT * from proofofsolution");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
 </head>
 
 <body class="no-blog">
@@ -31,19 +29,23 @@ $aboutus_fetch = $connection->query("SELECT * from proofofsolution");
     <div class="box">
         <?php include_once 'navbar.php'; ?>
 
-        <div class="container solutions my-5">
-            <div class="half-logo text-center">
+            <div class="container my-5">
+                <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>
-            <p class="h1 text-center mb-3"><span class="text-danger">Proof Of </span>Solution</p>
-            <?php
-                        $editRow = mysqli_fetch_row($aboutus_fetch);
-                        echo $editRow[1];
-            ?>
-                
-        </div>
-            
-        </div>
+            <p class="h1 text-center mb-3">Free<span class="text-danger"> Offerings</span></p>
+                <div class="container whyriskkarma row">
+                    <div class="col-lg-12">
+                        <div class="section_title_all">
+                            <p class="section_subtitle mx-auto text-muted">
+                            <?php
+                            $editRow = mysqli_fetch_row($newofferings_fetch);
+                            echo $editRow[0];
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         <?php include_once 'footer.php'; ?>
     </div>
