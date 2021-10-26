@@ -604,6 +604,16 @@ ul {
 }
 
 
+
+.technicalRishInsight ul li::before{
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  font-size: 170%;
+  vertical-align: center
+}
  /*---------------------------------*/
 
 
@@ -2884,6 +2894,7 @@ jQuery(document).ready(function( $ ){
     line-height: 1.2;"><span class="text-danger">Technical Risk </span>Insight</p>
   </div>
 </div>
+
 <div class="wp-block-columns are-vertically-aligned-center mb-0 py-5-percent c-white">
 <div class="wp-block-column is-vertically-aligned-center container" style="flex-basis:100%">
 <h3 class="has-text-align-center h3 mb-0 pb-2 c-black">Powerful Performance behind 20 Categories</h3>
@@ -3119,7 +3130,7 @@ jQuery(document).ready(function( $ ){
 </div>
 </div>
 
-        <div class="container solutions my-5">
+        <div class="container technicalRishInsight my-5">
             <?php
                         $editRow = mysqli_fetch_row($aboutus_fetch);
                         echo $editRow[1];

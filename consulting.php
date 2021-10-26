@@ -24,6 +24,15 @@ $consulting_logo = $connection->query("SELECT image from consulting_logo");
         crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+        <style type="text/css">
+            @media only screen and (max-width: 720px) {
+                .companyTable{
+                    table-layout: fixed;
+                    overflow-x: auto;
+                    display: block;
+                }
+            }
+        </style>
 </head>
 
 <body class="no-blog">
@@ -43,7 +52,7 @@ $consulting_logo = $connection->query("SELECT image from consulting_logo");
                         echo $editRow[1];
             ?>
             
-            <table align="center" border="0" cellpadding="5" cellspacing="1" style="width:100%">
+            <table align="center" border="0" cellpadding="5" cellspacing="1" style="width:100%;" class="companyTable">
                 <tbody>
                 <?php
                     $totalLogo = $connection->query("SELECT COUNT(*) FROM consulting_logo");

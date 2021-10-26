@@ -31,7 +31,7 @@ $aboutus_fetch = $connection->query("SELECT * from proofofsolution");
     <div class="box">
         <?php include_once 'navbar.php'; ?>
 
-        <div class="container solutions my-5">
+        <div class="container whyriskkarma solutions my-5">
             <div class="half-logo text-center">
               <img src="images/half-logo.png" style="width: 15%" />
             </div>

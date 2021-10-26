@@ -105,27 +105,37 @@ legend {
                                     $fields[] = $x['Field'];
                                   }
                                  $fields = array_diff($fields, array("id","sequence","datemodified"));
-                                 $count = 1;
+                                 
                                  $query = $connection->query("SELECT * FROM `pricelist` ORDER BY sequence ASC , datemodified DESC");
                                  ?>
-                                  <tr>
+                                  <tr class="aroundgray">
                                   <th width='20%' style="text-align: center;"></th>
-                                  <th width="80%" colspan="<?php echo $totalCol+1; ?>" style="text-align: center;"> Solutions for Assessing Cyber Risk for Enterprises (1st Party) and/or their Vendors/Suppliers (3rd Party)</th>
+                                  <th width="80%"  colspan="<?php echo $totalCol+1; ?>" style="text-align: center;"> Solutions for Assessing Cyber Risk for Enterprises (1st Party) and/or their Vendors/Suppliers (3rd Party)</th>
                                  </tr>
                                  <tr>
-                                  <th width='20%' style="text-align: center;"></th>
-                                  <th width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>
-                                  <th width="<?php echo $widthCat2Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Continuous Assessment & Monitoring (Duration: Annual)</th>
+                                  <th class="solidBorder" width='20%' style="text-align: center;"></th>
+                                  <th class="doubleBorder doubletop" width="<?php echo $widthCat1Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Point-in-Time Snapshot Assessment (Duration: 60-days)</th>
+                                  <th class="doubletop" width="<?php echo $widthCat2Col; ?>" colspan="<?php echo $totalcat2Col; ?>" style="text-align: center;">Continuous Assessment & Monitoring (Duration: Annual)</th>
                                  </tr>
                                  <?php
                                  while ($row = $query ->fetch_object()) {
+                                  $count = 1;
                                   $id = $row->id;
                                  ?>
                                  <tr>
                                   <?php
                                     foreach ($fields as $key) {
+                                      if($count == 1) {
+                                        echo "<td class='solidBorder'>";
+                                      }
+                                      else if ($count == 3) {
+                                        echo "<td class='doubleBorder'>";
+                                      }else{
+                                        echo "<td>";
+                                      }
+                                      
                                   ?>
-                                  <td> 
+                                  
                                       <?php 
                                       if($row->$key == 'true')
                                         echo '<i class="fa fa-check" />';
@@ -136,11 +146,12 @@ legend {
                                      ?>
                                   </td>
                                    <?php
+                                    $count++;
                                     }
                                    ?>
                                  </tr>
                                  <?php
-                                 $count ++;
+                                 // $count ++;
                                  }
                                  ?> 
           </table>

@@ -15,6 +15,16 @@
   /*margin-left: -1em;*/
 }
 
+.container .technicalRishInsight ul li::before{
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  font-size: 170%;
+  vertical-align: center
+}
+
 .pinwheel_icon {
 	width: 36px;
 	height: 38px;

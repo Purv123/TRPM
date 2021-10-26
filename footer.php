@@ -88,6 +88,10 @@
                                     if(basename($_SERVER['PHP_SELF']) == "newofferings.php")
                                         echo "class=active";
                                     ?> >Free Offers</a></li>
+                                    <li><a href="ecosystempartners.php"<?php
+                                    if(basename($_SERVER['PHP_SELF']) == "ecosystempartners.php")
+                                        echo "class=active";
+                                    ?> >Eco System Partners</a></li>
                                     <li><a href="consulting.php"<?php
                                     if(basename($_SERVER['PHP_SELF']) == "consulting.php")
                                         echo "class=active";
