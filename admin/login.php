@@ -192,7 +192,7 @@ if (isset($_SESSION["name"])) {
                 <a href="index.php">
                     <img src="../images/logo.svg" alt="" />
                     <h3>RISK KARMA</h3>
-                    <p>ENTERPRISE & THIRD-PARTY RISK MANAGEMENT</p>
+                    <p>THIRD-PARTY RISK MANAGEMENT</p>
                 </a>
             </div>
             <div class="container">

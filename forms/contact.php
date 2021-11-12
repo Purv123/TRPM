@@ -1,10 +1,7 @@
 <?php
-require_once '../db.php';
+  require_once '../db.php';
 
-  // Replace contact@example.com with your real receiving email address
-  // $receiving_email_address = '';
-  
-    // $to = $receiving_email_address;
+    $to = "support@riskkarama.com";
     $date = date("d-m-Y");
     $from_name = $_POST['name'];
     $from_email = $_POST['email'];
@@ -12,15 +9,15 @@ require_once '../db.php';
     $message = $_POST['message'];
 
     mysqli_query($connection, "INSERT INTO contact (`date`, `name`, `email`, `subject`, `message`) VALUES ('$date', '$from_name','$from_email','$subject', '$message')");
+    
+    // More headers
+    $headers .= 'From: '. $from_email . "\r\n";
+    $headers .= 'Cc: contact@riskkarma.com' . "\r\n";
+    $headers .= 'Reply-To: '. $from_email . "\r\n";
+    
+    // echo($to.$subject.$message.$headers);
+    mail($to,$subject,$message,$headers);
 
     header('location: ../index.php');
 
-    // $headers = 'From: websitesupport@vpautomobiles.com' . "\r\n" .
-    //     'Reply-To: websitesupport@vpautomobiles.com' . "\r\n" .
-    //     'X-Mailer: PHP/' . phpversion();
-
-    // if(mail($to, $subject, $message, $headers)){
-    //     die("OK");
-    // }
-    
 ?>
